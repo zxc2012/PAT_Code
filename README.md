@@ -16,6 +16,15 @@ git add README.md
 
 - git config --global user.email "xxxxxxx@xxx.com"
 
+```matlab
+fatal: The remote end hung up unexpectedly
+法1:$ git config --local http.postBuffer 524288000
+法2:修改config文件
+[http]
+    postBuffer = 524288000 //500MB
+``` 
+
+
 >远程仓库地址
 git remote add origin https://github.com/zxc2012/Algorithm_post_graduate.git
 
