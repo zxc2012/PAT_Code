@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+vector<vector<int>> g;
 vector<int> v,visit,father;
 int n;
 void dfs(int s) {
@@ -38,5 +39,6 @@ int main() {
             }
 		printf("%d\n", sum-1);
 	}
+	system("pause");
 	return 0;
 }
