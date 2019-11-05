@@ -16,7 +16,7 @@ git add README.md
 
 - git config --global user.email "xxxxxxx@xxx.com"
 
->远程仓库地址
+- 远程仓库地址
 git remote add origin https://github.com/zxc2012/Algorithm_post_graduate.git
 
 ![avatar](https://img-blog.csdn.net/2018052909403110)
