@@ -1,4 +1,9 @@
 {   
         "terminal.integrated.shell.windows": "E:\\Git\\Git\\bin\\bash.exe",
+        "C_Cpp.errorSquiggles": "Disabled",
+        "files.associations": {
+                "string": "cpp",
+                "iostream": "cpp"
+        },
     
 }  
