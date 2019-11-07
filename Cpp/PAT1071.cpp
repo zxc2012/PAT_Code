@@ -5,7 +5,7 @@ int main(){
     char c;
     string s,ss;
     int max=0;
-    while(scanf("%c",&c)){
+       while(c=getchar()){
         if(c<48||(c>'9'&&c<65)||(c>'Z'&&c<97)||c>'z')
         {
             if(s.size()!=0){

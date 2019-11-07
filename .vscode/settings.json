@@ -3,7 +3,9 @@
         "C_Cpp.errorSquiggles": "Disabled",
         "files.associations": {
                 "string": "cpp",
-                "iostream": "cpp"
+                "iostream": "cpp",
+                "random": "cpp",
+                "*.tcc": "cpp"
         },
     
 }  

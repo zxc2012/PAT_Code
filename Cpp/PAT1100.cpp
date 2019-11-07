@@ -28,7 +28,7 @@ int main() {
 		num2name[i+13]=s2[i];
 		name2num[s2[i]]=i+13;
 	}
-    getchar();
+    getchar()
 	for(i=0; i<n; ++i) {
 		getline(cin,ss);
 		if('0'<=ss[0]&&ss[0]<='9')transfer(stoi(ss));
