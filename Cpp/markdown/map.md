@@ -27,3 +27,22 @@ for(int i = 0; i < 3; i++) {
 return 0;
 ```
 法2:直接函数输出
+3.cmp的写法
+```cpp
+int cmp(struct node a, struct node b) {
+	if ((a.de1 + a.cai) != (b.de + b.cai))        
+        return (a.de + a.cai) > (b.de + b.cai);
+	else if (a.de != b.de)       
+        return a.de > b.de;
+	else       
+        return a.num < b.num;
+}
+```
+4.输出格式
+```cpp
+for (int i = 0; i < 4; i++) {
+	sort(v[i].begin(), v[i].end(), cmp);
+	for (int j = 0; j < v[i].size(); j++)
+		printf("%d %d %d\n", v[i][j].num, v[i][j].de, v[i][j].cai);
+}
+```
