@@ -14,3 +14,16 @@ gets(m);
 cin.getline(m,5);//多了一个参数，可以加结束符
 cin.get(m,20);//多了一个参数，可以加结束符
 ```
+2.对应的处理--
+法1:建表
+```cpp
+char c[14] = {"0123456789ABC"};
+printf("#");
+for(int i = 0; i < 3; i++) {
+    int num;
+    scanf("%d", &num);
+    printf("%c%c", c[num/13], c[num%13]);
+}
+return 0;
+```
+法2:直接函数输出
