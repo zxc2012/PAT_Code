@@ -38,6 +38,20 @@ int cmp(struct node a, struct node b) {
         return a.num < b.num;
 }
 ```
+```cpp
+struct node {
+	int id, best;
+	int score[4], rank[4];
+};
+for(flag = 0; flag <= 3; flag++) {
+        sort(stu.begin(), stu.end(), cmp1);
+        for(int i = 0; i < n; i++) {
+                stu[i].rank[flag] = i;
+                if(i>0&&stu[i].score[flag] == stu[i-1].score[flag])                
+                stu[i].rank[flag] = stu[i-1].rank[flag];
+        }
+}
+```
 4.输出格式
 ```cpp
 for (int i = 0; i < 4; i++) {
