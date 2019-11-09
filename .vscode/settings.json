@@ -7,5 +7,6 @@
                 "random": "cpp",
                 "*.tcc": "cpp"
         },
+        "python.pythonPath": "D:\\MDK\\python.exe",
     
 }  
