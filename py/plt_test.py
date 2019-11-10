@@ -16,6 +16,4 @@ x=np.array([[0,4],
            [2,3] ])
 print(np.linalg.norm(x,axis=0))
 print(math.sqrt(pow(3,2)+pow(4,2)+pow(4,2)+pow(6,2)+pow(1,2)))
-
-
-
+help(np.random)
