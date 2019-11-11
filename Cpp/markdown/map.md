@@ -35,10 +35,9 @@ return 0;
 int cmp(struct node a, struct node b) {
 	if ((a.de1 + a.cai) != (b.de + b.cai))        
         return (a.de + a.cai) > (b.de + b.cai);
-	else if (a.de != b.de)       
-        return a.de > b.de;
-	else       
-        return a.num < b.num;
+	else if (a.de != b.de) return a.de > b.de;
+	else return strcmp(a.name, b.name) < 0;//char name[9]
+        //还可以string a.name<b.name;
 }
 ```
 ```cpp
@@ -50,7 +49,7 @@ for(flag = 0; flag <= 3; flag++) {
         sort(stu.begin(), stu.end(), cmp1);
         for(int i = 0; i < n; i++) {
                 stu[i].rank[flag] = i;
-                if(i>0&&stu[i].score[flag] == stu[i-1].score[flag])                
+                if(i>0&&stu[i].score[flag] == stu[i-1].score[flag])//注意多一个判断还有反向                
                 stu[i].rank[flag] = stu[i-1].rank[flag];
         }
 }
@@ -65,3 +64,5 @@ for (int i = 0; i < 4; i++) {
 ```
 5.[易错点]多余链表、记录的问题
 PAT1016 Phone Bills
+6.运行超时:
+循环内套了一个大函数:如循环内sort(>1000)
