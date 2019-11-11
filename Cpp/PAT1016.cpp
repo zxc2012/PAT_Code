@@ -52,19 +52,19 @@ int main() {
 	float x;
 	float sum;
 	for(i=0; i<v.size(); ++i) {
-		if(m[v[i].ID]==0) {
-			sum=0;
-			m[v[i].ID]=i+1;
-			cout<<v[i].ID<<" ";
-			printf("%02d\n",v[i].t[0]);
-		}
 		if(v[i].ID==v[i+1].ID&&v[i].status==0&&v[i+1].status==1) {
+			if(m[v[i].ID]==0) {
+				sum=0;
+				m[v[i].ID]=i+1;
+				cout<<v[i].ID<<" ";
+				printf("%02d\n",v[i].t[0]);
+			}
 			x=cal(v[i+1].t)-cal(v[i].t);
 			int y=cal1(v[i].t,v[i+1].t);
 			sum+=x;
 			printf("%02d:%02d:%02d %02d:%02d:%02d %d $%.2f\n",v[i].t[1],v[i].t[2],v[i].t[3],v[i+1].t[1],v[i+1].t[2],v[i+1].t[3],y,x);
 		}
-		if(i==v.size()-1||v[i].ID!=v[i+1].ID) {
+		if(m[v[i].ID]!=0&&(i==v.size()-1||v[i].ID!=v[i+1].ID)) {
 			printf("Total amount: $%.2f\n",sum);
 		}
 	}
