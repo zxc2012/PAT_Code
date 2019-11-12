@@ -30,27 +30,44 @@ for(int i = 0; i < 3; i++) {
 return 0;
 ```
 法2:直接函数输出
+
 3.cmp的写法
 ```cpp
-int cmp(struct node a, struct node b) {
+int cmp(node& a, node& b) {//Tips:引用传递和地址传递效率高于直接传递
 	if ((a.de1 + a.cai) != (b.de + b.cai))        
-        return (a.de + a.cai) > (b.de + b.cai);
+        return (a.de + a.cai) > (b.de + b.cai);//技巧:以求和代替求平均值
 	else if (a.de != b.de) return a.de > b.de;
 	else return strcmp(a.name, b.name) < 0;//char name[9]
         //还可以string a.name<b.name;
 }
 ```
+- 并列排名问题
 ```cpp
 struct node {
 	int id, best;
 	int score[4], rank[4];
-};
-for(flag = 0; flag <= 3; flag++) {
-        sort(stu.begin(), stu.end(), cmp1);
+};//一般一个结构体
+for(i=0;i<sch.size();++i){
+ for(j=0;j<k;++j){
+        bool y;
+        int choice=sch[i].sc[j];
+        int x=ans[choice].size();
+        if(x>0){
+            int last=x-1;
+            y=sch[i].grade[0]==ans[choice][last].grade[0]&&sch[i].grade[1]==ans[choice][last].grade[1];
+            x=y?ans[choice][last].rank:x;
+        }
+        if(x<full[choice]||y){
+            ans[sch[i].sc[j]].push_back(sch[i];
+            break;
+        }
+}
+for(flag = 0; flag <= 2; flag++) {
+        sort(ans.begin(), ans.end(), cmp1);
         for(int i = 0; i < n; i++) {
-                stu[i].rank[flag] = i;
-                if(i>0&&stu[i].score[flag] == stu[i-1].score[flag])//注意多一个判断还有反向                
-                stu[i].rank[flag] = stu[i-1].rank[flag];
+            ans[i].rank[flag] = i;
+            if(i>0&&ans[i].grade[flag] == ans[i-1].grade[flag])//注意多一个判断还有反向            
+            ans[i].ans[flag] = ans[i-1].rank[flag];
         }
 }
 ```
@@ -58,11 +75,15 @@ for(flag = 0; flag <= 3; flag++) {
 ```cpp
 for (int i = 0; i < 4; i++) {
 	sort(v[i].begin(), v[i].end(), cmp);
-	for (int j = 0; j < v[i].size(); j++)
-		printf("%d %d %d\n", v[i][j].num, v[i][j].de, v[i][j].cai);
+	for (int j = 0; j < v[i].size(); j++){
+        if(j!=0)printf(" ");
+		printf("%d", v[i][j].num);
+    }
+    printf("\n");
 }
 ```
 5.[易错点]多余链表、记录的问题
 PAT1016 Phone Bills
+
 6.运行超时:
 循环内套了一个大函数:如循环内sort(>1000)
