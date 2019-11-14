@@ -3,28 +3,16 @@ using namespace std;
 struct Node{
     string number;
     int clock[3];
+    int time;
     int status;
 };
-struct ind{
-    int index;
-    int value=0;
-};
-vector<vector<Node>> v;
+vector<Node> v,st;
 map<string,int> m; 
-vector<ind> cp;
-bool cmp(Node& a,Node& b){
-    if(a.clock[0]!=b.clock[0]) return a.clock[0]<b.clock[0];
-    else{
-        if(a.clock[1]!=b.clock[1])return a.clock[1]<b.clock[1];
-        else{
-            if(a.clock[2]!=b.clock[2])return a.clock[2]<b.clock[2];
-            else return a.status<b.status;
-        }
-    }
+bool cmp1(Node& a,Node& b){
+    if(a.number!=b.number) return a.number<b.number;
+    else return a.time<b.time;
 }
-bool cm(ind& a,ind& b){
-    return a.value>b.value;
-}
+bool cmp2(Node& a,Node& b){return a.time<b.time;}
 int cal(int* a){
     return (3600*a[0]+60*a[1]+a[2]);
 }
@@ -36,7 +24,7 @@ void transfer(int& a){
     printf("%02d:%02d:%02d",h,m,s);
 }
 int main(){
-    int n,k,i,j,r;
+    int n,k,i,j,ma;
     cin>>n>>k;
     int c[3];
     int x;
@@ -45,56 +33,31 @@ int main(){
         cin>>s;
         scanf("%d:%d:%d",&c[0],&c[1],&c[2]);
         cin>>ss;
-        if(ss[0]=='i')x=0;
-        else x=1;
-        if(m[s]==0){
-            m[s]=i;
-            vector<Node> sr;
-            sr.push_back({s,{c[0],c[1],c[2]},x});
-            v.push_back(sr);
-        }
-        else{
-            v[m[s]-1].push_back({s,{c[0],c[1],c[2]},x});
-        }
+        if(ss[0]=='i')x=0;else x=1;
+        v.push_back({s,{c[0],c[1],c[2]},cal(c),x});
     }
-    for(i=0;i<m.size();++i){
-        sort(v[i].begin(),v[i].end(),cmp);
-    }
-    cp.resize(m.size());
-    for(j=0;j<m.size();++j){
-        for(r=0;r<v[j].size();++r)
-        if(v[j][r].status==0){
-            if(v[j][r+1].status==1){
-                cp[j].index=j;
-                if(cal(v[j][r+1].clock)-cal(v[j][r].clock)>0){
-                    cp[j].value+=(cal(v[j][r+1].clock)-cal(v[j][r].clock));
-                }
-            }
+    sort(v.begin(),v.end(),cmp1);
+    for(i=0;i<v.size();++i){
+        if(v[i].number==v[i+1].number&&v[i].status==0&&v[i+1].status==1){
+            st.push_back(v[i]);st.push_back(v[i+1]);
+            m[v[i].number]+=v[i+1].time-v[i].time;
+            ma=max(m[v[i].number],ma);
         }
     }
+    sort(st.begin(),st.end(),cmp2);
+    int temp=0,sum=0;
     for(i=0;i<k;++i){
-        int sum=0;
         scanf("%d:%d:%d",&c[0],&c[1],&c[2]);
-        for(j=0;j<m.size();++j){
-            int temp=0;
-            for(r=0;r<v[j].size();++r)
-            if(v[j][r].status==0){
-                if(v[j][r+1].status==1){
-                    cp[j].index=j;
-                    if(temp==0&&cal(v[j][r].clock)<=cal(c)&&cal(c)<cal(v[j][r+1].clock)){
-                        sum++;
-                        temp=1;
-                    }
-                }
-            }
-        }
+        for(j=temp;st[j].time<=cal(c)&&j<st.size();++j)
+            if(st[j].status==0)sum++;
+            else sum--;
+        temp=j;
         printf("%d\n",sum);
     }
-    sort(cp.begin(),cp.end(),cm);
-    for(i=0;i<cp.size();++i){
-        if(cp[i].value==cp[0].value)
-        cout<<v[cp[i].index][0].number<<" ";
+    for(auto it:m){
+        if(it.second==ma)
+        cout<<it.first<<" ";
     }
-    transfer(cp[0].value);
+    transfer(ma);
     return 0;
 }
