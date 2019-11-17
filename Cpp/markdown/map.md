@@ -17,6 +17,7 @@ cin.get(m,20);//多了一个参数，可以加结束符
 
 >%02d和%2d差不多 只不过左边补0
 
+>toupper,tolower的使用
 2."对应"的处理--
 
 ##### `法1:建表`
@@ -76,7 +77,7 @@ for(flag = 0; flag <= 2; flag++) {
 ```cpp
 for (int i = 0; i < 4; i++) {
 	sort(v[i].begin(), v[i].end(), cmp);
-	for (int j = 0; j < v[i].size(); j++){
+	for (int j = 0; j < v[i].size(); j++){//小技巧:利用顺序条件，如求一串码中只出现一次的元素
         if(j!=0)printf(" ");
 		printf("%d", v[i][j].num);
     }
