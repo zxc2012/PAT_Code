@@ -5,7 +5,9 @@
                 "string": "cpp",
                 "iostream": "cpp",
                 "random": "cpp",
-                "*.tcc": "cpp"
+                "*.tcc": "cpp",
+                "deque": "cpp",
+                "vector": "cpp"
         },
         "python.pythonPath": "D:\\MDK\\python.exe",
     
