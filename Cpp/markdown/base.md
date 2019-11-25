@@ -11,3 +11,4 @@ for (int i = 0; i < len; i++) {
 	if (s[i] == 'A')result = (result + (countp * countt) % 1000000007) % 1000000007;
 }
 ```
+- 数学形式题注意对数字的直接利用，少用字符串特性
