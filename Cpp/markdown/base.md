@@ -32,3 +32,14 @@ for(int i = 2; i <= n; i++)
 	}
 }
 ```
+##### 判断
+- `陷阱:1的特殊处理(极易错)`
+```cpp
+bool judge(int x){
+	if(x<2)return 0;
+    for(int i=2;i<=sqrt(x);++i){
+        if(x%i==0)return 0;
+    }
+    return 1;
+}
+```
