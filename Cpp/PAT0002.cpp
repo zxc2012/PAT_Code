@@ -1,0 +1,50 @@
+#include<bits/stdc++.h>
+using namespace std;
+struct Node{
+   string s;
+   float tws=0.0;
+   int ns=0;
+   int d;
+};
+vector<Node> v;
+map<string,int> m;
+bool cmp(Node a,Node b){
+   if((int)a.tws!=(int)b.tws)return (int)a.tws>(int)b.tws;
+   else if(a.ns!=b.ns)return a.ns<b.ns;
+   else return a.s<b.s;
+}
+int main(){
+   int n,i,j,g;
+   char id[7],s[7];
+   scanf("%d",&n);
+   for(i=0;i<n;++i){
+      getchar();
+      scanf("%s %d %s",&id,&g,&s);
+      for(j=0;j<6;++j)s[j]=tolower(s[j]);
+      string ss=s;
+      if(m[ss]==0){
+         m[ss]=v.size()+1;
+         Node y;
+         y.s=ss;
+         if(id[0]=='B')y.tws+=g/1.5;
+         else if(id[0]=='A')y.tws+=g;
+         else y.tws+=g*1.5;
+         y.ns+=1;
+         v.push_back(y);
+      }
+      else{
+         if(id[0]=='B')v[m[ss]-1].tws+=g/1.5;
+         else if(id[0]=='A')v[m[ss]-1].tws+=g;
+         else v[m[ss]-1].tws+=g*1.5;
+         v[m[ss]-1].ns+=1;
+      }          
+   }
+   sort(v.begin(),v.end(),cmp);
+   printf("%d\n",v.size());
+   for(i=0;i<v.size();++i){
+      v[i].d=i+1;
+      if(i>0&&(int)v[i].tws==(int)v[i-1].tws)v[i].d=v[i-1].d;
+      printf("%d %s %d %d\n",v[i].d,v[i].s.c_str(),(int)v[i].tws,v[i].ns);
+   }
+   return 0; 
+}
