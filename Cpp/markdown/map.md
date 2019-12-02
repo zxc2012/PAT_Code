@@ -91,6 +91,7 @@ for (int i = 0; i < 4; i++) {
 while(temp.size()<N)//有效数字位数小于N
 temp+="0";//在字符串末尾加足够的0保证有N位有效数字
 ```
+![avatar](https://github.com/zxc2012/Algorithm_post_graduate/blob/master/Cpp/markdown/STL.jpg)
 5.排序题
 
 >多维排序-->找参考系
