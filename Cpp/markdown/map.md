@@ -71,7 +71,7 @@
       <td>个数</td>
    </tr>
    <tr>
-      <td>删除算法返回被删除元素的下一个迭代器last</td>
+      <td rowspan="3">删除算法返回被删除元素的下一个迭代器last</td>
       <td>Single element</td>
       <td>vector,set</td>
       <td>iterator erase (const_iterator position);</td>
