@@ -18,6 +18,7 @@ cin.get(m,20);//多了一个参数，可以加结束符
 >%02d和%2d差不多 只不过左边补0
 
 >toupper,tolower的使用
+
 2."对应"的处理--
 
 ##### `法1:建表`
@@ -74,6 +75,7 @@ for(flag = 0; flag <= 2; flag++) {
 }
 ```
 4.输出格式
+>普通输出问题
 ```cpp
 for (int i = 0; i < 4; i++) {
 	sort(v[i].begin(), v[i].end(), cmp);
@@ -84,11 +86,17 @@ for (int i = 0; i < 4; i++) {
     printf("\n");
 }
 ```
+>条件补零问题Eg:保留n位小数(temp.size可大可小)
+```cpp
+while(temp.size()<N)//有效数字位数小于N
+temp+="0";//在字符串末尾加足够的0保证有N位有效数字
+```
 5.排序题
 
 >多维排序-->找参考系
 
 `1比较时间实际可以t[j]-t[i](从0:0:0开始)`
+
 `2求连续字符串和满足一定条件-->sum[j]-sum[i]`
 
 **[易错点]多余链表、记录的问题**
@@ -99,6 +107,14 @@ PAT1016 Phone Bills
 for(j=temp;st[j].time<=cal(c)&&j<st.size();++j)
     if(st[j].status==0)sum++;
     else sum--;
+```
+>堆
+```cpp
+//[f,l),[,Compare comp]
+void pop_heap(iterator first, iterator last);//向下调整,原堆顶->last-1,O(log(n))
+void push_heap(iterator first, iterator last);//向上调整O(log(n))
+void make_heap(iterator first, iterator last);//建堆O(n)
+void sort_heap(iterator first, iterator last);//建堆后排序O(nlog(n))
 ```
 6.运行超时:
 - 循环内套了一个大函数:如循环内sort(>1000),或是一个大数组($10^5$)的cin-->scanf
