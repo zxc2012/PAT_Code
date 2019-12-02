@@ -1,7 +1,100 @@
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });
+</script>
 ## STL,基础数学
-![test](STL.jpg)
+
+<table>
+   <tr>
+      <td>算法</td>
+      <td>类型</td>
+      <td>Structure</td>
+      <td>function</td>
+      <td>备注</td>
+   </tr>
+   <tr>
+      <td rowspan="4" width="80">不变序列算法O(n)</td>
+      <td rowspan="4" colspan="2" width="80">顺序容器/关联容器均适用</td>
+      <td>iterator min_element(iterator first, iterator last[,Pred op])</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>iterator max_element(iterator first, iterator last[,Pred op])</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>int count(iterator first, iterator last,const T& val)</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>iterator find(iterator first, iterator last,const T& val)</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td rowspan="7">插入算法第一个被插入元素的迭代器first</td>
+      <td rowspan="3" width="40">Single element</td>
+      <td width="40">vector</td>
+      <td>iterator insert (const_iterator position, const value_type& val);</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>set</td>
+      <td>pair&lt;iterator,bool> insert (const value_type& val);</td>
+      <td>pair::second inserted(1)or existed(0)</td>
+   </tr>
+   <tr>
+      <td>String</td>
+      <td>string& insert (size_t pos, const char* s);</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td rowspan="2">Fill</td>
+      <td>vector</td>
+      <td>iterator insert (const_iterator position, size_type n, const value_type& val);</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>String</td>
+      <td>string& insert (size_t pos, size_t n, char c);</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>Range</td>
+      <td>vector,String</td>
+      <td>iterator insert (const_iterator position, InputIterator first, InputIterator last);</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>Buffer</td>
+      <td>String</td>
+      <td>string& insert(size_t pos, const string& str, size_t subpos, size_t sublen);</td>
+      <td>个数</td>
+   </tr>
+   <tr>
+      <td>删除算法返回被删除元素的下一个迭代器last</td>
+      <td>Single element</td>
+      <td>vector,set</td>
+      <td>iterator erase (const_iterator position);</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>Unfill</td>
+      <td>set</td>
+      <td>size_type erase(const value_type& val);</td>
+      <td>个数</td>
+   </tr>
+   <tr>
+      <td></td>
+      <td>Range</td>
+      <td>vector,set</td>
+      <td>iterator erase(const_iterator first, const_iterator last);</td>
+      <td></td>
+   </tr>
+</table>
 1.输入方式大总结
-> getline(cin,str):  
+
+>getline(cin,str):  
 std::basic_istream& getline(std::basic_istream&__is, std::__cxx11::basic_string& __str);
 ```cpp
 //解析一个字符的三种方式
