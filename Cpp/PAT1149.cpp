@@ -22,13 +22,12 @@ int main(){
                 temp.push_back(y);
                 for(r=0;r<father[y].size();++r){
                     if(find(temp.begin(),temp.end(),father[y][r])!=temp.end()){
-                        printf("No\n");a=1;break;
+                        a=1;break;
                     }
                 }
             }
-            if(a==1)break;
         }
-        if(a==0)printf("Yes\n");
+        if(a==0)printf("Yes\n");else printf("No\n");
     }
     return 0;
 }
