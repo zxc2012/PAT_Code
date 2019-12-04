@@ -5,11 +5,8 @@ vector<int> v,visit,father;
 int n;
 void dfs(int s) {
     visit[s] = 1;
-    int i;
-    for (i = 1; i<=n; ++i)
-		if(g[s][i]==1&&visit[i]==0) {
-			dfs(i);
-		}
+    for(int i = 1; i<=n; ++i)
+	if(g[s][i]==1&&visit[i]==0)dfs(i);
 }
 int main() {
 	int m,sum;
@@ -29,9 +26,9 @@ int main() {
 		v.push_back(m);
 	}
 	for (i = 0; i < k; ++i) {
-		sum = 0;
+		sum = 0;cin >> m;
 		fill(visit.begin(),visit.end(),0);
-		visit[v[i]] = 1;
+		visit[m] = 1;
 		for (j = 1; j<=n; ++j)
 			if (visit[j] == 0){
                 dfs(j);
@@ -39,6 +36,5 @@ int main() {
             }
 		printf("%d\n", sum-1);
 	}
-	system("pause");
 	return 0;
 }

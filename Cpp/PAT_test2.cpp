@@ -14,7 +14,7 @@ int main(){
     sh=l1.size()<l2.size()?l1:l2;lo=l1.size()<l2.size()?l2:l1;
     x=sh.size()-1;
     for(i=0;i<lo.size();++i){
-        printf("%05d %d ",lo[i],node[lo[i]].data,sh[x]);
+        printf("%05d %d ",lo[i],node[lo[i]].data);
         if((i+1)%2==0){
             if(sh[x]==-1)printf("-1\n");
             else printf("%05d\n",sh[x]);

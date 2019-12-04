@@ -1,18 +1,4 @@
-## 贪心
-- 二分法upper_bound,lower_bound的运用
-- PAT题，利用次序
-```cpp
-for (int i = 0; i < len; i++) {
-	if (s[i] == 'T')countt++;
-}
-for (int i = 0; i < len; i++) {
-	if (s[i] == 'P')countp++;
-	if (s[i] == 'T')countt--;
-	if (s[i] == 'A')result = (result + (countp * countt) % 1000000007) % 1000000007;
-}
-```
-- 数学形式题注意对数字的直接利用，少用字符串特性
-
+## 暴力求解/数学问题
 1.素数
 ##### 算术基本定理:若$a\in Z$,$a\gt 1$,则有$a=p_1p_2\cdots p_n$,其中$p_i$为素数
 >证明：
@@ -37,9 +23,29 @@ for(int i = 2; i <= n; i++)
 ```cpp
 bool judge(int x){
 	if(x<2)return 0;
-    for(int i=2;i<=sqrt(x);++i){
+    for(int i=2;i<=sqrt(x);++i){//9
         if(x%i==0)return 0;
     }
     return 1;
 }
 ```
+2.gcd
+```cpp
+long long gcd(long long a,long long b){return b==0?a:gcd(b,a%b);}//原来a>b现调换
+```
+---
+#### 求解技巧
+思路:遍历范围内全部数字,依据首+尾/首+间隔遍历
+1.二分法upper_bound,lower_bound的运用
+2.PAT题，利用次序
+```cpp
+for (int i = 0; i < len; i++) {
+	if (s[i] == 'T')countt++;
+}
+for (int i = 0; i < len; i++) {
+	if (s[i] == 'P')countp++;
+	if (s[i] == 'T')countt--;
+	if (s[i] == 'A')result = (result + (countp * countt) % 1000000007) % 1000000007;
+}
+```
+3.数学形式题注意对数字的直接利用，少用字符串特性
