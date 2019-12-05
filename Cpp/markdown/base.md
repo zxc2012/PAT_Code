@@ -3,9 +3,12 @@
     MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });
 </script>
 ## 暴力求解/数学问题
-1.素数
+1.数学问题
+
+(1)素数
 ##### 算术基本定理:若$a\in Z$,$a\gt 1$,则有$a=p_1p_2\cdots p_n$,其中$p_i$为素数
 >##### 证明:假定定理对所有小于a的正整数均成立 若a为素数,则结论显然成立 若a为合数,$a=bc$,其中$1\lt b,c\lt a$由归纳假设$b=p_1p_2\cdots p_k,c=p_{k+1}p_{k+2}\cdots p_n$
+
 ```cpp
 for(int i = 2; i <= n; i++)
 {
@@ -18,8 +21,8 @@ for(int i = 2; i <= n; i++)
 	}
 }
 ```
-##### 判断
-`陷阱:1的特殊处理(极易错)`
+##### 判断素数
+>##### `陷阱:1的特殊处理(极易错)`
 ```cpp
 bool judge(int x){
 	if(x<2)return 0;
@@ -29,9 +32,19 @@ bool judge(int x){
     return 1;
 }
 ```
-2.gcd
+(2)gcd
 ```cpp
 long long gcd(long long a,long long b){return b==0?a:gcd(b,a%b);}//原来a>b现调换
+```
+(3)回文数
+```cpp
+for(int i = 0; i < index / 2; i++) {
+	if(arr[i] != arr[index-i-1]) 
+	{         
+		printf("No\n");            
+		flag = 1;break;        
+	}    
+}if(!flag)printf("Yes\n");
 ```
 3.数据类型范围
 <table>
