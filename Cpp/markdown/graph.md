@@ -1,6 +1,6 @@
 ## 图
 1.数连通分量(并查集)
-Eg:
+
 *PAT1013 Battle Over Cities*
 ##### `当删除其中一个顶点及其相关的边之后，计算出剩下的图的连通分量，那么增加的边就应该是求出的连通分量-1`
 >法1:每次dfs前判断visit[i]==0;
@@ -55,15 +55,43 @@ int removeStones(vector<vector<int>>& stones) {
 }
 ```
 2.有关是对边dfs还是点dfs
-PAT1034
-##### 给出多个人之间的通话长度，按照这些通话将他们分成若干个组，各个组的总权值是该组内所有通话长度之和，每个人的权值是其参与的所有通话长度之和。求组数和组内通话最长的
+
+*PAT1034*
+>##### 给出多个人之间的通话长度，按照这些通话将他们分成若干个组，各个组的总权值是该组内所有通话长度之和，每个人的权值是其参与的所有通话长度之和。求组数和组内通话最长的
 每个点至少有一个连线，故可以对边搜`数量关系的运用:边权和=点权和/2`
-PAT1021:
-##### 给定N个结点和N-1条边，问能否构成一棵树，如果能，则输出作为树的根节点时使得整棵树深度最大的结点，如果不能，输出这个图中有几个连通分量。
+
+*PAT1021*
+>##### 给定N个结点和N-1条边，问能否构成一棵树，如果能，则输出作为树的根节点时使得整棵树深度最大的结点，如果不能，输出这个图中有几个连通分量。
 能否构成树，要么有>1个连通分量,要么有环
 
-3.set vs vector
-注意剔除重复点时要用set(往往隐含)
+3.Hamiltonian Cycle
+##### (1)是否是N+1个点。
+##### (2)除起点外，每个点是否只出现了1次
+##### (3)经过的边是否存在
+##### (4)起点是否等于终点
+`注意剔除重复点时要用set(往往隐含)`
+```cpp
+void check(int index) {
+    int sum = 0, cnt, flag = 1;
+    scanf("%d", &cnt);
+    set<int> s;
+    vector<int> v(cnt);
+    for (int i = 0; i < cnt; i++) {
+        scanf("%d", &v[i]);
+        s.insert(v[i]);
+    }
+    for (int i = 0; i < cnt - 1; i++) {
+        if(e[v[i]][v[i+1]] == 0) flag = 0;//3
+        sum += e[v[i]][v[i+1]];
+    }
+    if (flag == 0)
+    printf("Path %d: NA (Not a TS cycle)\n", index);
+    else if(v[0]!=v[cnt-1]||s.size()!=n)//4,2
+    printf("Path %d: %d (Not a TS cycle)\n", index, sum);
+    else if(cnt != n + 1)printf("Path %d: %d (TS cycle)\n", index, sum);//1
+    else printf("Path %d: %d (TS simple cycle)\n", index, sum);
+}
+```
 
 4.dfs结构总结
 ```cpp
