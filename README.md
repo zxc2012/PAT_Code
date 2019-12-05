@@ -6,8 +6,8 @@ py:python学习
  - [树](https://github.com/zxc2012/Algorithm_post_graduate/blob/master/Cpp/markdown/tree.md)
  - [图](https://github.com/zxc2012/Algorithm_post_graduate/blob/master/Cpp/markdown/graph.md)
  - [搜索](https://github.com/zxc2012/Algorithm_post_graduate/blob/master/Cpp/markdown/searching.md)
- - [STL,基础数学](https://github.com/zxc2012/Algorithm_post_graduate/blob/master/Cpp/markdown/map.md)
- - [贪心,二分](https://github.com/zxc2012/Algorithm_post_graduate/blob/master/Cpp/markdown/base.md)
+ - [STL](https://github.com/zxc2012/Algorithm_post_graduate/blob/master/Cpp/markdown/map.md)
+ - [暴力求解，数论](https://github.com/zxc2012/Algorithm_post_graduate/blob/master/Cpp/markdown/base.md)
 
 ### `Structure:`
 
