@@ -6,16 +6,18 @@ unordered_map<int,int>mp;
 int findf(int v){
     if(v==father[v])return v;
     else{
-        int x=findf(father[v]);
-        father[v]=x;
-        return x;
+        int f=findf(father[v]);
+        father[v]=f;
+        return f;
     }
 }
 void uni(int a,int b){
     int fa=findf(a);
     int fb=findf(b);
-    if(fa!=fb)father[fa]=fb;
+    if(fa>fb)father[fa]=fb;
+    else father[fb]=fa;
 }
+bool cmp(vector<int>a,vector<int>b){return a[0]<b[0];}
 int main(){
     int k,n,m,i,j,c1,c2,w,total;
     scanf("%d%d%d",&k,&n,&m);
@@ -30,23 +32,31 @@ int main(){
     for(i=1;i<=n;++i){
         int call=0,hui=0;
         for(j=1;j<=n;++j){
-            if(visit[i][j]==1||j==i)continue;
-            if(g[i][j]<=5&&g[i][j]>0){call++;visit[i][j]=1;}
-            if(g[j][i]>0){hui++;visit[j][i]=1;}
-            if(g[i][j]>0&&g[j][i]>0)uni(i,j);
+            if(j==i)continue;
+            if(g[i][j]<=5&&g[i][j]>0){
+                call++;visit[i][j]=1;
+                if(g[j][i]>0){hui++;}
+            }
         }
         if(call>k&&hui<=call/5){sus[i]=1;total++;}
     }
     if(total==0){printf("None");return 0;}
+    for(i=1;i<=n;++i)
+        if(sus[i]==1)
+            for(j=i+1;j<=n;++j)
+                if(sus[j]==1&&g[i][j]>0&&g[j][i]>0)uni(i,j);
     w=1;
     for(i=1;i<=n;++i){
-        if(mp[findf(i)]==0){
-            mp[findf(i)]=w;
-            if(sus[i]==1)gang[w].push_back(i);
-            w++;
+        if(sus[i]==1){
+            if(mp[findf(i)]==0){
+                mp[findf(i)]=w;
+                gang[w].push_back(i);
+                w++;
+            }
+            else gang[mp[findf(i)]].push_back(i);
         }
-        else if(sus[i]==1)gang[mp[findf(i)]].push_back(i);
     }
+    sort(gang.begin()+1,gang.begin()+w,cmp);
     for(i=1;i<=n;++i){
         for(j=0;j<gang[i].size();++j){
             printf("%d",gang[i][j]);
