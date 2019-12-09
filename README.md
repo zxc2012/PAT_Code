@@ -37,14 +37,15 @@ git remote add origin https://github.com/zxc2012/Algorithm_post_graduate.git
 
 Cpp/Py:打开对应文件夹可以单独调试
 
-`DevCpp配置`
+### `DevCpp配置`
 >Tools--Compiler Options--General--Add the following commands when calling compiler---std=c++11
 
 ![Devcpp](https://img-blog.csdn.net/20170409111041454)
 >Settings-linker-Generate debugging information-Yes
 
 ![Devcpp](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMTkvMDcvMTkvNWQzMWUyMTc4MDExNjkzNzUwLnBuZw)
-`Win7基础设置`
+
+### `Win7基础设置`
 
 ![key](http://www.myexception.cn/img/2013/01/23/1143081857.png)
 ![key](http://www.myexception.cn/img/2013/01/23/1143081858.png)
