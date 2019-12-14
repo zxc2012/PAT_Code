@@ -34,7 +34,6 @@ int bfs(int i,int j,int k)
                 visit[node.i][node.j][node.k] = 1;
             }
         }
-
     }
     printf("%d\n",sum);
     if(sum>=T)
