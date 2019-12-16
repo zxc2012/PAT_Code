@@ -4,11 +4,12 @@ py:python学习
 
 ### `Markdown:`
 #### Cpp
- - [树](https://github.com/zxc2012/Algorithm_post_graduate/blob/master/Cpp/markdown/tree.md)
- - [图](https://github.com/zxc2012/Algorithm_post_graduate/blob/master/Cpp/markdown/graph.md)
- - [搜索](https://github.com/zxc2012/Algorithm_post_graduate/blob/master/Cpp/markdown/searching.md)
- - [STL](https://github.com/zxc2012/Algorithm_post_graduate/blob/master/Cpp/markdown/map.md)
- - [暴力求解，数论](https://github.com/zxc2012/Algorithm_post_graduate/blob/master/Cpp/markdown/base.md)
+ - [树](Cpp/markdown/tree.md)
+ - [图](Cpp/markdown/graph.md)
+ - [搜索](Cpp/markdown/searching.md)
+ - [STL](Cpp/markdown/map.md)
+ - [暴力求解，数论](Cpp/markdown/base.md)
+ - [动态规划](Cpp/markdown/dp.md)
 
 #### Py
  - [文本分类](py/markdown/classify.md)
