@@ -11,6 +11,5 @@ a = Apple("红色" , 5.68)
 # 打印Apple对象
 print(a)
 dict={"Name":"ycy","Age":12}
-for i in range(5):
-    if(i==3):break;
-    print(i);
+a=sum(i*j for i in range(3) for j in range(3))
+print(a)
