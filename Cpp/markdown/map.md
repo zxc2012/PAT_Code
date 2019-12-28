@@ -211,4 +211,6 @@ void sort_heap(iterator first, iterator last);//建堆后排序O(nlog(n))
 ```
 6.运行超时:
 - 循环内套了一个大函数:如循环内sort(>1000),或是一个大数组($10^5$)的cin-->scanf
+
+*Eg:i<strlen(s),每次求长度*
 - 外循环与内循环条件对换，可以减少重复
