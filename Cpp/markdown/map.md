@@ -193,6 +193,7 @@ temp+="0";//在字符串末尾加足够的0保证有N位有效数字
 `2求连续字符串和满足一定条件-->sum[j]-sum[i]`
 
 **[易错点]多余链表、记录的问题**
+**[易错点]sum有n+1个(还有0)
 
 PAT1016 Phone Bills
 >夹逼题:[a,b]!c
@@ -214,3 +215,6 @@ void sort_heap(iterator first, iterator last);//建堆后排序O(nlog(n))
 
 *Eg:i<strlen(s),每次求长度*
 - 外循环与内循环条件对换，可以减少重复
+
+7.逻辑错误
+- for:scanf()循环加了求sum或者列表问题,但还没sort呢

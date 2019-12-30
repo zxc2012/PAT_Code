@@ -2,29 +2,22 @@
 using namespace std;
 struct Node{
     int v,k,c,l;
-}node[1000];
-int dp[1000];
+}node[1001];
+int dp[1005],s[1001];
 inline bool cmp(Node a,Node b){return a.v<b.v;}
 int main(){
-    int n,i,j,x,total=0;scanf("%d",&n);
-    for(i=0;i<n;++i){
-        scanf("%d%d%d%d",&node[i].v,&node[i].k,&node[i].c,&node[i].l);
-        total+=node[i].k+node[i].c*node[i].l;
-    }
-    scanf("%d",&i);
-    sort(node,node+n,cmp);
-    for(i=0;i<n-1;++i){
-        int index=0;
-        for(j=i+1;j<n;++j){
-            x=i-1<0?total:dp[i-1];
-            int y=x-node[i].k+(node[j].c-node[i].c)*node[i].l;
-            if(y<x){
-                dp[i]=y;index=j;
-            }else dp[i]=x;
+    int n,i,j,x;
+	while(~scanf("%d",&n),n){
+		dp[0]=s[0]=0;
+        for(i=1;i<=n;++i)
+            scanf("%d%d%d%d",&node[i].v,&node[i].k,&node[i].c,&node[i].l);
+        sort(node+1,node+n+1,cmp);
+        for(i=1;i<=n;++i){
+            s[i]=s[i-1]+node[i].l;dp[i]=10000000;
+            for(j=0;j<i;++j)
+            dp[i]=min(dp[i],dp[j]+(s[i]-s[j])*node[i].c +node[i].k);
         }
-        if(index>0)node[index].l+=node[i].l;
+        printf("%d\n",dp[n]);
     }
-    x=n-2<0?total:dp[n-2];
-    printf("%d",x);
     return 0;
 }
