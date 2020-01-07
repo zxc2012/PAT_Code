@@ -60,6 +60,7 @@ for(int i=0;i<strlen(a);++i){
 printf("%d\n",dp[strlen(b)-1]);
 ```
 *完全背包*
+#### 递推被前面结果影响
 ```cpp
 for(int i=0;i<m;++i){
     scanf("%d%d",&v,&p);
@@ -69,6 +70,7 @@ for(int i=0;i<m;++i){
 printf("%d",dp[n]);
 ```
 *01背包*
+#### 递推不能被前面结果影响
 ```cpp
 for(i=0;i<m;++i)scanf("%d%d",&g[i],&w[i]);
 for(i=0;i<m;++i)for(j=t-v[i].g;j>=0;--j)
