@@ -100,7 +100,7 @@ scanf("%c",&ch);
 ch=cin.get();
 ch=getchar();
 //解析一个字符串的方式
-char m[20];
+char m[20];//gets函数如果读取了换行符会将其自动转换成字符串结束符'\0'
 gets(m);     
 cin.getline(m,5);//多了一个参数，可以加结束符
 cin.get(m,20);//多了一个参数，可以加结束符

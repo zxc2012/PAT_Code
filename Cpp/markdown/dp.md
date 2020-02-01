@@ -31,7 +31,7 @@ dp[j]=max(dp[j],dp[j+g[i]]+w[i]);
 法2:加入实际has数组
 
 >2.经典模型总结
-
+- 线性dp
 *LCS最大连续子序列和*
 #### 连续关系-->一位递推，看末位
 *LIS最大上升子序列*
@@ -77,3 +77,5 @@ for(i=0;i<m;++i)for(j=t-v[i].g;j>=0;--j)
 dp[j]=max(dp[j],dp[j+g[i]]+w[i]);
 printf("%d",dp[0]);
 ```
+
+- 树形dp
