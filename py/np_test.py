@@ -6,6 +6,7 @@ c=np.sort(b,axis=1);
 rg=np.eye(3,6,0,dtype=np.int)
 a=np.arange(16).reshape(4,4)
 s=np.linalg.norm(b,axis=1);
+
 print(a*np.pi)
 print(random.random())
-print(s)
+print(np.sqrt(10))
