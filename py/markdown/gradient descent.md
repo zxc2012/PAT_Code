@@ -1,3 +1,5 @@
+concordance/kən'kɔːd(ə)ns/一致
+```py
 '''
 读取数据,预处理
 3600=3200 400
@@ -73,3 +75,4 @@ def main():
     plt.show()
 if __name__=='__main__':   
     main()
+```

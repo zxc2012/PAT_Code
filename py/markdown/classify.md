@@ -1,1 +1,0 @@
-concordance/kən'kɔːd(ə)ns/一致
