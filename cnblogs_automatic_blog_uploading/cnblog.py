@@ -233,8 +233,8 @@ if __name__ == "__main__":
         for mdfile in glob.glob(unp_path + "*.md"):
             title, postid, publish = post_art(mdfile, False)
     except KeyboardInterrupt:
-        with open('postid_path', 'w', encoding='utf8') as fw:
+        with open(postid_path, 'w', encoding='utf8') as fw:
             json.dump(title_postid_dict, fw)
 
-    with open('postid_path', 'w', encoding='utf8') as fw:
+    with open(postid_path, 'w', encoding='utf8') as fw:
         json.dump(title_postid_dict, fw)
