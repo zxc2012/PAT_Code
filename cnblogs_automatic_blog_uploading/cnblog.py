@@ -169,6 +169,8 @@ def post_art(path, publish=True):
                       (title, title2id[title], publish))
 
                 filepath_ = os.path.join('./cnblogs_automatic_blog_uploading/articles/', f'{title}.md')
+                print(filepath_)
+                f.close()
                 os.remove(filepath_)
 
                 return (title, title2id[title], publish)
@@ -179,6 +181,8 @@ def post_art(path, publish=True):
                       (title, postid, publish))
 
                 filepath_ = os.path.join('./cnblogs_automatic_blog_uploading/articles/', f'{title}.md')
+                print(filepath_)
+                f.close()
                 os.remove(filepath_)
 
                 return (title, postid, publish)
