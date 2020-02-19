@@ -3,6 +3,11 @@ Cpp:PAT甲级/乙级 g++4.72
 py:python学习
 
 ### `Markdown:`
+#### 自动发博客
+在本地.git/hooks/目录下添加./cnblogs_automatic_blog_uploading/hooks下内容
+>chmod - change file mode bits
+
+>x execute (or search for directories) 
 #### Cpp
  - [树](Cpp/markdown/tree.md)
  - [图](Cpp/markdown/graph.md)
