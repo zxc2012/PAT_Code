@@ -1,8 +1,6 @@
 #! /usr/bin/env python
-# coding=utf-8
-
-# 使用python xmlrpc 发送内容到博客园
-# http://rpc.cnblogs.com/metaweblog/nickchen121 从链接可以看到支持的metaweblog API
+'''
+'''
 import xmlrpc.client as xmlrpclib
 import glob
 import os
@@ -21,6 +19,8 @@ unp_path = "./cnblogs_automatic_blog_uploading/unpublished/"
 cfg_path = "./cnblogs_automatic_blog_uploading/blog_config.json"
 # 备份路径(backup path)
 bak_path = "./cnblogs_automatic_blog_uploading/backup/"
+# 文章信息路径()
+postid_path = "./cnblogs_automatic_blog_uploading/title_postid.json"
 # 获取文章篇数
 recentnum = 99999
 
@@ -233,8 +233,8 @@ if __name__ == "__main__":
         for mdfile in glob.glob(unp_path + "*.md"):
             title, postid, publish = post_art(mdfile, False)
     except KeyboardInterrupt:
-        with open('title_postid.json', 'w', encoding='utf8') as fw:
+        with open('postid_path', 'w', encoding='utf8') as fw:
             json.dump(title_postid_dict, fw)
 
-    with open('title_postid.json', 'w', encoding='utf8') as fw:
+    with open('postid_path', 'w', encoding='utf8') as fw:
         json.dump(title_postid_dict, fw)
