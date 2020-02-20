@@ -30,17 +30,6 @@ for path in [art_path, unp_path, bak_path]:
         os.makedirs(path)
 
 # -----配置读写操作-----
-'''
-配置字典：
-type | description(example)
-str  | metaWeblog url, 博客设置中有('https://rpc.cnblogs.com/metaweblog/nickchen121')
-str  | appkey, Blog地址名('nickchen121')
-str  | blogid, 这个无需手动输入，通过getUsersBlogs得到
-str  | usr, 登录用户名
-str  | passwd, 登录密码
-'''
-
-
 def exist_cfg():
     '''
     返回配置是否存在
@@ -60,19 +49,26 @@ def exist_cfg():
             json.dump({}, f)
             return False
 
-
+'''
+配置字典：
+type | description(example)
+str  | metaWeblog url, 博客设置中有('https://rpc.cnblogs.com/metaweblog/chanceYu')
+str  | appkey, Blog地址名('chanceYu')
+str  | blogid, 这个无需手动输入，通过getUsersBlogs得到
+str  | usr, 登录用户名
+str  | passwd, 登录密码
+'''
 def create_cfg():
     '''
     创建配置
     '''
     while True:
         cfg = {}
-        for item in [("url", "https://rpc.cnblogs.com/metaweblog/chanceYu"),
-                     ("appkey", "chanceYu"),
-                     ("usr", "ycy123"),
-                     ("passwd", "morning2012")]:
-            cfg[item[0]] = item[1]
-            print(item[0]+":"+item[1]+"\n")
+        ## Edit your information here
+        cfg["url"] = "https://rpc.cnblogs.com/metaweblog/chanceYu"
+        cfg["appkey"] = "chanceYu"
+        cfg["url"] = "ycy123"
+        cfg["url"] = "morning2012"
         try:
             server = xmlrpclib.ServerProxy(cfg["url"])
             userInfo = server.blogger.getUsersBlogs(
@@ -158,7 +154,8 @@ def post_art(path, publish=True):
                 print("New:[title=%s][postid=%s][publish=%r]" %
                       (title, postid, publish))
 
-                filepath_ = os.path.join('./cnblogs_automatic_blog_uploading/unpublished/', f'{title}.md')
+                filepath_ = os.path.join(unp_path, f'{title}.md')
+                f.close()
                 os.remove(filepath_)
 
                 return (title, postid, publish)
@@ -168,7 +165,7 @@ def post_art(path, publish=True):
                 print("Update:[title=%s][postid=%s][publish=%r]" %
                       (title, title2id[title], publish))
 
-                filepath_ = os.path.join('./cnblogs_automatic_blog_uploading/articles/', f'{title}.md')
+                filepath_ = os.path.join(art_path, f'{title}.md')
                 print(filepath_)
                 f.close()
                 os.remove(filepath_)
