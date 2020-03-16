@@ -19,6 +19,10 @@ py:python学习
 #### Py
  - [文本分类](py/markdown/classify.md)
 
+### `Jupyter Notebook`
+
+nohup jupyter notebook --allow-root &
+
 ### `Git Notes`
 
 Git_Code ctrl+~运行bash终端

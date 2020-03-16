@@ -1,26 +1,22 @@
 #include<bits/stdc++.h>
 using namespace std;
-class Cashier {
+class Solution {
 public:
-    Cashier(int n, int discount, vector<int>& products, vector<int>& prices) {
-        num=n;d=discount;
-        int m=products.size();
-        for(int i=0;i<m;++i){
-            p[products[i]]=prices[i];
-        }
-    }
-    
-    double getBill(vector<int> product, vector<int> amount) {
-        step++;double sum=0;
-        int m=product.size();
-        for(int i=0;i<m;++i){
-            sum+=p[product[i]]*amount[i];
-        }
-        if(step%num==0)sum*=(1-d/100.0)*1.0;
-        return sum;
+    double frogPosition(int n, vector<vector<int>>& edges, int t, int target) {
+        v.resize(n);
+        for(vector &p:v[s])v[p[0]].push_back(p[1]);
+        time=t,tar=target;
+        return dfs(1);
     }
 private:
-    int num=0,d=0,step=0,p[200]={0};
+    vector<vector<int>>v;
+    int time,tar;
+    double& dfs(double& m,int s,int l){
+        int n=v[s].size();int x;
+        if(l<=time&&s==tar)return m;
+        for(int &p:v[s])if(x=dfs(m/n,p,++l)){break;return x;}
+        return 0;
+    }
 };
 int main(){
     Solution s;
