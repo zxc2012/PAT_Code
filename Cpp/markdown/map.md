@@ -212,9 +212,20 @@ void sort_heap(iterator first, iterator last);//建堆后排序O(nlog(n))
 ```
 6.运行超时:
 - 循环内套了一个大函数:如循环内sort(>1000),或是一个大数组($10^5$)的cin-->scanf
+- nontype to type:设计函数是不要一味用&引用,如果传参是non-const(eg.3->int),会报错
 
 *Eg:i<strlen(s),每次求长度*
 - 外循环与内循环条件对换，可以减少重复
 
 7.逻辑错误
 - for:scanf()循环加了求sum或者列表问题,但还没sort呢
+- int 转 double,注意不能直接return
+```cpp
+double function(){
+   double x;
+   if(type==1)x=0;
+   if(type==2)x=1;
+   else ...
+   return x;
+}
+```

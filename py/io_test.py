@@ -13,3 +13,5 @@ print(a)
 dict={"Name":"ycy","Age":12}
 a=sum(i*j for i in range(3) for j in range(3))
 print(a)
+b=[3 for i in range(3)]
+print(b)
