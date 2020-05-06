@@ -167,6 +167,22 @@ for(flag = 0; flag <= 2; flag++) {
 }
 ```
 4.输出格式
+>flag设置问题
+
+*Leetcode98 指针空间复杂度O(1)*
+```cpp
+int* last = NULL;//flag
+bool isValidBST(TreeNode* root) {
+   if (root){
+         if(!isValidBST(root->left)) return false;
+         if (last && *last>=root->val) return false;//第一次智慧执行下面
+         last = &root->val;
+         if(!isValidBST(root->right)) return false;
+         return true;
+   }else return true;
+};
+```
+
 >普通输出问题
 ```cpp
 for (int i = 0; i < 4; i++) {
