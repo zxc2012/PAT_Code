@@ -17,6 +17,9 @@
     }
     a:hover{
       cursor:url(https://raw.githubusercontent.com/zxc2012/NXP_Creative/master/Cursor/basic_press.cur),auto;
+    }
+    a:active{
+      cursor: url(https://raw.githubusercontent.com/zxc2012/NXP_Creative/master/Cursor/aero_move.cur),auto;
     } 
     </style>
 </head>
@@ -47,42 +50,5 @@
   <script src="https://cyc-1256109796.cos.ap-guangzhou.myqcloud.com/prism-sql.min.js"></script>
   <script src="https://cdn.bootcss.com/docsify/4.5.9/plugins/search.min.js"></script>
   </div>
-  <!-- 小火箭回到顶部 -->
-  <style>
-  #back-top {
-       position: fixed;
-       bottom: 10px;
-       right: 5px;
-       z-index: 99;
-  }
-  #back-top span {
-       width: 50px;
-       height: 64px;
-       display: block;
-       background:url(http://images.cnblogs.com/cnblogs_com/seanshao/855033/o_rocket.png)no-repeat center center;
-  }
-  #back-top a{outline:none}
-  </style>
-  <script type="text/javascript">
-  $(function() {
-      // hide #back-top first
-      $("#back-top").hide();
-      // fade in #back-top
-      $(window).scroll(function() {
-          if ($(this).scrollTop() > 500) {
-              $('#back-top').fadeIn();
-          } else {
-              $('#back-top').fadeOut();
-          }
-      });
-      // scroll body to 0px on click
-      $('#back-top a').click(function() {
-          $('body,html').animate({
-              scrollTop: 0
-          }, 800);
-          return false;
-      });
-  });
-  </script>
 </body>
 </html>
