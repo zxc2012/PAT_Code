@@ -1,7 +1,21 @@
-- 设计模式
+- 四大金刚
 
+- cs专业课
 
-- Spring框架
+- C++&Java
 
+- python
 
-- 数据库
+- 算法总结
+
+- Daily English
+
+- Overseas
+
+- Leetcode & OJ
+
+- 网络开发 & Linux
+
+- Electronics
+
+- 机器学习
