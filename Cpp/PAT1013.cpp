@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 vector<vector<int>> g;
-vector<int> v,visit,father;
+vector<int> v,visit;
 int n;
 void dfs(int s) {
     visit[s] = 1;

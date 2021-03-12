@@ -1,13 +1,14 @@
 #include<bits/stdc++.h>
 using namespace std;
+int dp[3];
 int main(){
-    int r,y,g,n,s=0;
-    scanf("%d%d%d",&r,&y,&g);scanf("%d",&n);
-    for(int i=0;i<n;++i){
-        scanf("%d%d",&y,&g);
-        if(y!=3)s+=g;
-        if(y==2)s+=r;
-    }
-    printf("%d",s);
-    return 0;
+	dp[1]=dp[2]=1;
+	int n;
+	scanf("%d",&n);
+	for(int i=3;i<=n;i+=2){
+		dp[1]=dp[1]+dp[2];
+		dp[2]=dp[1]+dp[2];
+	}
+	int s=n%2==0?dp[2]:dp[1];
+	printf("%d\n",s);
 }

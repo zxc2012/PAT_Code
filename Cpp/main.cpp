@@ -5,23 +5,14 @@
 using namespace std;
 struct po
 {
-    int from,to,dis,nxt,cap;
+    int u,v,dis,nxt,cap;
 }edge[250001];
 int head[250001], cur[1000001], dep[60001], n, m, s, t, u, num = -1, x, y, l, tot, sum, k, fa[10001];
 int dis[5001], b[5001], xb[5001], flow[5001]; 
-inline void add_edge(int from,int to,int cap,int dis)
+inline void add(int u,int v,int cap,int dis)
 {
-    edge[++num].nxt = head[from]; 
-    edge[num].from=from;
-    edge[num].to=to;
-    edge[num].cap=cap;
-    edge[num].dis=dis;
-    head[from]=num;
-}
-inline void add(int from,int to,int cap,int dis)
-{
-    add_edge(from,to,cap,dis);
-    add_edge(to,from,0,-dis);
+    edge[++num] = {u,v,dis,head[u],cap}; head[u]=num;
+    edge[++num] = {v,u,-dis,head[v],0}; head[v]=num;
 }
 inline bool spfa()
 {
