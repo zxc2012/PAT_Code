@@ -1,5 +1,9 @@
 ## 🎓cs专业课
 
+- [cs186 Lecture1 --Relational Model & SQL](cs/cs186_1.md)
+
+- [CS162 Lecture1 --Operating System Overview](cs/cs162_1.md)
+
 ## ☕️C++&Java
 
 ## 🐍python
