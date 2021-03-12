@@ -1,5 +1,3 @@
-## 🦾 四大金刚
-
 ## 🎓cs专业课
 
 ## ☕️C++&Java
@@ -24,7 +22,7 @@
 
 ## 🍌Leetcode & OJ
 
-## 💡网络开发 & Linux
+## 💡Software Development
 
 ## 🕹️Electronics
 
