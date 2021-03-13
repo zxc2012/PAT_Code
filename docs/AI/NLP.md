@@ -12,8 +12,7 @@
 import os
 import json
 from gensim.models.word2vec import LineSentence, Word2Vec
-
-# 将json转换为原文,一行一句
+#将json转换为原文,一行一句
 def func(fin, fout):
     for line in fin:
         line = line.strip()
