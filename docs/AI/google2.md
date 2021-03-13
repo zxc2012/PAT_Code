@@ -6,13 +6,13 @@
 
 >以下公式成立:
 
-$total number of trained examples=batch size*steps$
-
+total_number_of_trained_examples=batch_size*steps
+  
 - periods：控制报告的粒度。例如，如果 periods 设为 7 且 steps 设为 70，则练习将每 10 步输出一次损失值（即 7 次）。与超参数不同，我们不希望您修改 periods 的值。请注意，修改 periods 不会更改模型所学习的规律。
 
 >以下公式成立：
 
-$number of training examples in each period=batch size*steps/periods$
+number_of_training_examples_in_each_period=batch_size*steps/periods
 # 李宏毅2019机器学习hw1
 ## Description
 本次作業的資料是從行政院環境環保署空氣品質監測網所下載的觀測資料。
@@ -104,14 +104,14 @@ def update(feature,targets,steps):
         for i in range(m):
             for j in range(n):
                 w_diff[i] -= feature[j,i]*(targets[j]-b-w.dot(feature[j,:]))
-            w_diff[i] += beta*w[i]*w[i]
+            w_diff[i] += beta*w[i]
             w_diff[i]/=n
         for j in range(n):
             b_diff-=targets[j]-b-w.dot(feature[j,:])
             loss+=(targets[j]-b-w.dot(feature[j,:]))**2
         b_diff/=n
+        loss+=np.sum(np.square(w))
         loss/=n
-        loss=np.sqrt(loss)
         losses.append(loss)
         w_diff_2=np.sqrt(np.sum(w_diff*w_diff))
         b_diff_2=np.sqrt(np.sum(b_diff*b_diff))

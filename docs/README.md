@@ -13,7 +13,7 @@
 ## ✏️算法总结
 
 - [1 Coding style and STL summary](Algorithms/1.md)
-- 
+- [2 暴力求解/数学问题](Alogorithms/2.md)
 
 ## ☀️Daily English
 
@@ -42,4 +42,5 @@
 ## 🍉机器学习
 
 - [Google机器学习入门--Pandas 简介](AI/google_1.md)
+- [机器学习之梯度下降法](AI/google2.md)
 - [Pytorch入门](AI/pytorch.md)
