@@ -5,7 +5,9 @@
 Two Containers:**Collection** and **Map**
 
 1.Collection:
+
 **list**:hold the element in a particular sequence 
+
 **set**
 
 2.Map:
@@ -30,6 +32,7 @@ Deque[dek]--double ended queue
 ### Set
 
 1.**HashSet**:Objects must also define hashCode()
+
 2.**TreeSet**:An ordered Set backed by a tree.
 
 ## Map
