@@ -2,7 +2,9 @@
 
 ## Linux命令行结构
 >$ command [[-]*option(s)*] [*option argument(s)*] [*command argument(s)*]
+
 ## 基本指令
+
 1.Linux三大查询命令man,info,--help
 >man ls
 >man passwd
@@ -10,12 +12,16 @@
 >who --help
 >
 man page:manual page
+
 2.uname(short for unix name)
 parameter:
 -n(-nodename)
 -p(-processor)
+
 3.*cal* command is a calendar command in Linux which is used to see the calendar of a specific month or a whole year.
+
 4.
+
 |Command|Interpretation|
 |-|-|
 |pwd|print working directory|
@@ -61,6 +67,7 @@ nslookup [-option] [name | -] [server]
 #### 参数解释
 -option:
 -query=hinfo
+
 |hinfo|解释|
 |-|-|
 |A|ipv4

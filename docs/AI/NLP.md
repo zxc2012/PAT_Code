@@ -28,8 +28,6 @@ def make_corpus():
             func(fin, fout)
         with open('data/NYT_CoType/test.json', 'rt', encoding='utf-8') as fin:
             func(fin, fout)
-
-
 if __name__ == "__main__":
     if not os.path.exists('data/NYT_CoType/corpus.txt'):
         make_corpus()
