@@ -37,6 +37,7 @@
 ## 💡Software Development
 
 - [Starting a successful blog](SDE/blog.md)
+- [Linux基础指令](SDE/linux.md)
 - [上网环境基础配置](SDE/network.md)
 
 ## 🕹️Electronics
