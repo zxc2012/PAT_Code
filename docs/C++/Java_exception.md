@@ -7,6 +7,7 @@
 3. allocate that much memory;(JVM64MB)
 4. read the file into memory;(杭州下雨软盘失效)
 5. close the file;
+
 ### Stream
 ```mermaid
 graph LR;
@@ -47,13 +48,20 @@ LineNumberInputStream:一行行读文本
 	- write(byte b[],int off,int len)
 - flush()
 - close()
+
 ## Exceptions
 ### The catch mechanism
+
 **throw try to match a catch**
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2020102715001043.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70#pic_center)
+
 ### throw and throws
+
 You can *claim* to throw an Exception that you really don't.
+
 1. Otherwise if you 在f()内throw别的异常 编译不通过.
+
 2. Anyone call your funcition must catch it or throws again.
 ```java
 throw new Exception;//祈使句

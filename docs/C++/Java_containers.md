@@ -1,7 +1,9 @@
 # Java Application Design--Containers
 
 ## Introduction
+
 Two Containers:**Collection** and **Map**
+
 1.Collection:
 **list**:hold the element in a particular sequence 
 **set**
@@ -16,7 +18,9 @@ key-value object pairs
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201016210354543.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70#pic_center)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2020101621042813.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70#pic_center)
 ### List
+
 1.**ArrayList**:implement with an array,slow for inserting and removing.
+
 2.**LinkedList**:inexpensive insertions and deletions,slow for random access.
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201016210913913.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70#pic_center)
 Deque[dek]--double ended queue
