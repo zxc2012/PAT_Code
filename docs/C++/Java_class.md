@@ -10,6 +10,7 @@
 |long|64|$-2^{63}$|$2^{63}-1$|
 |float|32|Approximately-3.4e+38 with 7 significant digits|Approximately3.4e+38 with 7 significant digits|
 |double|64|Approximately-1.7e+308 with 15 significant digits|Approximately-1.7e+308 with 15 significant digits|
+
 ![vs](https://img-blog.csdnimg.cn/20201013163013271.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70#pic_center)
 
 ## Cleanup:finalize()
@@ -22,6 +23,7 @@ But **finalize()** is totally different from destructor of C++:
 ## Order of Initialization
 
 1.Staic members is to be initialized in the loading of the class,属于类的数据(C++全局)
+
 2.When a new object is create,顺序:
 - Allocate enough storage for an object on the heap.
 - Setting **all** the primitives in the object to their default values.(Any initializations that occur at the point of field definition are executed.)
@@ -30,6 +32,7 @@ But **finalize()** is totally different from destructor of C++:
 ## Polymorphism
 
 **Overriding**:子类定义与父类名称、返回值类型、参数列表完全相同的方法
+
 **Overloading**:同一类中名称相同、参数列表不同的方法
 Eg:
 
