@@ -2,6 +2,9 @@
 
 - [CS186 Lecture1 --Relational Model & SQL](cs/cs186_1.md)
 - [CS162 Lecture1 --Operating System Overview](cs/cs162_1.md)
+- [Numrical Analysis Summary](cs/numerical.md)
+- [离散数学复习--命题逻辑](cs/discrete_1.md)
+- [离散数学复习--谓词逻辑](cs/discrete_2.md)
 
 ## ☕️C++&Java
 
@@ -18,6 +21,8 @@
 - [5 Searching summary](Algorithms/5.md)
 - [6 Tree & Graph](Algorithms/6.md)
 - [7 DP summary](Algorithms/7.md)
+- [Greedy Algorithm correctness proof](Algorithms/greedy.md)
+- [Trie summary](Algorithms/trie.md)
 
 ## ☀️Daily English
 
