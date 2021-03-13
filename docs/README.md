@@ -1,11 +1,10 @@
 ## 🎓cs专业课
 
-- [cs186 Lecture1 --Relational Model & SQL](cs/cs186_1.md)
+- [CS186 Lecture1 --Relational Model & SQL](cs/cs186_1.md)
 - [CS162 Lecture1 --Operating System Overview](cs/cs162_1.md)
 
 ## ☕️C++&Java
 
-## 🐍python
 
 ## ✏️算法总结
 
@@ -28,6 +27,9 @@
 - [POJ2456 Aggressive cows](OJ/POJ2456.md)
 
 ## 💡Software Development
+
+- [Starting a successful blog](SDE/blog.md)
+- [上网环境基础配置](SDE/network.md)
 
 ## 🕹️Electronics
 
