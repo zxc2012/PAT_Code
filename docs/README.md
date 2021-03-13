@@ -1,7 +1,6 @@
 ## 🎓cs专业课
 
 - [cs186 Lecture1 --Relational Model & SQL](cs/cs186_1.md)
-
 - [CS162 Lecture1 --Operating System Overview](cs/cs162_1.md)
 
 ## ☕️C++&Java
@@ -9,18 +8,15 @@
 ## 🐍python
 
 ## ✏️算法总结
-- [1 Coding style and STL summary](Algorithms/1.md)
 
+- [1 Coding style and STL summary](Algorithms/1.md)
 - 
 
 ## ☀️Daily English
 
 - [TPO47](DailyEnglish/TPO47.md)
-
 - [2020.8.19 TOEFL Independent Writing](DailyEnglish/Writing.md)
-
 - [Ceceil Hotel](DailyEnglish/ceil.md)
-
 - [TPO05](DailyEnglish/TPO05.md)
 
 ## ✈️Overseas
@@ -38,3 +34,6 @@
 - [逆透视变换车道线检测](Electronics/IPM.md)
 
 ## 🍉机器学习
+
+- [Google机器学习入门--Pandas 简介](AI/google_1.md)
+- [Pytorch入门](AI/pytorch.md)
