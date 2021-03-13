@@ -7,6 +7,7 @@ Two Containers:**Collection** and **Map**
 1.Collection:
 **list**:hold the element in a particular sequence 
 **set**
+
 2.Map:
 key-value object pairs
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201016212410955.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70#pic_center)
@@ -29,7 +30,6 @@ Deque[dek]--double ended queue
 ### Set
 
 1.**HashSet**:Objects must also define hashCode()
-
 2.**TreeSet**:An ordered Set backed by a tree.
 
 ## Map
@@ -40,6 +40,7 @@ Deque[dek]--double ended queue
 
 ### 机制
 Java--类型参数作为类的成员变量
+
 C++(模板)--源代码的源代码
 
 ### Method

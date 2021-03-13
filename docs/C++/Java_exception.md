@@ -9,6 +9,7 @@
 5. close the file;
 
 ### Stream
+
 ```mermaid
 graph LR;
 	DataInputStream-->FilterInputStream;
@@ -26,7 +27,9 @@ graph LR;
 	ByteArrayOutputStream-->OutputStream;
 	FileOutputStream-->OutputStream;
 ```
+
 DataInputStream:二进制写的primitive
+
 LineNumberInputStream:一行行读文本
 **InputStream**
 
@@ -50,6 +53,7 @@ LineNumberInputStream:一行行读文本
 - close()
 
 ## Exceptions
+
 ### The catch mechanism
 
 **throw try to match a catch**
@@ -68,7 +72,9 @@ throw new Exception;//祈使句
 class SException extends Exception{}//陈述句三单
 public void f()throws SException,IOExption{}//陈述句三单
 ```
+
 ### Interface:throwable
+
 ```mermaid
 graph LR;
 	ArithmeticException-->RuntimeException;
@@ -85,12 +91,14 @@ graph LR;
     Exception-->Throwable;
     Error-->Throwable;
 ```
+
 - String get Message();
 - String toString();
 - void printStackTrace();
 - void printStackTrace(PrintStream);
 
 ### throw Inheritance
+
 **成员函数:父类和接口的交集**
 ```java
 class B extends A;
