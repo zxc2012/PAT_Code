@@ -45,6 +45,8 @@
 
 ## 🍉机器学习
 
+- [服务器配置](AI/config.md)
 - [Google机器学习入门--Pandas 简介](AI/google_1.md)
 - [机器学习之梯度下降法](AI/google2.md)
 - [Pytorch入门](AI/pytorch.md)
+- [基于CNN-LSTM命名实体识别和关系抽取联合学习](AI/NLP.md)
