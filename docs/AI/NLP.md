@@ -46,10 +46,13 @@ if __name__ == "__main__":
     word_vectors.save('data/NYT_CoType/word2vec')
     word_vectors.save_word2vec_format('data/NYT_CoType/word2vec.txt', fvocab='data/NYT_CoType/vocab.txt')
 ```
+
 ## Tagging scheme
 根据中科院论文中的标注，这里举例如下:
 ![dcas](https://img-blog.csdnimg.cn/20200521212641784.png)
+
 预处理过程主要注意几个要点:
+
 >1 转换大小写
 
 >2 长度不够要padding
