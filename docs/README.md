@@ -5,6 +5,8 @@
 
 ## ☕️C++&Java
 
+- [Java Application Design--Class](C++/Java_class.md)
+- [Java Application Design--Containers](C++/Java_containers.md)
 - [Java Application Design--Exceptions & IO](C++/Java_exception.md)
 - [内存分配](C++/内存分配.md)
 
