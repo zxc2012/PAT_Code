@@ -13,7 +13,11 @@
 ## ✏️算法总结
 
 - [1 Coding style and STL summary](Algorithms/1.md)
-- [2 暴力求解/数学问题](Alogorithms/2.md)
+- [2 暴力求解/数学问题](Algorithms/2.md)
+- [3 Basic Strategy](Algorithms/3.md)
+- [5 Searching summary](Algorithms/5.md)
+- [6 Tree & Graph](Algorithms/6.md)
+- [7 DP summary](Algorithms/7.md)
 
 ## ☀️Daily English
 
