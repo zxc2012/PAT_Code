@@ -26,6 +26,7 @@
 
 ## ☀️Daily English
 
+- [TG英语备考](DailyEnglish/TOEFL.md)
 - [TPO47](DailyEnglish/TPO47.md)
 - [2020.8.19 TOEFL Independent Writing](DailyEnglish/Writing.md)
 - [Ceceil Hotel](DailyEnglish/ceil.md)
@@ -38,6 +39,8 @@
 ## 🍌Leetcode & OJ
 
 - [POJ2456 Aggressive cows](OJ/POJ2456.md)
+- [PAT1123 Is It a Complete AVL Tree](OJ/PAT1123.md)
+- [PAT1141 PAT Ranking of Institutions](OJ/PAT1141.md)
 
 ## 💡Software Development
 

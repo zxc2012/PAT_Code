@@ -2,6 +2,7 @@
 ## Introduction
 - Fixed-length coding: Information Entropy(en- tropical`turn`混乱)
 - Variable-length coding: Prefix-Free code (no codeword is a prefix of a codework of another symbol)
+
 ## Proof
 ### Theorem
 - T: a tree for some prefix encoding A and some probability distribution p over the symbols.
@@ -32,6 +33,7 @@ Let A'=A+{x,y}-z,T':adding x,y as children of z.
 $H'$:optimum tree for A' 
 
 $H$:removing x,y from H;
+
 *Then*
 $E_p(T)<=E_p(H)$
 
