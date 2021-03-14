@@ -23,6 +23,8 @@
 - [7 DP summary](Algorithms/7.md)
 - [Greedy Algorithm correctness proof](Algorithms/greedy.md)
 - [Trie summary](Algorithms/trie.md)
+- [位运算总结](Algorithms/bit_operation.md)
+- [剑指offer](Algorithms/point.md)
 
 ## ☀️Daily English
 
@@ -41,6 +43,7 @@
 - [POJ2456 Aggressive cows](OJ/POJ2456.md)
 - [PAT1123 Is It a Complete AVL Tree](OJ/PAT1123.md)
 - [PAT1141 PAT Ranking of Institutions](OJ/PAT1141.md)
+- [leetcode1348 Tweet Counts Per Frequency](OJ/Leeetcode1348.md)
 
 ## 💡Software Development
 
