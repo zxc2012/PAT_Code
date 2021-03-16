@@ -60,12 +60,17 @@
             noData: '😞 No Results! ',
             depth: 6
         },
+      plugins: [
+      EditOnGithubPlugin.create('https://github.com/zxc2012/zxc2012.github.io/tree/master/docs', 
+      undefined, 'Edit on github')
+      ],
       coverpage: false,
       loadNavbar: false
     }
   </script>
   <!-- Docsify v4 -->
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
   <script src="//unpkg.com/docsify/lib/plugins/emoji.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-java.min.js"></script>
