@@ -27,11 +27,13 @@ nohup jupyter notebook --allow-root &
 
 Git_Code ctrl+~运行bash终端
 
-- git init:添加.git
+- local repository
 
-```
+```bash
+git init:添加.git
 touch README.md
 git add README.md
+git commit -m ""
 ```
 ```matlab
 fatal: The remote end hung up unexpectedly
@@ -40,12 +42,11 @@ fatal: The remote end hung up unexpectedly
 [http]
     postBuffer = 524288000 //500MB
 ``` 
-- git config --global user.name "zxc2012"
-
-- git config --global user.email "xxxxxxx@xxx.com"
-
-- 远程仓库地址
-git remote add origin https://github.com/zxc2012/Algorithm_post_graduate.git
+-  git web server
+    - git config --global user.name "zxc2012"
+    - git config --global user.email "xxxxxxx@xxx.com"
+    - git remote add origin https://github.com/zxc2012/Algorithm_post_graduate.git
+    - git push -u origin main
 
 ![avatar](https://img-blog.csdn.net/2018052909403110)
 
