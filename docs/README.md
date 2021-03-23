@@ -3,7 +3,7 @@
 - [CS186 Lecture1 --Relational Model & SQL](cs/cs186_1.md)
 - [CS162 Lecture1 --Operating System Overview](cs/cs162_1.md)
 - [CS162 Lecture2 --Threads and Processes](cs/cs186_2.md)
-- [web.lab1]()
+- [web.lab1](cs/web_1.md)
 - [Numrical Analysis Summary](cs/numerical.md)
 - [离散数学复习--命题逻辑](cs/discrete_1.md)
 - [离散数学复习--谓词逻辑](cs/discrete_2.md)
