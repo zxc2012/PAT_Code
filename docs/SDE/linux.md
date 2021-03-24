@@ -6,17 +6,22 @@
 ## 基本指令
 
 1.Linux三大查询命令man,info,--help
->man ls
->man passwd
->info pwd
->who --help
->
+
 man page:manual page
+>man ls
+
+>man passwd
+
+>info pwd
+
+>who --help
 
 2.uname(short for unix name)
+
 parameter:
--n(-nodename)
--p(-processor)
+
+- -n(-nodename)
+- -p(-processor)
 
 3.*cal* command is a calendar command in Linux which is used to see the calendar of a specific month or a whole year.
 
@@ -74,3 +79,16 @@ nslookup [-option] [name | -] [server]
 |AAAA |ipv6|
 |CNAME|别名记录|
 |MX |邮件服务器记录|
+
+## 编译工具
+### gcc
+
+gcc :GNU compiler collection(gcc, g++, gfortran, etc.)
+
+gdb :GNU symbolic debugger
+
+联想Devcpp
+- gcc -g: the output will have debug symbols
+    - -o file: Place the output into file
+- gdb programname: look at a stack trace && inspect
+variables()
