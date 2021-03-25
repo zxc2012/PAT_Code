@@ -49,6 +49,7 @@
 </head>
 <body>
   <div id="app"></div>
+  <a class="to-top">Top</a>
   <script>
     window.$docsify = {
       maxAge: 8,
@@ -73,6 +74,8 @@
   <script src="//unpkg.com/prismjs/components/prism-cpp.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-sql.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-python.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-javascript.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-css.min.js"></script>
   <script src="https://cdn.bootcss.com/docsify/4.5.9/plugins/search.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
 
@@ -93,6 +96,12 @@
       // facebook-like distraction free mode
       distractionFreeMode: false
     })
+  </script>
+  <!-- 置顶插件 -->
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/jquery.toTop.min.js"></script>
+  <script>
+    $('.to-top').toTop();
   </script>
   </div>
 </body>
