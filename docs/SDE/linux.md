@@ -80,7 +80,7 @@ nslookup [-option] [name | -] [server]
 |CNAME|别名记录|
 |MX |邮件服务器记录|
 
-## 编译工具
+## Useful Tools
 ### gcc
 
 gcc :GNU compiler collection(gcc, g++, gfortran, etc.)
@@ -92,3 +92,6 @@ gdb :GNU symbolic debugger
     - -o file: Place the output into file
 - gdb programname: look at a stack trace && inspect
 variables()
+
+### tmux
+tmux:terminal multiplexer
