@@ -12,59 +12,7 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">  
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"/>
-  <style type="text/css">
-    .markdown-section{
-      font-family: "微软雅黑","Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
-      max-width:800px;
-      font-size: 16px;
-    }
-    .markdown-section em{
-      color:black
-    } 
-    .markdown-section pre>code{
-      font-family: Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace !important;
-      font-size: 15px !important;
-      min-width:100%;
-      background: #282c34 !important;
-      line-height:1.7!important;
-      padding:1em !important;
-      color: #fff;
-    }
-    .token.punctuation{
-      color: #fff;
-    }
-    .token.keyword{
-      color:#66d9ef !important;
-    }
-    .token.string,.token.function{
-      color:rgba(223, 226, 44, 1) !important
-    }
-    .token.comment{
-      color:#6ce26ccf;
-    }
-    .token.number{
-      color:rgba(255, 230, 128, 1) !important
-    }
-    </style>
-</head>
-<body>
-  <div id="app"></div>
-  <a class="to-top">Top</a>
-  <script>
-    window.$docsify = {
-      maxAge: 8,
-      maxLevel: 4,/*目录层级*/
-      name: 'Content',
-      search: {
-            paths: 'auto',
-            placeholder: '🔍 Type to search ',
-            noData: '😞 No Results! ',
-            depth: 6
-        },
-      coverpage: false,
-      loadNavbar: false
-    }
-  </script>
+  <link rel="stylesheet" href="style/style.css">
   <!-- Docsify v4 -->
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
   <script src="//unpkg.com/docsify/lib/plugins/emoji.min.js"></script>
@@ -85,7 +33,7 @@
 
   <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
   <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
-  <script src="js/md5.min.js"></script>
+  <script src="style/md5.min.js"></script>
   <script>
     const gitalk = new Gitalk({
       clientID: 'ef1688db5559b2318610',
@@ -98,8 +46,8 @@
     })
   </script>
   <!-- 置顶插件 -->
-  <script src="js/jquery-1.11.3.min.js"></script>
-  <script src="js/jquery.toTop.min.js"></script>
+  <script src="style/jquery-1.11.3.min.js"></script>
+  <script src="style/jquery.toTop.min.js"></script>
   <script>
     $('.to-top').toTop();
   </script>

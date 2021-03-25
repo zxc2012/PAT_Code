@@ -1,0 +1,42 @@
+/* 置顶插件 */
+.to-top {
+    display: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    color: #fff;
+    border-radius: 10px;
+    background-color: rgb(102, 126, 233);
+}
+
+.markdown-section{
+    font-family: "微软雅黑","Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+    max-width:800px;
+    font-size: 16px;
+}
+.markdown-section em{
+    color:black
+} 
+.markdown-section pre>code{
+    font-family: Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace !important;
+    font-size: 15px !important;
+    min-width:100%;
+    background: #282c34 !important;
+    line-height:1.7!important;
+    padding:1em !important;
+    color: #fff;
+}
+.token.punctuation{
+    color: #fff;
+}
+.token.keyword{
+    color:#66d9ef !important;
+}
+.token.string,.token.function{
+    color:rgba(223, 226, 44, 1) !important
+}
+.token.comment{
+    color:#6ce26ccf;
+}
+.token.number{
+    color:rgba(255, 230, 128, 1) !important
+}
