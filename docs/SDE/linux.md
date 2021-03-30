@@ -88,8 +88,14 @@ gcc :GNU compiler collection(gcc, g++, gfortran, etc.)
 gdb :GNU symbolic debugger
 
 联想Devcpp
-- gcc -g: the output will have debug symbols
-    - -o file: Place the output into file
+- gcc 
+    - -g: the output will have debug symbols
+    - -o: file Place the output into file
+    - -Wall: Enables all compiler warnings
+    - -m32: Compiles the code for the i386 architecture.
+    - -E: Preprocess only; do not compile, assemble or link
+    - -S: Invokes the COMPILER only.
+    - -c: Invokes the COMPILER and ASSEMBLER only.
 - gdb programname: look at a stack trace && inspect
 variables()
 
