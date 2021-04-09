@@ -1,5 +1,9 @@
 # GPU
 ---
+## 环境变量
+
+source ~/.bashrc
+
 ## 显示所有可用于tensorflow的设备
 ```py
 from tensorflow.python.client import device_lib
