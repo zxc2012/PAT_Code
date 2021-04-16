@@ -135,5 +135,48 @@ if __name__=='__main__':
 ```
 #### Result
 
+画曲线总结
+
+```py
+class Drawtest():
+    #函数开始时创建盛放loss与acc的容器
+    def __init__(self):
+        self.color = {}
+        self.color[0]='r'
+        self.color[1]='g'
+        self.color[2]='k'
+        self.color[3]='m'
+        self.text = {}
+        self.text[0]='CNN-Res'
+        self.text[1]='FL-CNN-Res'
+        self.text[2]='FL-CNN-RC'
+        self.text[3]='FL-CNN-RC2'
+ 
+    #绘图，这里把每一种曲线都单独绘图，若想把各种曲线绘制在一张图上的话可修改此方法
+    def draw_p(self, lists, label, type,num):
+        plt.plot(range(len(lists)), lists, self.color[num], label=self.text[num])
+        plt.ylabel(label)
+        plt.xlabel('epoch')
+        plt.title(type+label)
+        plt.legend(loc="upper right")
+        if label=='loss' and type =='train_epoch':
+            self.ax1=plt.gca()
+        else:
+            self.ax2=plt.gca()
+        plt.savefig('model/'+type+'_'+label+'.jpg')
+
+    def end_draw(self,num,acc,loss):
+        if num ==0 :
+            plt.figure()
+        else:
+            plt.sca(self.ax1)   
+        self.draw_p(loss, 'loss', 'train_epoch',num)
+        if num ==0 :
+            plt.figure()
+        else:
+            plt.sca(self.ax2)   
+        self.draw_p(acc, 'acc', 'train_epoch',num)
+```
+
 ![result](https://s2.ax1x.com/2020/02/20/3e656A.jpg)
 ![result1](https://s2.ax1x.com/2020/02/20/3ecUBt.png)
