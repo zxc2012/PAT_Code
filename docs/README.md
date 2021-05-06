@@ -1,7 +1,7 @@
 ## 🎓cs专业课
 
 - [CS186 Lecture1 --Relational Model & SQL](cs/cs186_1.md)
-- [CS186 Lecture2 --Indexes](cs/cs186_2.md)
+- [CS186 Lecture2 --DB_Design](cs/cs186_2.md)
 - [CS162 Lecture1 --Operating System Overview](cs/cs162_1.md)
 - [CS162 Lecture2 --Threads and Processes](cs/cs162_2.md)
 - [web.lab1 --HTML&CSS](cs/web_1.md)

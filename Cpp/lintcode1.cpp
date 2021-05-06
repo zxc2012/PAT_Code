@@ -1,24 +1,43 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include<bits/stdc++.h>
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+struct TreeNode {
+      int val;
+      TreeNode *left;
+      TreeNode *right;
+      TreeNode() : val(0), left(nullptr), right(nullptr) {}
+      TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+      TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ };
 class Solution {
 public:
-    int deduplication(vector<int> &nums) {
-        if(nums.empty()) return 0;
-        sort(nums.begin(), nums.end());
-        int n=nums.size(), index=0;
-        for(int i=1;i<n;i++){
-            if(nums[i]!=nums[i-1]) 
-                nums[++index]=nums[i];
-        }
-        return index+1;
+    int rangeSumBST(TreeNode* root, int low, int high) {
+        sum=0;
+        dfs(root,low,high);
+        return sum;
     }
+private:
+    int sum;
+    void dfs(TreeNode*root,int low, int high){
+        if(root==NULL||root->val<low||root->val>high)return;
+        dfs(root->left,low,high);
+        sum+=root->val;
+        dfs(root->right,low,high);
+    }
+
 };
 int main(){
 	Solution s;
-	vector<int> nums={1,3,1,4,4,2};
-	int n=nums.size();
-	printf("count:%d\n",s.deduplication(nums));
-	for(int i=0;i<n;++i)
-	printf("%d ",nums[i]);
+	TreeNode * t=new TreeNode(3);
+	s.rangeSumBST(t,7,15);
 	return 0;
 }
