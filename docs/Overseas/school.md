@@ -81,9 +81,9 @@
 |NWU  | CE CS|
 |NEU(三校区)  | MIS MSCS(align and general)|
 |NYU Tandon|CS CE|
-|Rice  | MCS ECE|
-|Rochester|CS|
-|Rutgers|CS|
+ |Rice  | MCS ECE|
+ |Rochester|CS|
+ |Rutgers|CS|
 |SCU|MSCS|
 |TAMU  | CS MIS|
 |UCB  |EECS Meng  |
