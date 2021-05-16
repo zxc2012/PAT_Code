@@ -40,7 +40,7 @@
 
 ## ✈️Overseas
 
-- [选校帖收藏](Overseas/选校帖收藏.md)
+- [选校帖收藏](Overseas/school.md)
 
 ## 🍌Leetcode & OJ
 
