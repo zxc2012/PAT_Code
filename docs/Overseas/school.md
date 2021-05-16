@@ -18,6 +18,8 @@
 
 [华东理工EE](https://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=573614&page=1#pid8979536)
 
+[天大本硕EE](https://www.1point3acres.com/bbs/thread-306765-1-1.html)
+
 [985EE](https://www.1point3acres.com/bbs/thread-352564-1-1.html)
 
 [985光电](https://www.1point3acres.com/bbs/thread-608971-1-1.html)
@@ -46,6 +48,8 @@
 [北大CS](https://www.1point3acres.com/bbs/home.php?mod=space&uid=416514&do=thread&type=thread&view=me&from=space)
 
 [同济软件](https://www.1point3acres.com/bbs/thread-188372-1-1.html)
+
+[哈工大CS](https://www.1point3acres.com/bbs/thread-428211-1-1.html)
 
 [西工大CS](https://www.1point3acres.com/bbs/thread-538584-1-1.html)
 
@@ -77,15 +81,16 @@
 |NWU  | CE CS|
 |NEU(三校区)  | MIS MSCS(align and general)|
 |NYU Tandon|CS CE|
- |Rice  | MCS ECE|
- |Rochester|CS|
- |SCU|MSCS|
+|Rice  | MCS ECE|
+|Rochester|CS|
+|Rutgers|CS|
+|SCU|MSCS|
 |TAMU  | CS MIS|
 |UCB  |EECS Meng  |
 |UCD  |MSCS CE|
 |UCI  |MCS MSWE  |
 |UCSB|EE|
-|UCSC|MSCS|
+|UCSC|MSCS CE|
 |UCSD|ECE-EC79 CSME|
 |UF|CS|
 |UTD  | CS |
