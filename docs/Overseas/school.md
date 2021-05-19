@@ -55,6 +55,8 @@
 
 [985CS科班](https://www.1point3acres.com/bbs/thread-369430-1-1.html)
 
+[人大SE](https://www.1point3acres.com/bbs/thread-541629-1-1.html)
+
 [电科CS](https://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=552807)
 
 ### 定位
@@ -94,7 +96,7 @@
 |UCSD|ECE-EC79 CSME|
 |UF|CS|
 |UTD  | CS |
-|USC  | CS37 CE|
+|USC  | CS37 CS28 CE|
 |UW|CS EE|
 |UW-Madison|ECE|
 |UMN  | MSCS|
