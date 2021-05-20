@@ -16,6 +16,8 @@
 
 [同济车辆工程](https://www.1point3acres.com/bbs/home.php?mod=space&uid=479362&do=thread&type=thread&view=me&from=space)
 
+[浙大EE](https://www.1point3acres.com/bbs/thread-437536-1-1.html)
+
 [华东理工EE](https://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=573614&page=1#pid8979536)
 
 [天大本硕EE](https://www.1point3acres.com/bbs/thread-306765-1-1.html)

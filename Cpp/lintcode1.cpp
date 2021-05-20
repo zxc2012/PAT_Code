@@ -1,18 +1,12 @@
-#include <iostream>
-#include <unordered_map>
+# include<bits/stdc++.h>
 using namespace std;
+#define DEBUG 0
+
 int main(void) {
-   unordered_map<char, int> um;
-   cout << "Initial size of unordered map = " << um.size() << endl;
-   um = {
-         {'a', 1},
-         {'b', 2},
-         {'c', 3},
-         {'d', 4},
-         {'e', 5},
-      };
-   cout << "Size of unordered map after inserting elements = " << um.size() << endl;
-   cout<<um['f']<<endl;
-   cout << "Size of unordered map after inserting elements = " << um.size() << endl;
+#ifdef DEBUG
+	printf("DEBUG");
+#else 
+	printf("NO DEBUG");
+#endif
    return 0;
 }
