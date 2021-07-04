@@ -29,3 +29,38 @@ public:
      }
 };
 ```
+
+##  Set Mismatch
+
+a set of integers 1 to n but got repetition of one number and loss of another number,e.g. [1,2,2,4]
+
+find the duplicate and the missing.
+
+**在后面添加1ton，构建3个duplicate和1个missing,然后在数量上做文章**
+
+```cpp
+vector<int> findErrorNums(vector<int>& nums) {
+    int sum=0,num1=0,num2=0;
+    int n=nums.size();
+    vector<int> result(2);
+    for(int i=0;i<n;++i){
+        sum^=nums[i];
+        sum^=(i+1);
+    }
+    int low=sum&(-sum);
+    for(int i=0;i<n;++i){
+        if((nums[i]&low)==0)num1^=nums[i];
+        else num2^=nums[i];
+        if(((i+1)&low)==0)num1^=(i+1);
+        else num2^=(i+1);
+    }
+    for(int i=0;i<n;++i){
+        if(nums[i]==num1||nums[i]==num2){
+            result[0]=nums[i];
+            result[1]=nums[i]==num1?num2:num1;
+            break;
+        }
+    }
+    return result;
+}
+```
