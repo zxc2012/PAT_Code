@@ -32,6 +32,8 @@ public:
 
 ##  Set Mismatch
 
+[题目链接](https://leetcode-cn.com/problems/set-mismatch/)
+
 a set of integers 1 to n but got repetition of one number and loss of another number,e.g. [1,2,2,4]
 
 find the duplicate and the missing.
