@@ -36,7 +36,7 @@ a set of integers 1 to n but got repetition of one number and loss of another nu
 
 find the duplicate and the missing.
 
-**在后面添加1ton，构建3个duplicate和1个missing,然后在数量上做文章**
+**在后面添加1 to n，构建3个duplicate和1个missing,然后在数量上做文章**
 
 ```cpp
 vector<int> findErrorNums(vector<int>& nums) {
