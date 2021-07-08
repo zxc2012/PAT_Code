@@ -1,22 +1,17 @@
 #include<sys/types.h>
 #include<stdlib.h>
-#include<unistd.h>
+#include <unistd.h>
+#include <signal.h>
 
-int main(int argc, char* argv[]){
-    pid_t cpid,tcpid;
-    cpid = fork();
-    int status;
-    if (cpid > 0) {               /* Parent Process */
-        tcpid = wait(&status);
-    } else if (cpid == 0) {      /* Child Process */
-    char *args[] = {"ls", "-l", NULL};
-    execv("/bin/ls", args);
-
-    /* execv doesn’t return when it works.
-        So, if we got here, it failed! */
-
-    perror("execv");
-    exit(1);
-    }
-
+void signal_callback_handler(int signum) {
+  printf("Caught signal!\n");
+  exit(1);
+}
+int main() {
+  struct sigaction sa;
+  sa.sa_flags = 0;
+  sigemptyset(&sa.sa_mask);
+  sa.sa_handler = signal_callback_handler;
+  sigaction(SIGINT, &sa, NULL);
+  while (1) {}
 }
