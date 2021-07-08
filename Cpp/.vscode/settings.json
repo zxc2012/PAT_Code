@@ -81,7 +81,8 @@
         "regex": "cpp",
         "typeindex": "cpp",
         "valarray": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "types.h": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled",
     "files.exclude": {
