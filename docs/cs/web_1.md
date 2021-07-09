@@ -36,7 +36,7 @@ content
 
 ![W0 & HTML CSS (1)](https://raw.githubusercontent.com/zxc2012/image/main/W0%20%26%20HTML%20CSS%20(1).jpg)
 
-|~|class|id|
+|~|id|class|
 |-|-|-|
 |备注|An element can have only one *unique* ID|An element can have multiple classes|
 |css|#id {…}|.classname {…}|
