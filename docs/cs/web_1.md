@@ -26,7 +26,7 @@ content
 (2)img,insert css
 ```markdown
 <img src="push.gif" />
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="style.css" /> <!-- rel:relation between  the linked document to the current document -->
 ```
 (3)div
 - class

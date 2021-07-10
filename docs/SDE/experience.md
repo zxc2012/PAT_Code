@@ -3,7 +3,7 @@
 
 [开发面经gitbook](https://hit-alibaba.github.io/interview/basic/network/HTTP.html)
 
-[CS-Notes(较全面)](https://cyc2018.github.io/CS-Notes/#/notes/计算机网络%20-%20网络层)
+[CS-Notes(较全面)](http://www.cyc2018.xyz/)
 
 [高频面试题](https://github.com/caidwang/note_md)
 
