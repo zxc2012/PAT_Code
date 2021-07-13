@@ -13,7 +13,7 @@ css: cascading style sheets
 <body> ducument body
     <h1,h2,h3> header tags
     <p> paragraph tag
-<div> generic block section tag
+<div> generic block section tag(division)
 ```
 ### Attributes
 ![W0 & HTML CSS](https://raw.githubusercontent.com/zxc2012/image/main/W0%20%26%20HTML%20CSS.jpg)
@@ -32,6 +32,12 @@ content
 - class
 - id
 
+(4)
+```markdown
+<ul><!-- unordered list-->
+<li></li>
+</url>
+```
 ## CSS
 
 ![W0 & HTML CSS (1)](https://raw.githubusercontent.com/zxc2012/image/main/W0%20%26%20HTML%20CSS%20(1).jpg)
