@@ -62,7 +62,16 @@
                 "thread": "cpp",
                 "utility": "cpp",
                 "typeindex": "cpp",
-                "typeinfo": "cpp"
+                "typeinfo": "cpp",
+                "__bit_reference": "cpp",
+                "__functional_base": "cpp",
+                "__node_handle": "cpp",
+                "__memory": "cpp",
+                "filesystem": "cpp",
+                "iterator": "cpp",
+                "locale": "cpp",
+                "optional": "cpp",
+                "variant": "cpp"
         },
         "python.pythonPath": "D:\\MDK\\python.exe",
     
