@@ -6,6 +6,9 @@ Make states stay, make props pass
 
 - states -- Private information maintained by a component
 
+```html
+<Component propName={propValue}/>
+```
 ## JSX
 
 syntax extension to JavaScript that allows us to write HTML code snippets in JavaScript files

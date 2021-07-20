@@ -50,3 +50,31 @@ hr : horizontal rule
 |-|-|-|
 |备注|An element can have only one *unique* ID|An element can have multiple classes|
 |css|#id {…}|.classname {…}|
+
+## Web Standards
+
+### HTTP
+
+*hypertext transfer protocol*
+
+- Primary Methods
+    - GET gets data
+    - POST creates data
+    - PUT modifies data
+    - DELETE deletes data
+
+- Status Code
+    - 2xx success
+    - 3xx redirection
+    - 4xx client error
+    - 5xx server
+error
+
+### URL
+
+*uniform resource locator*
+
+```html
+<protocol>://<hostname>/<path>？<query>#<fragment_id>
+```
+*fragment_id* points to the HTML element with the given ID
