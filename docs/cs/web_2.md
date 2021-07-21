@@ -67,5 +67,5 @@ Document Object Model: how your browser interprets the HTML “tree”
     const button=document.getElementById("button");
     button.addEventListener("click",()=>{
         addParagraph("");
-    });
+    });//common events include load, click, input, mouseover
     ```

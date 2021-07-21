@@ -6,8 +6,26 @@ Make states stay, make props pass
 
 - states -- Private information maintained by a component
 
-```html
-<Component propName={propValue}/>
+```js
+//Parent Component
+changeCatHappinneess=()=>{
+    this.setState=({
+        catHappiness: this.state.catHappiness+1,
+        //change state
+        prevState=>({
+            persons:[...prevState.persons,"me"]
+        })
+    },()=>{
+        console.log(this.state.persons);//callback
+    });
+}
+render(){
+    return (
+        <childComponent propName={this.changeCatHappiness}/>
+    );
+}
+//Child Component
+this.props.catHappiness;
 ```
 ## JSX
 
