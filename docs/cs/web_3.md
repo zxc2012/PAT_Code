@@ -19,9 +19,9 @@ changeCatHappinneess=()=>{
         console.log(this.state.persons);//callback
     });
 }
-render(){
+render(){//run the code inside the childComponent constructor!
     return (
-        <childComponent propName={this.changeCatHappiness}/>
+        <childComponent propName={this.state.catHappiness}/>
     );
 }
 //Child Component

@@ -137,3 +137,57 @@ public:
     }
 };
 ```
+### 22 栈的压入、弹出序列
+```cpp
+class Solution {
+public:
+    bool IsPopOrder(vector<int> pushV,vector<int> popV) {
+        int n=pushV.size();
+        int i=0;
+        for(int p=0;p<n;++p){
+            while(present.empty()||present.top()!=popV[p]){
+                if(i==n)break;
+                present.push(pushV[i++]);
+            }
+            if(present.top()==popV[p])
+                present.pop();
+            else return false;
+        }
+        return true;
+    }
+private:
+    stack<int> present;
+};
+```
+### 37 两个链表的第一个公共节点
+>法1:找到差值后找公共
+```cpp
+ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
+    int la=0,lb=0;
+    for(ListNode* p=headA;p;p=p->next)la++;
+    for(ListNode* p=headB;p;p=p->next)lb++;
+    ListNode *p=headA,*q=headB;
+    int len=lb-la;
+    if(la>lb){
+        len=-len;
+        p=headB,q=headA;
+    }
+    for(int i=0;i<len;++i)q=q->next;
+    while(p&&p!=q){
+        p=p->next;
+        q=q->next;
+    }
+    return p;
+}
+```
+>法2:双指针,利用两个链表合并后长度-公共长度时一定相遇
+```cpp
+ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
+    ListNode *p=headA,*q=headB;
+    while(p!=q){
+        p=p==NULL?headB:p->next;
+        q=q==NULL?headA:q->next;
+    }
+    return p;
+}
+```
