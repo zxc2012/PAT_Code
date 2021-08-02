@@ -46,11 +46,54 @@ hr : horizontal rule
 
 ![W0 & HTML CSS (1)](https://raw.githubusercontent.com/zxc2012/image/main/W0%20%26%20HTML%20CSS%20(1).jpg)
 
+### ID and class
 |~|id|class|
 |-|-|-|
-|备注|An element can have only one *unique* ID|An element can have multiple classes|
+|Notes|An element can have only one *unique* ID|An element can have multiple classes|
 |css|#id {…}|.classname {…}|
 
+### Box Model
+
+![20210730203640](https://raw.githubusercontent.com/zxc2012/image/main/20210730203640.png)
+
+### Layout
+
+#### display
+<table>
+    <tr>
+        <th>Properties</th><th>Choices</th><th>Notes</th>
+    </tr>
+    <tr>
+        <td rowspan="6">display</td><td>block</td><td>big blocks that stretch across, always sit on new lines.(i.e. div,section,ul,p,h1-6,header)</td>
+    </tr>
+    <tr>
+        <td>inline</td><td>an element that is part of text, size is always proportional to text.they do NOT accept width/height properties and top/bottom margins(i.e. span, a, img)</td>
+    </tr>
+    <tr>
+        <td>inline-block</td><td>stays within text, but can have its own size independent from text,you CAN set width and height.useful for including non-text elements within text</td>
+    </tr>
+    <tr>
+        <td>flex</td><td>flexibly contain and distribute elements inside itself flexible</td>
+    </tr>
+    <tr>
+        <td>grid</td><td>grid-template-columns/grid-template-rows(1fr: fraction)</td>
+    </tr>
+    <tr>
+        <td>none</td><td></td>
+    </tr>
+    <tr>
+        <td rowspan="4">justify-content</td><td>space-between</td><td>push the child component as far away from each other as possible</td>
+    </tr>
+    <tr>
+        <td>center</td><td>together center</td>
+    </tr>
+    <tr>
+        <td>start</td><td>together start</td>
+    </tr>
+    <tr>
+        <td>space-evenly</td><td></td>
+    </tr>
+</table>
 ## Web Standards
 
 ### HTTP
