@@ -56,6 +56,12 @@ hr : horizontal rule
 
 ![20210730203640](https://raw.githubusercontent.com/zxc2012/image/main/20210730203640.png)
 
+- border-radius: specify the radius
+    - 1 value: all
+    - 2 value: 左上右下 右上左下
+    - 3 value: 左上 右上左下 右下
+    - /: horizontal radius/vertical radius 
+
 ### Layout
 
 #### display
@@ -94,6 +100,50 @@ hr : horizontal rule
         <td>space-evenly</td><td></td>
     </tr>
 </table>
+
+#### position
+
+vh:viewpoint height
+
+vw:viewpoint width
+
+<table>
+    <tr>
+        <th>Properties</th><th>Choices</th><th>Notes</th>
+    </tr>
+    <tr>
+        <td rowspan="4">position</td><td>static</td><td>(default)renders boxes position based on order in document</td>
+    </tr>
+    <tr>
+        <td>relative</td><td>positions the element "relative" to where it would be if static</td>
+    </tr>
+    <tr>
+        <td>absolute</td><td>ppositions the element relative to first ancestor positioned non-statically</td>
+    </tr>
+    <tr>
+        <td>fixed</td><td>positions the element relative to the screen</td>
+    </tr>
+</table>
+
+### Transitions & Animations
+
+![20210804143850](https://raw.githubusercontent.com/zxc2012/image/main/20210804143850.png)
+
+
+```css
+.box{
+    aninimation: rolling 1s infinite;
+    /*<keyframes-name> <time> <single-animation-iteration-count>*/
+}
+@keyframes rolling{
+    0%{
+        transform: rotate(-180deg)
+    }
+    100%{
+        transform: rotate(180deg)
+    }
+}
+```
 ## Web Standards
 
 ### HTTP
