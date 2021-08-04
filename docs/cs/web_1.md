@@ -52,6 +52,50 @@ hr : horizontal rule
 |Notes|An element can have only one *unique* ID|An element can have multiple classes|
 |css|#id {…}|.classname {…}|
 
+### Selector
+#### Attribute Selector
+
+[attr=value]
+![20210804152555](https://raw.githubusercontent.com/zxc2012/image/main/20210804152555.png) 
+
+#### Combinators
+- Siblings
+
+    - Adjacent siblings: +
+    ```css
+    h2 + p {}/* selects all <p> that directly follow an <h2>*/ 
+    ```
+
+    - General siblings: ~
+    ```css
+    p ~ span {}/* selects all <span> that follow an <p> */
+    ```
+- Child/Descendant
+    - Child: >
+    ```css
+    ul > li {}/*selects all <li> directly inside a <ul>*/
+    ```
+
+    - Descendant: ' '(space)
+    ```css
+    div span {} /*selects all <span> anywhere inside a <div>*/ 
+    ```
+
+#### Pseudo-Classes/Elements
+
+```css
+element:hover {}/*cool hover rules*/
+a:active {} /*clicking on a link*/ 
+input:focus {} /*tabbing/clicking on an input*/ 
+p:nth-child(4n) {} /*every 4th <p>*/ 
+p::first-line {} /*first line of a <p>*/ 
+::selection {}/*user highlighted text*/ 
+a::after {}	/*styling placed in a generated element after every <a>*/
+```
+
+![20210804153651](https://raw.githubusercontent.com/zxc2012/image/main/20210804153651.png)
+
+
 ### Box Model
 
 ![20210730203640](https://raw.githubusercontent.com/zxc2012/image/main/20210730203640.png)
