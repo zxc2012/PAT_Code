@@ -15,6 +15,14 @@ npm: node package manager
 "==" forces the arguments to be of the same type before comparing them
 
 *use a===b*
+
+### Function
+```js
+//一个参数时()可省略
+(param1, param2, …, paramN) => { statements }
+(param1, param2, …, paramN) => expression
+//相当于：(param1, param2, …, paramN) =>{ return expression; }
+```
 ### Ouput
 
 ```js
