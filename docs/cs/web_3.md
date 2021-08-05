@@ -38,5 +38,3 @@ syntax extension to JavaScript that allows us to write HTML code snippets in Jav
 ## Lifecyle method
 
 ![20210804194814](https://raw.githubusercontent.com/zxc2012/image/main/20210804194814.png)
-
-## Auth
