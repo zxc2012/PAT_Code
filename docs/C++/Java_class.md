@@ -13,6 +13,19 @@
 
 ![vs](https://img-blog.csdnimg.cn/20201013163013271.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70#pic_center)
 
+### Operator precedence
+单算移关与，异或逻条赋
+
+- 单表示单目运算符：逻辑非(!),按位取反(~),自增(++),自减(--),取地址(&),取值(*)
+- 算表示算术运算符：乘、除和求余(*,/,%)级别高于加减(+,-)
+- 移表示按位左移(<<)和位右移(>>)
+- 关表示关系运算符：大小关系(>,>=,<,<=)级别高于相等不相等关系(==,!=)
+- 与表示按位与(&)
+- 异表示按位异或(^)
+- 或表示按位或(|)
+- 逻表示逻辑运算符：逻辑与(&&)级别高于逻辑或(||)
+- 条表示条件运算符(? :)
+- 赋表示赋值运算符(=,+=,-=,*=,/=,%=,>>=,<<=,&=,^=, |=,!=)
 ## Cleanup:finalize()
 
 When the garbage collector is ready to release the storage used for your object,it will first call its **finalize()**
