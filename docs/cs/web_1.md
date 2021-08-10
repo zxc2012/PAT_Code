@@ -100,6 +100,10 @@ a::after {}	/*styling placed in a generated element after every <a>*/
 
 ![20210730203640](https://raw.githubusercontent.com/zxc2012/image/main/20210730203640.png)
 
+- padding:
+    - 1 value: all
+    - 2 value: 上下 左右
+    - 3 value: 上 左右 下 
 - border-radius: specify the radius
     - 1 value: all
     - 2 value: 左上右下 右上左下
@@ -176,7 +180,7 @@ vw:viewpoint width
 
 ```css
 .box{
-    aninimation: rolling 1s infinite;
+    animation: rolling 1s infinite;
     /*<keyframes-name> <time> <single-animation-iteration-count>*/
 }
 @keyframes rolling{
