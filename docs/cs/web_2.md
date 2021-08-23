@@ -7,14 +7,26 @@ npm: node package manager
 ### Primitive types
 - Boolean (true, false)
 - Number (12, 1.618, -46.7, 0, etc.)
-- String (“hello”, “world!”, “12”, “”, etc.)
+- String ("hello", "world!", "12", etc.)
 - Null (no value)
 - Undefined (declared but not yet assigned a value)
+- Symbol
+- BigInt
+
+#### Symbol
+- Symbol.for(key)
+
+    Searches for existing Symbols with the given key and returns it if found. Otherwise a new Symbol gets created in the global Symbol registry with key.
+
+- Symbol.keyFor(sym)
+
+    Retrieves a shared Symbol key from the global Symbol registry for the given Symbol.
 
 ### Operators
-"==" forces the arguments to be of the same type before comparing them
+1. "==" forces the arguments to be of the same type before comparing them
 
-*use a===b*
+    *use a===b*
+2. '+'触发隐式类型转换
 
 ### Function
 ```js

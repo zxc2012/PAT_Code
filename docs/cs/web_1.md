@@ -135,20 +135,18 @@ a::after {}	/*styling placed in a generated element after every <a>*/
     <tr>
         <td>none</td><td></td>
     </tr>
-    <tr>
-        <td rowspan="4">justify-content</td><td>space-between</td><td>push the child component as far away from each other as possible</td>
-    </tr>
-    <tr>
-        <td>center</td><td>together center</td>
-    </tr>
-    <tr>
-        <td>start</td><td>together start</td>
-    </tr>
-    <tr>
-        <td>space-evenly</td><td></td>
-    </tr>
+
 </table>
 
+flex:
+- flex-direction: |column |column-reverse|row |row-reverse 
+![20210817205612](https://raw.githubusercontent.com/zxc2012/image/main/20210817205612.png)
+
+- justify-content:(主轴)
+![20210817205407](https://raw.githubusercontent.com/zxc2012/image/main/20210817205407.png)
+
+- align-items:(各自在主轴)
+![20210818095851](https://raw.githubusercontent.com/zxc2012/image/main/20210818095851.png)
 #### position
 
 vh:viewpoint height
