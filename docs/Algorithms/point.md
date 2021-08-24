@@ -159,6 +159,24 @@ private:
     stack<int> present;
 };
 ```
+## 23 二叉搜索树的后序遍历序列
+```cpp
+bool VerifySquenceOfBST(vector<int> sequence) {
+    stack<int> s;
+    int root=INT_MAX;
+    reverse(sequence.begin(),sequence.end());
+    if(sequence.size()==0)return false;
+    for(int &p:sequence){
+        if(p>root)return false;
+        while(!s.empty()&&s.top()>p){
+            root=s.top();
+            s.pop();
+        }
+        s.push(p);
+    }
+    return true;
+}
+```
 ### 37 两个链表的第一个公共节点
 >法1:找到差值后找公共
 ```cpp

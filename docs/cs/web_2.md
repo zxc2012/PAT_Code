@@ -35,6 +35,10 @@ npm: node package manager
 (param1, param2, …, paramN) => expression
 //相当于：(param1, param2, …, paramN) =>{ return expression; }
 ```
+```js
+//常用函数
+setTimeout(handler: TimerHandler, timeout?: number, ...arguments: any[]): number//timeout default:0
+```
 ### Ouput
 
 ```js
@@ -55,10 +59,42 @@ let {name,age}=person;//Object destructuring is a shorthand to obtain multiple p
 ### Array
 ```js
 let a=[1,2,3];
+//改变数组
 a.splice(1,1,4);//于p1删除p2个元素并在p1插入=>[1,4,3]
+//不改变数组
+a.concat(1,[2,3],[5,[6,7]])//[1,4,3,1,2,3,5,[6,7]]//flatten array,but not arrays of arrays
 a.map(x=>x+3);//return [4,7,6] but not change
+a.foreach(value=>sum+=value);
 a.filter(x=>x>2);//return [4,3]
+a.reduce((x,y)=>x+y);//8,reduce right process from right-to-left
 ```
+#### Other function
+<table>
+    <tr>
+        <th>Category</th>
+        <th>Function</th>
+        <th>Notes</th>
+    </tr>
+    <tr>
+        <td>find</td>
+        <td>indexOf(),lastIndexOf()</td>
+        <td>starts at the beginning/end</td>
+    </tr>
+    <tr>
+        <td>fill</td>
+        <td>fill(value: number, start?: number, end?: number)</td>
+        <td>start default:0,end default:array.length</td>
+    </tr>
+    <tr>
+        <td rowspan="2">stacks & queues</td>
+        <td>push(),pop()</td>
+    </tr>
+    <tr>
+        <td>shift(),unshift()</td>
+        <td>delete index 0,insert index 0</td>
+    </tr>
+</table>
+
 ## function
 ```js
 let addTwo=x=>{
@@ -93,3 +129,27 @@ Document Object Model: how your browser interprets the HTML “tree”
         addParagraph("");
     });//common events include load, click, input, mouseover
     ```
+
+## Promise
+### 实现promise.all
+```js
+/**
+ * @param {Array<any>} promises - notice input might have non-Promises
+ * @return {Promise<any[]>}
+ */
+function all(promises) {
+  return new Promise((resolve,reject)=>{
+    if(!Array.isArray(promises))reject(new TypeError("参数错误"));
+    let results=[];
+    if(promises.length==0)resolve(promises);
+    promises.forEach(promise=>{
+      Promise.resolve(promise).then(value=>{
+        results.push(value);
+        if(results.length===promises.length)
+          resolve(results);
+      },err=>reject(err));
+    })
+  }
+  )
+}
+```

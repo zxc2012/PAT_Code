@@ -22,3 +22,4 @@ class Comment extends component{
     }
 }
 export default Comment;
+setTimeout()

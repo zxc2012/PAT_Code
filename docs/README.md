@@ -54,7 +54,7 @@
 
 ## 💡Software Development
 
-- [Starting a successful blog](SDE/blog.md)
+- [Software Engineering Basics](SDE/blog.md)
 - [面经](SDE/experience.md)
 - [Linux基础指令](SDE/linux.md)
 - [上网环境基础配置](SDE/network.md)
