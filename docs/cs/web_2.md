@@ -1,9 +1,5 @@
 # Javascript
 ## Basic
-### Node
-
-npm: node package manager
-
 ### Primitive types
 - Boolean (true, false)
 - Number (12, 1.618, -46.7, 0, etc.)
