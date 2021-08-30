@@ -102,3 +102,52 @@ struct AC{
     }
 }at;
 ```
+## Regular Expression
+Given an input string s and a pattern p, implement regular expression matching with support for '.' and '*' where:
+
+'.' Matches any single character.​​​​
+
+'*' Matches zero or more of the preceding element.
+
+### Solution:
+
+The matching should cover the entire input string (not partial).
+
+Iterate Two strings, match one by one
+
+- case 0: 一般情况judge(str[i-1],pattern[j-1])
+    - dp[i][j]=dp[i-1][j-1]
+- case 1: pattern[j-1]=='*':
+    
+  两种小情况:
+  
+  (1)not use preceding char 
+  
+  (2)preceding char use multiple times
+
+    - dp[i][j]=dp[i][j-2]||judge(str[i-1],pattern[j-2]&&dp[i-1][j])
+
+### Code
+```cpp
+class Solution {
+public:
+    bool match(string s, string p) {
+        int n=p.size();
+        int m=s.size();
+        vector<vector<int>> dp(m+1,vector<int>(n+1,0));
+        dp[0][0]=1;
+        for(int i=2;i<=n;++i){
+            if(p[i-1]=='*')dp[0][i]=dp[0][i-2];
+        }
+        for(int i=1;i<=m;++i)for(int j=1;j<=n;++j){
+            if(judge(s[i-1],p[j-1]))
+                dp[i][j]=dp[i-1][j-1];
+            else if(p[j-1]=='*')
+                dp[i][j]=dp[i][j-2]||judge(s[i-1],p[j-2])&&dp[i-1][j];
+        }
+        return dp[m][n];
+    }
+private:
+    bool judge(char a,char b){return a==b||b=='.';}
+};
+```
