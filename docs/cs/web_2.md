@@ -9,6 +9,53 @@
 - Symbol
 - BigInt
 
+#### Const,let and var
+
+||hoist|scope|
+|-|-|-|
+|var|Only declarations are hoisted|function scope|
+|let const|block hoisted,but not initialized with 'undefined'|block scope|
+
+TDZ: from the start of the block until the initialization has completed.
+
+**block:{}**
+```js
+/**Example 1:hoist ***/
+x = 1; 
+console.log(x + " " + y); // '1 undefined'
+var y = 2; // Declare and Initialize y
+console.log(num);//Cannot access 'num' before initialization
+let num="fasd";
+/**Example 2:scope ***/
+function varTest() {
+  var x = 1;
+  {
+    var x = 2;  // same variable!
+    console.log(x);  // 2
+  }
+  console.log(x);  // 2
+}
+
+function letTest() {
+  let x = 1;
+  {
+    let x = 2;  // different variable
+    console.log(x);  // 2
+  }
+  console.log(x);  // 1
+}
+/**Example3: TDZ**/
+function go(n) {
+  // n here is defined!
+  console.log(n); // Object {a: [1,2,3]}
+
+  for (let n of n.a) { // ReferenceError,n.a先找block内的再找function内的
+    console.log(n);
+  }
+}
+
+go({a: [1, 2, 3]});
+```
 #### Symbol
 - Symbol.for(key)
 
@@ -25,6 +72,11 @@
 2. '+'触发隐式类型转换
 
 ### Function
+- Arrow Function: 
+    - Does not have its own bindings to this or super, and should not be used as methods.
+    - Can not be used as constructors.(new)
+- Traditional Function:
+    - 每次调用都会创建this和arguments
 ```js
 //一个参数时()可省略
 (param1, param2, …, paramN) => { statements }
@@ -91,13 +143,50 @@ a.reduce((x,y)=>x+y);//8,reduce right process from right-to-left
     </tr>
 </table>
 
-## function
-```js
-let addTwo=x=>{
-    return x+2;
-}
-```
+## Closure
+this is determined by the enclosing lexical context
 
+### Global Context
+```js
+function f1() {
+  return this;
+}
+// In a browser:
+f1() === window; // true
+// In Node:
+f1() === globalThis; // true
+```
+### Class Context
+Within a class constructor, "this" is a regular object. 
+
+All non-static methods within the class are added to the prototype of "this"
+### Inside Object
+Object有自己的Execution context,但没有this.
+
+When a function is called as a method of an object, "this" is set to the object the method is called on.
+```js
+var obj = {
+  bar: function() {
+    var x = (() => this);
+    return x;
+  },
+  doSomethingLater : function (){
+    setTimeout(function(){
+        this.count++;
+        console.log(this);
+    }, 300);
+  }
+};
+var fn = obj.bar();
+console.log(fn() === obj); // true
+// But caution if you reference the method of obj without calling it
+var fn2 = obj.bar;
+// Calling the arrow function's this from inside the bar method()
+// will now return window, because 把函数拉到下面去了
+console.log(fn2()() == window); // true
+obj.doSomethingLater(); 
+//In a browser:window,In Node:Timeout {...}
+```
 ## DOM
 Document Object Model: how your browser interprets the HTML “tree”
 ```html
