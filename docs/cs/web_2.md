@@ -77,6 +77,7 @@ go({a: [1, 2, 3]});
     - Can not be used as constructors.(new)
 - Traditional Function:
     - 每次调用都会创建this和arguments
+
 ```js
 //一个参数时()可省略
 (param1, param2, …, paramN) => { statements }
@@ -87,6 +88,7 @@ go({a: [1, 2, 3]});
 //常用函数
 setTimeout(handler: TimerHandler, timeout?: number, ...arguments: any[]): number//timeout default:0
 ```
+
 ### Ouput
 
 ```js
@@ -147,6 +149,7 @@ a.reduce((x,y)=>x+y);//8,reduce right process from right-to-left
 this is determined by the enclosing lexical context
 
 ### Global Context
+
 ```js
 function f1() {
   return this;
@@ -164,6 +167,7 @@ All non-static methods within the class are added to the prototype of "this"
 Object有自己的Execution context,但没有this.
 
 When a function is called as a method of an object, "this" is set to the object the method is called on.
+
 ```js
 var obj = {
   bar: function() {
@@ -189,12 +193,14 @@ obj.doSomethingLater();
 ```
 ## DOM
 Document Object Model: how your browser interprets the HTML “tree”
+
 ```html
 <ul id="shopping list">
     <li>milk</li>
 </ul>
 ```
 - Create and add elements on the fly
+
     ```js
     const list=document.getElementById("shopping list");
     const newEL=document.createElement("li");
@@ -202,6 +208,7 @@ Document Object Model: how your browser interprets the HTML “tree”
     list.appendChild(newEl));
     ```
 - Change the contents/style of an element
+
     ```js
     const list=document.getElementById("shopping list");
     list.style.color="red";
