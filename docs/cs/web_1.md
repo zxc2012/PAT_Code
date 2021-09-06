@@ -196,20 +196,33 @@ vw:viewpoint width
 
 *hypertext transfer protocol*
 
-- Primary Methods
-    - GET gets data
-    - POST creates data
-    - PUT modifies data
-    - DELETE deletes data
+Fetching a web page with HTTP:
 
-- Status Code
-    - 2xx success
-    - 3xx redirection
-    - 4xx client error
-    - 5xx server
-error
+1. Resolve the server to IP address (DNS)
+2. Set up TCP connection to the server
+3. Send HTTP request for the page
+4. Await HTTP response for the page
+5. Execute and fetch embedded resources, render
+6. Clean up any idle TCP connections
 
-### URL
+Primary Methods
+
+- GET gets data
+- POST creates data
+- PUT modifies data
+- DELETE deletes data
+
+Status Code
+
+|Code|Meaning|Examples|
+|-|-|-|
+|1xx| Information |100 = server agrees to handle client's request|
+|2xx |Success |200 = request succeeded; 204 = no content present|
+|3xx| Redirection| 301 = page moved; 304 = cached page still valid|
+|4xx| Client error| 403 = forbidden page; 404 = page not found|
+|5xx| Server error| 500 = internal server error; 503 = try again later error|
+
+URL
 
 *uniform resource locator*
 
@@ -217,3 +230,13 @@ error
 <protocol>://<hostname>/<path>？<query>#<fragment_id>
 ```
 *fragment_id* points to the HTML element with the given ID
+
+
+#### Application
+- CDN: Content Delivery Networks
+ 
+Map clients to a nearby replica
+
+![20210906213916](https://raw.githubusercontent.com/zxc2012/image/main/20210906213916.png)
+
+- DNS: Domain Name System
