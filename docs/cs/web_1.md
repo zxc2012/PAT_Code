@@ -140,13 +140,17 @@ a::after {}	/*styling placed in a generated element after every <a>*/
 
 flex:
 - flex-direction: |column |column-reverse|row |row-reverse 
+
 ![20210817205612](https://raw.githubusercontent.com/zxc2012/image/main/20210817205612.png)
 
 - justify-content:(主轴)
+
 ![20210817205407](https://raw.githubusercontent.com/zxc2012/image/main/20210817205407.png)
 
 - align-items:(各自在主轴)
+
 ![20210818095851](https://raw.githubusercontent.com/zxc2012/image/main/20210818095851.png)
+
 #### position
 
 vh:viewpoint height
@@ -240,3 +244,13 @@ Map clients to a nearby replica
 ![20210906213916](https://raw.githubusercontent.com/zxc2012/image/main/20210906213916.png)
 
 - DNS: Domain Name System
+
+## Cookie and Session
+Cookie:
+
+Cookies allow a server to ask a client to remember "name=value" pairs and send them back in all future requests
+
+Session:
+- All session-related “states” reside on the server
+- A unique session ID is associated with a session and set as a cookie
+- Given a session ID in a request, the server obtains session related “states” from local “session data store”
