@@ -194,7 +194,7 @@ vw:viewpoint width
     }
 }
 ```
-## Web Standards
+## Computer Networks
 
 ### HTTP
 
@@ -245,7 +245,7 @@ Map clients to a nearby replica
 
 - DNS: Domain Name System
 
-## Cookie and Session
+### Cookie and Session
 Cookie:
 
 Cookies allow a server to ask a client to remember "name=value" pairs and send them back in all future requests
@@ -254,3 +254,13 @@ Session:
 - All session-related “states” reside on the server
 - A unique session ID is associated with a session and set as a cookie
 - Given a session ID in a request, the server obtains session related “states” from local “session data store”
+
+### CORS
+
+CORS: Cross-origin resource sharing
+
+CORS vs JSONP
+- Use regular XMLHttpRequest with CORS
+- JSONP only supports GET, CORS supports other types of HTTP requests
+- JSONP can cause cross-site scripting (XSS) issues where the external site is compromised, CORS allows websites to manually parse responses to ensure security
+- JSONP works on legacy browsers which predate CORS support

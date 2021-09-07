@@ -1,16 +1,6 @@
-var obj = {
-  count : 10,
-  doSomethingLater : function(){
-      // The traditional function binds "this" to the "obj" context.
-      setTimeout( function (){
-          // Since the arrow function doesn't have its own binding and
-          // setTimeout (as a function call) doesn't create a binding
-          // itself, the "obj" context of the traditional function will
-          // be used within.
-          this.count++;
-          console.log(this);
-      }, 300);
-  }
-}
-
-obj.doSomethingLater();
+let pattern1 = /[a-z]+([A-Z][a-z]+)?/gi; 
+console.log(pattern1.global); // false 
+console.log(pattern1.ignoreCase); // true 
+console.log(pattern1.multiline); // false 
+console.log(pattern1.lastIndex); // 0 
+console.log(pattern1.source); // "\[bc\

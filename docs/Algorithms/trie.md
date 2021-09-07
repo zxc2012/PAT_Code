@@ -151,3 +151,43 @@ private:
     bool judge(char a,char b){return a==b||b=='.';}
 };
 ```
+
+## Regular Expressions
+<table>
+<tr>
+    <th>Category</th>
+    <th>Pattern</th>
+    <th >Matches</th>
+</tr>
+<tr>
+    <td rowspan="3">Disjuncitons</td>
+    <td>/[A-Z|a-z]/</td>
+    <td>An upper/lower case letter</td>
+</tr>
+<tr>
+    <td>/[0-9]/</td>
+    <td>A single digit</td>
+</tr>
+<tr>
+    <td>/[^A-Z]/</td>
+    <td>Negations</td>
+</tr>
+<tr>
+    <td rowspan="2">Anchors</td>
+    <td>/^/</td>
+    <td>Start of Input</td>
+</tr>
+<tr>
+    <td>/$/</td>
+    <td>End of Input</td>
+</tr>
+<tr>
+    <td rowspan="2">Frequencies</td>
+    <td>/^/</td>
+    <td>Start of Input</td>
+</tr>
+<tr>
+    <td>/$/</td>
+    <td>End of Input</td>
+</tr>
+</table>
