@@ -160,7 +160,7 @@ private:
     <th >Matches</th>
 </tr>
 <tr>
-    <td rowspan="3">Disjuncitons</td>
+    <td rowspan="6">Disjuncitons</td>
     <td>/[A-Z|a-z]/</td>
     <td>An upper/lower case letter</td>
 </tr>
@@ -173,6 +173,18 @@ private:
     <td>Negations</td>
 </tr>
 <tr>
+    <td>/\d/</td>
+    <td>any digit</td>
+</tr>
+<tr>
+    <td>/\D/</td>
+    <td>any non-digit</td>
+</tr>
+<tr>
+    <td>/./</td>
+    <td>Any character except for newline</td>
+</tr>
+<tr>
     <td rowspan="2">Anchors</td>
     <td>/^/</td>
     <td>Start of Input</td>
@@ -182,12 +194,29 @@ private:
     <td>End of Input</td>
 </tr>
 <tr>
-    <td rowspan="2">Frequencies</td>
-    <td>/^/</td>
-    <td>Start of Input</td>
+    <td rowspan="5">Frequencies</td>
+    <td>/?/</td>
+    <td>Optional(one or none)</td>
 </tr>
 <tr>
-    <td>/$/</td>
-    <td>End of Input</td>
+    <td>/*/</td>
+    <td>zero or more</td>
+</tr>
+<tr>
+    <td>/+/</td>
+    <td>one or more</td>
+</tr>
+<tr>
+    <td>/{m}/</td>
+    <td>m repetitions</td>
+</tr>
+<tr>
+    <td>/{m,n}/</td>
+    <td>m to n repetitions</td>
+</tr>
+<tr>
+    <td>Others</td>
+    <td>/()/</td>
+    <td>capture group</td>
 </tr>
 </table>

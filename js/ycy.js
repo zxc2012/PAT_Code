@@ -1,6 +1,7 @@
-let pattern1 = /[a-z]+([A-Z][a-z]+)?/gi; 
-console.log(pattern1.global); // false 
-console.log(pattern1.ignoreCase); // true 
-console.log(pattern1.multiline); // false 
-console.log(pattern1.lastIndex); // 0 
-console.log(pattern1.source); // "\[bc\
+let obj={'fa':12,'eq':23};
+for (i of obj){
+    console.log(i);
+    // if(obj[]==null)obj[i]=1;
+    // else obj[i]++;
+}
+console.log(obj);

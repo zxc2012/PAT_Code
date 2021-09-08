@@ -70,7 +70,9 @@ go({a: [1, 2, 3]});
 
     *use a===b*
 2. '+'触发隐式类型转换
+3. for...in iterates over all enumerable *properties* of an object that are keyed by strings
 
+   for...of creates a loop iterating over *iterable objects*.
 ### Function
 - Arrow Function: 
     - Does not have its own bindings to this or super, and should not be used as methods.
