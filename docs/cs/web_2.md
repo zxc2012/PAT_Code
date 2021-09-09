@@ -247,3 +247,32 @@ function all(promises) {
   )
 }
 ```
+## debounce & throttle
+```js
+function debounce(func, wait) {
+  let timer=null;
+  return function(...args){
+    if(timer){
+      clearTimeout(timer);
+    }
+    timer=setTimeout(()=>{
+      func.call(this,args);
+    },wait);
+  }
+}
+function throttle(func, wait) {
+  let timer=null;
+  let lastargs;
+  return (...args)=>{
+    if(timer)lastargs=args;
+    else{
+      func.call(this,...args);
+      timer=setTimeout(()=>{
+        if(lastargs)func.call(this,lastargs);
+        timer=null;
+      },wait)
+    }
+  } 
+}
+```
+
