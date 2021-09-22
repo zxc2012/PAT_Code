@@ -63,3 +63,27 @@ System.out.println(true?Integer.valueOf(1):Double.valueOf(2))
 |public String toString()||
 |public final Class getClass()||
 |protected Object clone()|返回调用该方法的对象的一个副本|
+
+## Other Class
+### Scanner Class
+
+```java
+Scanner input = new Scanner(System.in);
+int value = input.nextInt();
+// nextByte() reads an integer of the byte type.
+// nextShort() reads an integer of the short type.
+// nextInt() reads an integer of the int type.
+// nextLong() reads an integer of the long type.
+// nextFloat() reads a number of the float type.
+// nextDouble() reads a number of the double type.
+```
+### String Class
+
+|Method|Description|
+|-|-|
+|length()|Returns the number of characters in this string.|
+|charAt(index)|Returns the character at the specified index from this string.|
+|concat(s1)|Returns a new string that concatenates this string with string s1.|
+|toUpperCase()|Returns a new string with all letters in uppercase.|
+|toLowerCase()|Returns a new string with all letters in lowercase.|
+|trim() |Returns a new string with whitespace characters trimmed on both sides.|

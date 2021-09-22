@@ -73,6 +73,7 @@ go({a: [1, 2, 3]});
 3. for...in iterates over all enumerable *properties* of an object that are keyed by strings
 
    for...of creates a loop iterating over *iterable objects*.
+4. Spread syntax (...) allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.
 ### Function
 - Arrow Function: 
     - Does not have its own bindings to this or super, and should not be used as methods.
@@ -90,12 +91,31 @@ go({a: [1, 2, 3]});
 //常用函数
 setTimeout(handler: TimerHandler, timeout?: number, ...arguments: any[]): number//timeout default:0
 ```
-
-### Ouput
-
+#### Prototype
 ```js
-console.log();
-alert("");//generate a pop-up notification with the given content
+function doSomething(){}
+doSomething.prototype.foo = "bar";
+var doSomeInstancing = new doSomething();
+doSomeInstancing.prop = "some value";
+console.log("doSomeInstancing.prop:      " + doSomeInstancing.prop);//some value
+console.log("doSomeInstancing.foo:       " + doSomeInstancing.foo);//bar
+console.log("doSomething.prop:           " + doSomething.prop);//undefined
+console.log("doSomething.foo:            " + doSomething.foo);//undefined
+console.log("doSomething.prototype.prop: " + doSomething.prototype.prop);//undefined
+console.log("doSomething.prototype.foo:  " + doSomething.prototype.foo);//bar
+```
+### Ouput
+Function.prototype.call(),Function.prototype.blind()
+```js
+Function.prototype.mycall = function(thisArg, ...args) {
+  if(thisArg===null||thisArg===undefined)thisArg=window;
+  thisArg=Object(thisArg);
+  let key = Symbol();
+  thisArg[key]=this;
+  let result = thisArg[key](...args);
+  delete thisArg[key];
+  return result;
+}
 ```
 ## Object
 ### Declaration
@@ -196,11 +216,14 @@ obj.doSomethingLater();
 ## DOM
 Document Object Model: how your browser interprets the HTML “tree”
 
-```html
-<ul id="shopping list">
-    <li>milk</li>
-</ul>
+### Function
+```js
+HTMLOrForeignElement.blur()// 从当前焦点元素中移除键盘焦点。
+HTMLElement.click()// 向元素发送鼠标单击事件。
+HTMLOrForeignElement.focus()// 使元素成为当前键盘焦点。
+HTMLElement.forceSpellCheck()// 对元素的内容运行拼写检查程序
 ```
+
 - Create and add elements on the fly
 
     ```js

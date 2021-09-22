@@ -1,7 +1,11 @@
-let obj={'fa':12,'eq':23};
-for (i of obj){
-    console.log(i);
-    // if(obj[]==null)obj[i]=1;
-    // else obj[i]++;
-}
-console.log(obj);
+function foo(){}
+foo.prototype.foo_prop = "foo val";
+function bar(){}
+var proto = Object.create(
+  foo.prototype
+);
+proto.bar_prop = "bar val";
+bar.prototype = proto;
+var inst = new bar();
+console.log(inst.foo_prop);
+console.log(inst.bar_prop);

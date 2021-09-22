@@ -50,3 +50,19 @@ export const { name1, name2: bar } = o;
 import { export1 as alias1 } from "module-name";
 import defaultExport, {foo, bar}from "module-name";
 ```
+
+## Webpack
+
+### Loader
+
+- test: enables Webpack to determine which files it should transform. 
+- use: specifies what loader to use for it.
+```js
+module : {
+ rules : [
+ {
+    test : /\.(jpg|png)$/, 
+    use : { loader : "url-loader" } 
+  }]
+}
+```
