@@ -88,7 +88,7 @@ B = new int[4];
 int[] C = new int[] { 1, 2, 3, 4 }
 // Array with explicit initial values.
 int[] D = { 1, 2, 3, 4 } // Shorthand for the above
-/******Method***/
+/***Method******/
 public static <T> void sort(T[] a,
             int fromIndex,
             int toIndex,
@@ -110,7 +110,7 @@ Lambda Expression
 //一个参数时()可省略
 (param1, param2, …, paramN) -> { statements }
 (param1, param2, …, paramN) -> expression
-//相当于：(param1, param2, …, paramN) =>{ return expression; }
+//相当于：(param1, param2, …, paramN) ->{ return expression; }
 ```
 
 ![20211004215118](https://raw.githubusercontent.com/zxc2012/image/main/20211004215118.png)
