@@ -87,3 +87,6 @@ int value = input.nextInt();
 |toUpperCase()|Returns a new string with all letters in uppercase.|
 |toLowerCase()|Returns a new string with all letters in lowercase.|
 |trim() |Returns a new string with whitespace characters trimmed on both sides.|
+
+### Array Class
+![20211004215118](https://raw.githubusercontent.com/zxc2012/image/main/20211004215118.png)
