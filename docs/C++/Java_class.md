@@ -77,6 +77,45 @@ int value = input.nextInt();
 // nextFloat() reads a number of the float type.
 // nextDouble() reads a number of the double type.
 ```
+
+### Array Class
+
+```java
+/***Creation****/
+int[] A = new int[4]; // A points to array of 4 0s.
+int[] B; // Same thing, but in two steps.
+B = new int[4];
+int[] C = new int[] { 1, 2, 3, 4 }
+// Array with explicit initial values.
+int[] D = { 1, 2, 3, 4 } // Shorthand for the above
+/******Method***/
+public static <T> void sort(T[] a,
+            int fromIndex,
+            int toIndex,
+            Comparator<? super T> c)
+public static boolean equals(Object[] a,
+             Object[] a2)//Returns true if the two specified arrays of Objects are equal to one another.
+public static void fill(Object[] a,
+        int fromIndex,
+        int toIndex,
+        Object val)             
+```
+Lambda Expression
+- A comma-separated list of formal parameters enclosed in parentheses(Optional type declaration)
+
+- The arrow token, ->
+
+- A body, which consists of a single expression or a statement block. 
+```java
+//一个参数时()可省略
+(param1, param2, …, paramN) -> { statements }
+(param1, param2, …, paramN) -> expression
+//相当于：(param1, param2, …, paramN) =>{ return expression; }
+```
+
+![20211004215118](https://raw.githubusercontent.com/zxc2012/image/main/20211004215118.png)
+
+
 ### String Class
 
 |Method|Description|
@@ -87,6 +126,3 @@ int value = input.nextInt();
 |toUpperCase()|Returns a new string with all letters in uppercase.|
 |toLowerCase()|Returns a new string with all letters in lowercase.|
 |trim() |Returns a new string with whitespace characters trimmed on both sides.|
-
-### Array Class
-![20211004215118](https://raw.githubusercontent.com/zxc2012/image/main/20211004215118.png)
