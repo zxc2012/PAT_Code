@@ -27,11 +27,20 @@
 - 条表示条件运算符(? :)
 - 赋表示赋值运算符(=,+=,-=,*=,/=,%=,>>=,<<=,&=,^=, |=,!=)
 
+## Visibility Modifiers 
+
+|Modifiers|Description|
+|-|-|
+|public|The class, data, or method is visible to any class in any package|
+|(default)|the class, variable, or method can be accessed by any class in the same package|
+|private|Modifier cannot be applied to a class, only its members/The data or methods can be accessed only by the declaring class|
+|protected|Used in inheritance|
+
 ## Cleanup:finalize()
 
 When the garbage collector is ready to release the storage used for your object,it will first call its **finalize()**
 But **finalize()** is totally different from destructor of C++:
-- (1)Garbage collection is not destruction,it is only abour memory.
+- (1)Garbage collection is not destruction,it is only about memory.
 - (2)Your objects might not get garbage-collected.
 
 ## Order of Initialization
