@@ -59,8 +59,3 @@ Cpp/Py:打开对应文件夹可以单独调试
 >Settings-linker-Generate debugging information-Yes
 
 ![Devcpp](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMTkvMDcvMTkvNWQzMWUyMTc4MDExNjkzNzUwLnBuZw)
-
-### `Win7基础设置`
-
-![key](http://www.myexception.cn/img/2013/01/23/1143081857.png)
-![key](http://www.myexception.cn/img/2013/01/23/1143081858.png)
