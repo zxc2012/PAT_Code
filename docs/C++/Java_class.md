@@ -2,10 +2,24 @@
 
 ## Primitive Data Types
 
+C++(ILP32:int long pointer)
+|Type|Storage(bits)|
+|-|-|
+|char|8|
+|short|16|
+|int|32|
+|long|32|
+|float|32|
+|long long|64|
+|double|64|
+
+Java
 |Type|Storage(bits)|Min Value|Max Value|
 |-|-|-|-|
+|boolean|-|-|-|
 |byte|8|-128|127|
 |short|16|$-2^{15}$|$2^{15}-1$|
+|char|16|0|$2^{16}-1$|
 |int|32|$-2^{31}$|$2^{31}-1$|
 |long|64|$-2^{63}$|$2^{63}-1$|
 |float|32|Approximately-3.4e+38 with 7 significant digits|Approximately3.4e+38 with 7 significant digits|
@@ -13,6 +27,14 @@
 
 ![vs](https://img-blog.csdnimg.cn/20201013163013271.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70#pic_center)
 
+### Initialization
+- Data Field
+  - null for a reference type
+  - 0 for a numeric type
+  - false for a boolean type
+  - '\u0000' for a char type
+- no default value to a local
+variable
 ### Operator precedence
 单算移关与，异或逻条赋
 
@@ -27,14 +49,31 @@
 - 条表示条件运算符(? :)
 - 赋表示赋值运算符(=,+=,-=,*=,/=,%=,>>=,<<=,&=,^=, |=,!=)
 
-## Cleanup:finalize()
+### Pass by value
+- For a parameter of a **primitive** type, the actual value is passed
+
+- For a parameter of an **array** type, the reference value is passed
+
+## Class
+
+### Constructor
+
+- Constructors must have the same name as the
+class itself
+- A constructor with no parameters is referred to as
+a no-arg constructor(*default*: no-arg constructor with an
+empty body)
+- Constructors do not have a return type(Not even void)
+
+### Cleanup:finalize()
 
 When the garbage collector is ready to release the storage used for your object,it will first call its **finalize()**
 But **finalize()** is totally different from destructor of C++:
-- (1)Garbage collection is not destruction,it is only abour memory.
-- (2)Your objects might not get garbage-collected.
 
-## Order of Initialization
+1. Garbage collection is not destruction,it is only abour memory.
+2. Your objects might not get garbage-collected.
+
+### Order of Initialization
 
 1.Staic members is to be initialized in the loading of the class,属于类的数据(C++全局)
 
@@ -80,6 +119,7 @@ int value = input.nextInt();
 
 ### Array Class
 
+get length: array.length(*variable*)
 ```java
 /***Creation****/
 int[] A = new int[4]; // A points to array of 4 0s.
