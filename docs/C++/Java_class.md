@@ -89,11 +89,29 @@ But **finalize()** is totally different from destructor of C++:
 - Setting **all** the primitives in the object to their default values.(Any initializations that occur at the point of field definition are executed.)
 - Constructors are executed.
 
-## Polymorphism
+## Inheritance & Polymorphism
 
-**Overriding**:子类定义与父类名称、返回值类型、参数列表完全相同的方法
+### Inheritance
 
-**Overloading**:同一类中名称相同、参数列表不同的方法
+- super
+  - constructor 
+  - superclass method
+  
+    super.method(arguments);
+
+
+**Overriding**
+
+- Have the same signature
+- Are in different classes related by inheritance
+
+**Overloading**
+
+- Have the same name, but different parameter lists
+- Can be either
+  - In the same class
+  - In different classes related by inheritance
+
 Eg:
 
 ```java
