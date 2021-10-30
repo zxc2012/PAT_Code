@@ -1,8 +1,9 @@
 import java.util.*;
 public class ycy{
     public static void main(String args[]){
-        Refer x= new Refer();
-        System.out.println(Refer.age);
+        String s = "print";
+        s = "Html";
+        System.out.println(s);
         int test[][] = new int [][]{
             {1,2},{3,4},{5,6}
         };
