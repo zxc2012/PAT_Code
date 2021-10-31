@@ -99,6 +99,10 @@ But **finalize()** is totally different from destructor of C++:
   
     super.method(arguments);
 
+    *private、static method cannot be overriden*(If a static method defined in the superclass is
+    redefined in a subclass, the method defined
+    in the superclass is hidden)
+
 
 **Overriding**
 
