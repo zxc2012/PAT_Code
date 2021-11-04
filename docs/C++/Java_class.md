@@ -123,6 +123,22 @@ System.out.println(true?Integer.valueOf(1):Double.valueOf(2))
 //输出1.0,因为java是编译语言不是解释语言，编译器看到函数调用不会立即执行
 //而是根据double确定println overload为double类型
 ```
+
+## Abstract Classes & Interfaces
+
+### Abstract Class
+
+- Cannot
+  - Abstract method are only allowed in abstract classes 
+  - An object cannot be created from an abstract class
+- Can
+  - Superclass of abstract class may be concrete
+  - Concrete method overridden to be abstract
+  - Abstract class as a data type
+  ```java
+  GeometricObject[] objects = new GeometricObject[2];
+  ```
+
 ## Object Class
 
 |Function|Interpretion|

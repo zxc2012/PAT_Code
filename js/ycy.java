@@ -1,12 +1,22 @@
 import java.util.*;
-public class ycy {
+abstract class test{
+    public test(){
+        System.out.println("testfromabstractclass");
+    }
+    abstract void getparam();
+    int param;
+}
+public class ycy extends test {
+    public ycy(){
+        super();
+    }
+    @Override
+    void getparam() {
+        // TODO Auto-generated method stub
+        System.out.print("extends from abstract class");
+    }
     public static void main(String[] args) {
-        int i;
-        int sum = 0;
-        for (i = 0; i < 10; i++) {
-        sum += i;
-        }
-        assert i == 10;
-        assert sum > 10 && sum < 4 * 10 : "sum is " + sum;
+        System.out.println("testmain");
     }
 }
+
