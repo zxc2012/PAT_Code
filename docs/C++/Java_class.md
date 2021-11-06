@@ -128,16 +128,28 @@ System.out.println(true?Integer.valueOf(1):Double.valueOf(2))
 
 ### Abstract Class
 
-- Cannot
-  - Abstract method are only allowed in abstract classes 
-  - An object cannot be created from an abstract class
-- Can
-  - Superclass of abstract class may be concrete
-  - Concrete method overridden to be abstract
-  - Abstract class as a data type
-  ```java
-  GeometricObject[] objects = new GeometricObject[2];
-  ```
+- Abstract method(only a signature without implementationv)
+- Abstract class as a data type
+```java
+GeometricObject[] objects = new GeometricObject[2];
+```
+### Interfaces
+
+public -> can be used in any package
+
+default
+```java
+public interface A {
+  public default void doSomething() {
+    System.out.println("Do something");
+  } 
+}
+```
+
+||Variables|Constructors|Methods|
+|-|-|-|-|
+|Abstract Class|No restrictions|Constructors are invoked by subclasses through constructor chaining. An abstract class cannot be initialized using the *new* operator|Superclass of abstract class may be concrete. Concrete method can be overridden to abstract|
+|Interface|All variables must be *public static final*|no constructors|Only contain public abstract,public default,public static methods|
 
 ## Object Class
 

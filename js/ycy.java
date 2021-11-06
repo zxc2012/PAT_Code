@@ -4,7 +4,7 @@ abstract class test{
         System.out.println("testfromabstractclass");
     }
     abstract void getparam();
-    int param;
+    static int param;
 }
 public class ycy extends test {
     public ycy(){
@@ -13,9 +13,13 @@ public class ycy extends test {
     @Override
     void getparam() {
         // TODO Auto-generated method stub
-        System.out.print("extends from abstract class");
+        super.param =2;
+        this.param = 3;
+        System.out.println("extends from abstract class"+this.param);
     }
     public static void main(String[] args) {
+        ycy x = new ycy();
+        x.getparam();
         System.out.println("testmain");
     }
 }
