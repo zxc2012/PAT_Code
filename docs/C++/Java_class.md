@@ -133,11 +133,12 @@ System.out.println(true?Integer.valueOf(1):Double.valueOf(2))
 ```java
 GeometricObject[] objects = new GeometricObject[2];
 ```
+
 ### Interfaces
 
-public -> can be used in any package
+public -> can be used in any package(All method declarations in an interface, including default methods, are implicitly public, so you can omit the public modifier.)
 
-default
+default(no need to override in subclass)
 ```java
 public interface A {
   public default void doSomething() {
@@ -149,7 +150,7 @@ public interface A {
 ||Variables|Constructors|Methods|
 |-|-|-|-|
 |Abstract Class|No restrictions|Constructors are invoked by subclasses through constructor chaining. An abstract class cannot be initialized using the *new* operator|Superclass of abstract class may be concrete. Concrete method can be overridden to abstract|
-|Interface|All variables must be *public static final*|no constructors|Only contain public abstract,public default,public static methods|
+|Interface|All variables must be *public static final*|no constructors|Only contain abstract,*default*,*static* methods|
 
 ## Object Class
 
