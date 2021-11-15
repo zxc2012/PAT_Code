@@ -1,5 +1,5 @@
 {   
-        "terminal.integrated.shell.windows": "C:\\Git\\git-bash.exe",
+        "terminal.integrated.defaultProfile.windows":"GitBash",
         "C_Cpp.errorSquiggles": "Disabled",
         "files.associations": {
                 "string": "cpp",
@@ -77,5 +77,9 @@
                 "set": "cpp"
         },
         "python.pythonPath": "D:\\MDK\\python.exe",
+        "java.project.referencedLibraries": [
+                "lib/**/*.jar",
+                "c:\\Users\\yuchenyang\\Downloads\\junit-4.13.2.jar"
+        ],
     
 }  

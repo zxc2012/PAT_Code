@@ -1,25 +1,18 @@
-import React,{component}from 'react';
-class Comment extends component{
-    constructor(props){
-        super(props);//calls on the component's super class constructor
-                    //converts this javascript class into a react component
-        state={
-            isLiked:false,
-        }
-    }
-    likeComment=()=>{
-        this.setstate=({
-            isLiked=true,
-        });
-    }
-    render(){
-        return(
-            <div id="coolcomment" className="comment-text" onClick={this.likeComment}>
-                {this.props.content}
-                {this.setstate.isLiked?<LikeButton />:null}
-            </div>
-        );
-    }
+let arr =[];
+const configs = [{defaultValue: "0.0.0",
+description: "dlp ini版本",
+group: "DLP配置",
+name: "version",
+required: true,
+type: "string"}];
+arr = [{defaultValue: "0.0.0",
+description: "dlp ini版本",
+group: "DLP配置",
+name: "version",
+required: true,
+type: "string"}];
+for(let i =0;i<arr.length;++i){
+    console.log(configs.indexOf(arr[i]));
 }
-export default Comment;
-setTimeout()
+
+console.log(null+null===null)
