@@ -16,3 +16,7 @@ for(let i =0;i<arr.length;++i){
 }
 
 console.log(null+null===null)
+
+
+let temp = ['dfdsfs','sfsd','name','value'];
+console.log(temp.indexOf('value'));
