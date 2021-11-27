@@ -26,3 +26,18 @@ colspan、rowspan
 Unified Modeling Language
 
 ![20211005144832](https://raw.githubusercontent.com/zxc2012/image/main/20211005144832.png)
+
+### JUnit
+
+```java
+@org.junit.Test
+org.junit.Assert.assertEquals(expected, actual)
+```
+
+It is annoying to type out the name of the library repeatedly,
+to avoid this we’ll start every test file with:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+```

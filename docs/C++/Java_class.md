@@ -146,10 +146,9 @@ public interface A {
 }
 ```
 
-||Variables|Constructors|Methods|
-|-|-|-|-|
-|Abstract Class|No restrictions|Constructors are invoked by subclasses through constructor chaining. An abstract class cannot be initialized using the *new* operator|Superclass of abstract class may be concrete. Concrete method can be overridden to abstract|
-|Interface|All variables must be *public static final*|no constructors|Only contain abstract,*default*,*static* methods|
+![20211125105220](https://raw.githubusercontent.com/zxc2012/image/main/20211125105220.png)
+
+![20211125105246](https://raw.githubusercontent.com/zxc2012/image/main/20211125105246.png)
 
 ## Object Class
 
