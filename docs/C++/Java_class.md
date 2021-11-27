@@ -3,6 +3,7 @@
 ## Primitive Data Types
 
 C++(ILP32:int long pointer)
+
 |Type|Storage(bits)|
 |-|-|
 |char|8|
@@ -14,6 +15,7 @@ C++(ILP32:int long pointer)
 |double|64|
 
 Java
+
 |Type|Storage(bits)|Min Value|Max Value|
 |-|-|-|-|
 |boolean|-|-|-|
