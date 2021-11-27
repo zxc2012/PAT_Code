@@ -1,12 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
-class ycy{
-    public:
-    ycy(){
-        printf("3432");
-    }
-};
 int main(){
-    ycy x;
+    vector<int> a(10,3);
+    for(int x:a)cout<<x<<endl;
     return 0;
 }

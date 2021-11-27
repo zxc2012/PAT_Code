@@ -136,9 +136,8 @@ GeometricObject[] objects = new GeometricObject[2];
 
 ### Interfaces
 
-public -> can be used in any package(All method declarations in an interface, including default methods, are implicitly public, so you can omit the public modifier.)
-
-default(no need to override in subclass)
+- public: can be used in any package(All method declarations in an interface, including default methods, are implicitly public, so you can omit the public modifier.)
+- default: no need to override in subclass
 ```java
 public interface A {
   public default void doSomething() {
