@@ -1,7 +1,9 @@
 # Java Application Design--Exceptions & IO
 
 ## IO
+
 ### Read a file
+
 1. open the file;(共享文件同时正在写)
 2. determine its size;(文件=键盘)
 3. allocate that much memory;(JVM64MB)
@@ -28,15 +30,15 @@ graph LR;
 	FileOutputStream-->OutputStream;
 ```
 
-DataInputStream:二进制写的primitive
+DataInputStream:二进制写的 primitive
 
 LineNumberInputStream:一行行读文本
 **InputStream**
 
 - read()
-	- int read()
-	- read(byte b[])
-	- read(byte b[],int off,int len)
+  - int read()
+  - read(byte b[])
+  - read(byte b[],int off,int len)
 - skip(long n)
 - int available()
 - mark()
@@ -45,10 +47,11 @@ LineNumberInputStream:一行行读文本
 - close()
 
 **OutputStream**
+
 - write()
-	- write(int b)
-	- write(byte b[]);
-	- write(byte b[],int off,int len)
+  - write(int b)
+  - write(byte b[]);
+  - write(byte b[],int off,int len)
 - flush()
 - close()
 
@@ -62,11 +65,12 @@ LineNumberInputStream:一行行读文本
 
 ### throw and throws
 
-You can *claim* to throw an Exception that you really don't.
+You can _claim_ to throw an Exception that you really don't.
 
-1. Otherwise if you 在f()内throw别的异常 编译不通过.
+1. Otherwise if you 在 f()内 throw 别的异常 编译不通过.
 
 2. Anyone call your funcition must catch it or throws again.
+
 ```java
 throw new Exception;//祈使句
 class SException extends Exception{}//陈述句三单
@@ -86,7 +90,7 @@ graph LR;
 	NullPointerException-->RuntimeException;
 	ClassNotFoundException-->Exception;
 	CloneNotSupportedException-->Exception;
-	IOException-->Exception; 
+	IOException-->Exception;
     RuntimeException-->Exception;
     Exception-->Throwable;
     Error-->Throwable;
@@ -100,12 +104,13 @@ graph LR;
 ### throw Inheritance
 
 **成员函数:父类和接口的交集**
+
 ```java
 class B extends A;
 A b=new B();
 b.f();//编译器认为他还是A类，如果throw其他异常会光A.f()捕捉不到
 ```
+
 **构造方法:父类的超集**
 
-因为构造方法里隐含调用了super();
-
+因为构造方法里隐含调用了 super();
