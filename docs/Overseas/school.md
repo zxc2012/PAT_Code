@@ -22,6 +22,8 @@
 
 [天大本硕EE](https://www.1point3acres.com/bbs/thread-306765-1-1.html)
 
+[天大通信](https://www.1point3acres.com/bbs/thread-352564-1-1.html)
+
 [985EE](https://www.1point3acres.com/bbs/thread-352564-1-1.html)
 
 [985光电](https://www.1point3acres.com/bbs/thread-608971-1-1.html)
@@ -101,6 +103,7 @@
 |UF|CS|
 |UTD  | CS |
 |USC  | CS37 CS28 CE|
+|USF|CS|
 |UW|CS EE|
 |UW-Madison|ECE|
 |UMN  | MSCS|
@@ -117,3 +120,5 @@
 [ECE转码校](https://www.1point3acres.com/bbs/thread-582240-1-1.html)
 
 [二硕+工作党申请总结](https://www.1point3acres.com/bbs/thread-610671-1-1.html)
+
+[学信网](https://www.1point3acres.com/bbs/thread-651776-1-1.html)
