@@ -1,4 +1,6 @@
 import java.util.*;
+import org.junit.Test;
+import static org.junit.Assert.*;
 
 class Dog implements Comparable<Dog>{
     private String name = "";
@@ -19,22 +21,15 @@ class Dog implements Comparable<Dog>{
         System.out.println(this.name+"barking");
     }
 }
-class DogAgeCompator implements Comparator<Dog>{
-
-    @Override
-    public int compare(Dog o1, Dog o2) {
-        return o1.compareTo(o2);
-    }
-    
-}
-public class testcompare{
-    public static void main(String[] args) {
+public class Testcompare{
+    @Test
+    public void testbark(){
         Dog[] dogs = {new Dog("monkey",2),new Dog("monika",1),new Dog("Snooby",4)};
-        DogAgeCompator dogAgeComparator = new DogAgeCompator();
-        Arrays.sort(dogs,dogAgeComparator);
+        Arrays.sort(dogs,(Dog o1,Dog o2)->o1.compareTo(o2));
         for (Dog o: dogs){
             o.bark();
         }
+        assertEquals(3,3);
     }
 }
 

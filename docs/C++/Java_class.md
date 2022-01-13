@@ -130,6 +130,18 @@ System.out.println(true?Integer.valueOf(1):Double.valueOf(2))
 //而是根据double确定println overload为double类型
 ```
 
+### Polymorphism
+
+The compiler chooses the most specific matching method signature from the static type of the invoking class
+
+- Static Type: type specified at declaration
+- Dynamic Type: type specified at instantiation(the object being pointed at)
+- dynamic method selection: if dynamic type **overide**s the method, its method is used instead.
+
+Casting Problem:
+
+(联想集合)To move from a wider type to a narrower type, **must** use casting
+![20211230194803](https://raw.githubusercontent.com/zxc2012/image/main/20211230194803.png)
 ## Abstract Classes & Interfaces
 
 ### Abstract Class
@@ -214,6 +226,8 @@ Lambda Expression
 - The arrow token, ->
 
 - A body, which consists of a single expression or a statement block.
+
+![20220112194646](https://raw.githubusercontent.com/zxc2012/image/main/20220112194646.png)
 
 ```java
 //一个参数时()可省略

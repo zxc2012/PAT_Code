@@ -52,6 +52,7 @@
 - [PAT1123 Is It a Complete AVL Tree](OJ/PAT1123.md)
 - [PAT1141 PAT Ranking of Institutions](OJ/PAT1141.md)
 - [Leetcode 4 Median of Two Sorted Arrays](OJ/Leetcode4.md)
+- [Leetcode 334 Increasing Triplet Subsequence](OJ/Leetcode334.md)
 - [leetcode1348 Tweet Counts Per Frequency](OJ/Leetcode1348.md)
 
 ## 💡Software Development

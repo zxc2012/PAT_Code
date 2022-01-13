@@ -39,15 +39,80 @@ Deque[dek]--double ended queue
 
 **HashMap** and **TreeMap**
 ## Generics
-`注意无论是什么泛型，类型均是同一个`
+`注意无论是什么泛型，getClass()均是同一个`
 
 ### 机制
-Java--类型参数作为类的成员变量
+Java--类型参数(**Cannot use primitive types**)作为类的成员变量
 
 C++(模板)--源代码的源代码
 
+### Class
+```java
+public class ArrayMap<K, V> {
+  private K[] keys; 
+  private V[] values;
+  private int size;
+  public ArrayMap() {
+    keys = (K[]) new Object[100];
+    values = (V[]) new Object[100];
+    size = 0;
+  }
+  ...
+}
+```
+
 ### Method
-我们知道String可以赋值给Object，但Object不能赋给String--反推2
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201017155012620.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70#pic_center)
-加进来的时候得限定不然成了Object，不能调用接口的方法
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201017160239945.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70#pic_center)
+
+#### Type Upper Bounds
+
+```java
+public static <K extends Comparable<K>, V> K maxKey(ArrayMap<K, V> am) {//Meaning: Any ArrayMap you give me must have actual parameter type that is a subtype of Comparable<T>.
+
+   ...
+     	if (k.compareTo(largest) > 0) {
+   ...
+}
+```
+
+#### Convariance 
+
+```java
+ArrayMap<FrenchDog, Integer> am2 = new ArrayMap<FrenchDog, Integer>();
+am2.put(new FrenchDog("francis"), 10);
+am2.put(new FrenchDog("francis jr"), 20);
+allBark(am2);
+// 实现allBark
+public static void allBark(ArrayMap<Dog, ?> am) {
+   for (Dog d : am.keys()) {
+       d.bark(); 	
+   }
+}
+```
+
+Arrays are convariant in java, but generic types are invariant
+
+反证: 
+if 2(√) then 4(x) so 2(x)
+
+```java
+List<FrenchDog> fg = new ArrayList<FrenchDog>();
+List<Dog> g = fg;
+g.add(new Dog());
+FrenchDog s = g.get(0);
+```
+
+```java
+//正确
+public static <K extends Dog> void allBark(ArrayMap<K, ?> am) {
+   for (Dog d : am.keys()) {
+       d.bark();
+   }
+}
+//or 
+public static void allBark(ArrayMap<?extends Dog,?> am){
+    for(Dog d : am.keys()){
+        d.bark();
+    }
+}
+
+```
