@@ -177,6 +177,19 @@ bool VerifySquenceOfBST(vector<int> sequence) {
     return true;
 }
 ```
+### 31 栈的压入、弹出序列
+```cpp
+bool IsPopOrder(vector<int> pushV,vector<int> popV) {
+    stack<int> s;
+    int n = popV.size();
+    int j =0;
+    for(int i =0;i<n;++i){
+        while(s.empty()||popV[i]!=s.top()&&j<n)s.push(pushV[j++]);
+        if(popV[i]==s.top())s.pop();
+    }
+    return s.empty();
+}
+```
 ### 37 两个链表的第一个公共节点
 >法1:找到差值后找公共
 ```cpp
