@@ -4,11 +4,17 @@
 ### 非CS
 [自动化本硕](https://www.1point3acres.com/bbs/thread-611224-1-1.html)
 
+[本硕EE](https://www.1point3acres.com/bbs/thread-634428-1-1.html)
+
+[广西大学控制](https://www.1point3acres.com/bbs/thread-572711-1-1.html)
+
 [东南EE](https://www.1point3acres.com/bbs/thread-605145-1-1.html)
 
 [清北EE](https://www.1point3acres.com/bbs/thread-492062-1-1.html)
 
 [EEtop15](https://www.1point3acres.com/bbs/thread-585211-1-1.html)
+
+[EEtop30](https://www.1point3acres.com/bbs/thread-611726-1-1.html)
 
 [武理北邮通信](https://www.1point3acres.com/bbs/thread-615288-1-1.html)
 
@@ -25,6 +31,8 @@
 [天大通信](https://www.1point3acres.com/bbs/thread-352564-1-1.html)
 
 [985EE](https://www.1point3acres.com/bbs/thread-352564-1-1.html)
+
+[山大EE本硕](https://www.1point3acres.com/bbs/thread-581480-1-1.html)
 
 [985光电](https://www.1point3acres.com/bbs/thread-608971-1-1.html)
 
@@ -49,11 +57,15 @@
 
 [软件科班](https://www.1point3acres.com/bbs/thread-452365-1-1.html)
 
+[上交CS](https://www.1point3acres.com/bbs/thread-817663-1-1.html)
+
 [北大CS](https://www.1point3acres.com/bbs/home.php?mod=space&uid=416514&do=thread&type=thread&view=me&from=space)
 
 [同济软件](https://www.1point3acres.com/bbs/thread-188372-1-1.html)
 
 [哈工大CS](https://www.1point3acres.com/bbs/thread-428211-1-1.html)
+
+[西交软工](https://www.1point3acres.com/bbs/thread-817034-1-1.html)
 
 [西工大CS](https://www.1point3acres.com/bbs/thread-538584-1-1.html)
 
