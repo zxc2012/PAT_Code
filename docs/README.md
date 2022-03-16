@@ -4,6 +4,7 @@
 - [CS186 Lecture2 --DB_Design](cs/cs186_2.md)
 - [CS186 Lecture3 --Index & Hashing](cs/cs186_3.md)
 - [CS61C Lecture1 --Number Representation](cs/cs61c_1.md)
+- [CS61C Lecture2 --RISCV Assembly](cs/cs61c_2.md)
 - [CS162 Lecture1 --Operating System Overview](cs/cs162_1.md)
 - [CS162 Lecture2 --Threads and Processes](cs/cs162_2.md)
 - [web.lab1 --HTML&CSS](cs/web_1.md)
