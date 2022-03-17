@@ -12,12 +12,15 @@
   <link rel="stylesheet" href="//unpkg.com/docsify@4/lib/themes/vue.css">
   <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">  
   <link rel="stylesheet" href="//unpkg.com/katex@latest/dist/katex.min.css"/>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css" />
   <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
   <div id="app"></div>
   <a class="to-top">Top</a>
   <script>
+    var num = 0;
+    mermaid.initialize({ startOnLoad: false });
     window.$docsify = {
       maxAge: 8,
       maxLevel: 4,/*目录层级*/
@@ -32,7 +35,9 @@
         renderer: {
           code: function (str, lang) {
               let ch = [];
-              if(lang==='mermaid') return str;
+              if(lang==='mermaid')return (
+                '<div class="mermaid">' + mermaid.render('mermaid-svg-' + num++, code) + "</div>"
+              );
               ch.push("<pre><code>");
               try {
                   str = hljs.getLanguage(lang)
@@ -68,9 +73,9 @@
   -->
   <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
   <script src="//unpkg.com/docsify-katex@latest/dist/docsify-katex.js"></script>
+  
 
-  <script src="//unpkg.com/mermaid/dist/mermaid.js"></script>
-  <script src="//unpkg.com/docsify-mermaid@latest/dist/docsify-mermaid.js">
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
   <script>mermaid.initialize({ startOnLoad: true });</script>
 
   <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
