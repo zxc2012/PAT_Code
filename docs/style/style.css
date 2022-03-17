@@ -22,113 +22,73 @@
     font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace !important;
     font-size  : 15px !important;
     min-width  : 100%;
-    background : #282c34 !important;
+    background : #282a36 !important;
     line-height: 1.7 !important;
     padding    : 1em !important;
     color      : #fff;
 }
 
-.hljs-keyword,
-.hljs-literal,
-.hljs-symbol,
-.hljs-name {
-  color: #569CD6;
-}
-.hljs-link {
-  color: #569CD6;
-  text-decoration: underline;
-}
-
 .hljs-built_in,
-.hljs-type {
-  color: #4EC9B0;
+.hljs-selector-tag,
+.hljs-section,
+.hljs-link {
+  color: #8be9fd;
 }
 
-.hljs-number,
-.hljs-class {
-  color: #B8D7A3;
+.hljs-keyword {
+  color: #ff79c6;
+}
+
+.hljs,
+.hljs-subst {
+  color: #f8f8f2;
+}
+
+.hljs-title,
+.hljs-attr,
+.hljs-meta-keyword {
+  font-style: italic;
+  color: #50fa7b;
 }
 
 .hljs-string,
-.hljs-meta .hljs-string {
-  color: #D69D85;
-}
-
-.hljs-regexp,
-.hljs-template-tag {
-  color: #9A5334;
-}
-
-.hljs-subst,
-.hljs-function,
-.hljs-title,
-.hljs-params,
-.hljs-formula {
-  color: #DCDCDC;
+.hljs-meta,
+.hljs-name,
+.hljs-type,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-tag,
+.hljs-template-variable {
+  color: #f1fa8c;
 }
 
 .hljs-comment,
-.hljs-quote {
-  color: #57A64A;
-  font-style: italic;
+.hljs-quote,
+.hljs-deletion {
+  color: #6272a4;
 }
 
-.hljs-doctag {
-  color: #608B4E;
-}
-
-.hljs-meta,
-.hljs-meta .hljs-keyword,
-
-.hljs-tag {
-  color: #9B9B9B;
-}
-
-.hljs-variable,
-.hljs-template-variable {
-  color: #BD63C5;
-}
-
-.hljs-attr,
-.hljs-attribute {
-  color: #9CDCFE;
-}
-
-.hljs-section {
-  color: gold;
-}
-
-.hljs-emphasis {
-  font-style: italic;
-}
-
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-title,
+.hljs-section,
+.hljs-doctag,
+.hljs-type,
+.hljs-name,
 .hljs-strong {
   font-weight: bold;
 }
 
-/*.hljs-code {
-  font-family:'Monospace';
-}*/
-
-.hljs-bullet,
-.hljs-selector-tag,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-selector-attr,
-.hljs-selector-pseudo {
-  color: #D7BA7D;
+.hljs-literal,
+.hljs-number {
+  color: #bd93f9;
 }
 
-.hljs-addition {
-  background-color: #144212;
-  display: inline-block;
-  width: 100%;
-}
-
-.hljs-deletion {
-  background-color: #600;
-  display: inline-block;
-  width: 100%;
+.hljs-emphasis {
+  font-style: italic;
 }
 
 .token.punctuation {
