@@ -32,6 +32,7 @@
         renderer: {
           code: function (str, lang) {
               let ch = [];
+              if(lang==='mermaid') return str;
               ch.push("<pre><code>");
               try {
                   str = hljs.getLanguage(lang)
