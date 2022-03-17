@@ -1,42 +1,100 @@
 /* 置顶插件 */
 .to-top {
-    display: none;
-    padding: 10px 20px;
-    margin-right: 10px;
-    color: #fff;
-    border-radius: 10px;
+    display         : none;
+    padding         : 10px 20px;
+    margin-right    : 10px;
+    color           : #fff;
+    border-radius   : 10px;
     background-color: rgb(102, 126, 233);
 }
 
-.markdown-section{
-    font-family: "微软雅黑","Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
-    max-width:800px;
-    font-size: 16px;
+.markdown-section {
+    font-family: "微软雅黑", "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
+    max-width  : 800px;
+    font-size  : 16px;
 }
-.markdown-section em{
-    color:black
-} 
-.markdown-section pre>code{
-    font-family: Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace !important;
-    font-size: 15px !important;
-    min-width:100%;
-    background: #282c34 !important;
-    line-height:1.7!important;
-    padding:1em !important;
+
+.markdown-section em {
+    color: black
+}
+
+.markdown-section pre>code {
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace !important;
+    font-size  : 15px !important;
+    min-width  : 100%;
+    background : #282c34 !important;
+    line-height: 1.7 !important;
+    padding    : 1em !important;
+    color      : #fff;
+}
+
+.hljs-attribute,
+.hljs-keyword {
+    color: #66d9ef !important;
+}
+
+/*void int for*/
+.hljs-deletion,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-meta {
+    color: rgba(152, 230, 5, 0.92) !important;
+}
+
+/*#include*/
+.hljs-built_in,
+.hljs-string,
+.hljs-title,
+.hljs-section,
+.hljs-attribute,
+.hljs-literal,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-addition {
+    color: rgba(223, 226, 44, 1) !important
+}
+
+/*vector*/
+.hljs-bullet,
+.hljs-link,
+.hljs-literal,
+.hljs-number,
+.hljs-quote {
+    color: rgba(255, 230, 128, 1) !important
+}
+
+/*3*/
+.hljs-comment,
+.hljs-quote,
+.hljs-variable {
+    color: #6ce26ccf;
+}/*注释*/
+hljs-builtin-name,
+.hljs-code,
+.hljs-section,
+.hljs-selector-class,
+.hljs-title {
+    color: #fff !important;
+}
+
+.token.punctuation {
     color: #fff;
 }
-.token.punctuation{
-    color: #fff;
+
+.token.keyword {
+    color: #66d9ef !important;
 }
-.token.keyword{
-    color:#66d9ef !important;
+
+.token.string,
+.token.function {
+    color: rgba(223, 226, 44, 1) !important
 }
-.token.string,.token.function{
-    color:rgba(223, 226, 44, 1) !important
+
+.token.comment {
+    color: #6ce26ccf;
 }
-.token.comment{
-    color:#6ce26ccf;
-}
-.token.number{
-    color:rgba(255, 230, 128, 1) !important
+
+.token.number {
+    color: rgba(255, 230, 128, 1) !important
 }
