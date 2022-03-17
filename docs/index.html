@@ -23,11 +23,29 @@
       maxLevel: 4,/*目录层级*/
       name: 'Content',
       search: {
-            paths: 'auto',
-            placeholder: '🔍 Type to search ',
-            noData: '😞 No Results! ',
-            depth: 6
-        },
+        paths: 'auto',
+        placeholder: '🔍 Type to search ',
+        noData: '😞 No Results! ',
+        depth: 6
+      },
+      markdown: {
+        renderer: {
+          code: function (str, lang) {
+              let ch = [];
+              ch.push("<pre><code>");
+              try {
+                  str = hljs.getLanguage(lang)
+                      ? hljs.highlight(str, { language: lang }).value
+                      : hljs.highlightAuto(str).value;
+                  ch.push(str);
+              } catch (__) {
+                  ch.push(str);
+              }
+              ch.push("</code></pre>");
+              return ch.join('');
+          }
+        }
+      },
       coverpage: false,
       loadNavbar: false
     }
@@ -35,6 +53,8 @@
   <!-- Docsify v4 -->
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
   <script src="//unpkg.com/docsify/lib/plugins/emoji.min.js"></script>
+  <script src="https://npm.elemecdn.com/@highlightjs/cdn-assets@11.3.1/highlight.min.js"></script>
+  <!--
   <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-java.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-c.min.js"></script>
@@ -44,6 +64,7 @@
   <script src="//unpkg.com/prismjs/components/prism-javascript.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-css.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-nasm.js"></script>
+  -->
   <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
   <script src="//unpkg.com/docsify-katex@latest/dist/docsify-katex.js"></script>
 
