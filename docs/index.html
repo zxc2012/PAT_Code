@@ -37,7 +37,7 @@
           code: function (str, lang) {
               let ch = [];
               if(lang==='mermaid')return (
-                '<div class="mermaid">' + mermaid.render('mermaid-svg-' + num++, code) + "</div>"
+                '<div class="mermaid">' + mermaid.render('mermaid-svg-' + num++, str) + "</div>"
               );
               ch.push("<pre><code>");
               try {
