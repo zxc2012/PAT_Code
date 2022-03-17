@@ -28,54 +28,107 @@
     color      : #fff;
 }
 
-.hljs-attribute,
-.hljs-keyword {
-    color: #66d9ef !important;
+.hljs-keyword,
+.hljs-literal,
+.hljs-symbol,
+.hljs-name {
+  color: #569CD6;
+}
+.hljs-link {
+  color: #569CD6;
+  text-decoration: underline;
 }
 
-/*void int for*/
-.hljs-deletion,
-.hljs-selector-attr,
-.hljs-selector-pseudo,
-.hljs-meta {
-    color: rgba(152, 230, 5, 0.92) !important;
-}
-
-/*#include*/
 .hljs-built_in,
-.hljs-string,
-.hljs-title,
-.hljs-section,
-.hljs-attribute,
-.hljs-literal,
-.hljs-template-tag,
-.hljs-template-variable,
-.hljs-type,
-.hljs-addition {
-    color: rgba(223, 226, 44, 1) !important
+.hljs-type {
+  color: #4EC9B0;
 }
 
-/*vector*/
-.hljs-bullet,
-.hljs-link,
-.hljs-literal,
 .hljs-number,
-.hljs-quote {
-    color: rgba(255, 230, 128, 1) !important
+.hljs-class {
+  color: #B8D7A3;
 }
 
-/*3*/
+.hljs-string,
+.hljs-meta .hljs-string {
+  color: #D69D85;
+}
+
+.hljs-regexp,
+.hljs-template-tag {
+  color: #9A5334;
+}
+
+.hljs-subst,
+.hljs-function,
+.hljs-title,
+.hljs-params,
+.hljs-formula {
+  color: #DCDCDC;
+}
+
 .hljs-comment,
-.hljs-quote,
-.hljs-variable {
-    color: #6ce26ccf;
-}/*注释*/
-hljs-builtin-name,
-.hljs-code,
-.hljs-section,
+.hljs-quote {
+  color: #57A64A;
+  font-style: italic;
+}
+
+.hljs-doctag {
+  color: #608B4E;
+}
+
+.hljs-meta,
+.hljs-meta .hljs-keyword,
+
+.hljs-tag {
+  color: #9B9B9B;
+}
+
+.hljs-variable,
+.hljs-template-variable {
+  color: #BD63C5;
+}
+
+.hljs-attr,
+.hljs-attribute {
+  color: #9CDCFE;
+}
+
+.hljs-section {
+  color: gold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+/*.hljs-code {
+  font-family:'Monospace';
+}*/
+
+.hljs-bullet,
+.hljs-selector-tag,
+.hljs-selector-id,
 .hljs-selector-class,
-.hljs-title {
-    color: #fff !important;
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+  color: #D7BA7D;
+}
+
+.hljs-addition {
+  background-color: #144212;
+  display: inline-block;
+  width: 100%;
+}
+
+.hljs-deletion {
+  background-color: #600;
+  display: inline-block;
+  width: 100%;
 }
 
 .token.punctuation {
