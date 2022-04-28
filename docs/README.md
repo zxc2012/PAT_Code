@@ -7,6 +7,7 @@
 - [CS61C Lecture2 --RISCV Assembly](cs/cs61c_2.md)
 - [CS61C Lecture3 --RISCV Single-Cycle Control and Pipelining](cs/cs61c_3.md)
 - [CS61C Lecture4 --Cache](cs/cs61c_4.md)
+- [CS61C Lecture4 --Parallelism](cs/cs61c_5.md)
 - [CS162 Lecture1 --Operating System Overview](cs/cs162_1.md)
 - [CS162 Lecture2 --Threads and Processes](cs/cs162_2.md)
 - [web.lab1 --HTML&CSS](cs/web_1.md)
