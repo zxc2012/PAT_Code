@@ -2,15 +2,17 @@
 ## 单词篇
 [2个月计划](https://zhuanlan.zhihu.com/p/38191414)
 
-## 备考T
+## TOEFL
 [TOEFL 110](https://zhuanlan.zhihu.com/p/29026198?utm_source=qq&utm_medium=social&utm_oi=736283920542203904)
+
 [高考生短平快](https://www.1point3acres.com/bbs/thread-576890-1-1.html)
 
-## 个人计划
-### Words
-- [x] 4.26  **word list 28** pass  
-- [ ] 1.31- 2.3 **Round 1** (*to* word list 30)pass
-- [ ] 2.4-2.18 **Round 2** (2 lists/day)
-- [ ] 2.20-2.28  **Round 2**(5 lists/day)
-- [ ] 6.1-6.7 **Round 3** 挑出单词(5 lists/day)
-- [ ] 6.8-6.14 **Round 4** 待定......
+[六级500](https://www.cc98.org/topic/5221614/1#1)
+
+[60到100](https://www.cc98.org/topic/5181699)
+
+- 阅读
+    - 精读:一篇阅读做题的一遍+纠错时一遍+纠完错后再通读一遍
+- 听力
+    - 精听:做题→纠错→重听并核对英文→不看内容重听→跟读
+## GRE

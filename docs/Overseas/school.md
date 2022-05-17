@@ -92,7 +92,7 @@
 |ASU | MCS SE|
 |CMU | ECE INI-MSIT-IS SE 	MSE for Professional|
 |Cornell|ECE Meng|
-|Colorado Boulder|MSCS|
+|CU Boulder|MSCS|
 |Columbia|CE|
 |Duke  | ECE(+Meng) |
 |JHU  | CS |
