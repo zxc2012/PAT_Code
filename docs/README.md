@@ -11,7 +11,7 @@
 - [CS152 Lecture1 --Cache Coherence & Memory Consistency](cs/cs152_1.md)
 - [CS152 Lecture2 --Complex Pipelining](cs/cs152_2.md)
 - [CS162 Lecture1 --Operating System Overview](cs/cs162_1.md)
-- [CS162 Lecture2 --Threads and Processes](cs/cs162_2.md)
+- [CS162 Lecture2 --Synchronization](cs/cs162_2.md)
 - [web.lab1 --HTML&CSS](cs/web_1.md)
 - [web.lab2 --Javascript](cs/web_2.md)
 - [web.lab3 --React](cs/web_3.md)
