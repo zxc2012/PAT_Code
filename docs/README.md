@@ -9,6 +9,7 @@
 - [CS61C Lecture4 --Cache](cs/cs61c_4.md)
 - [CS61C Lecture5 --Parallelism](cs/cs61c_5.md)
 - [CS61C Lecture6 --Virtual Memory](cs/cs61c_6.md)
+- [CS61C Lecture7 --Summary](cs/cs61c_7.md)
 - [CS152 Lecture1 --Cache Coherence & Memory Consistency](cs/cs152_1.md)
 - [CS152 Lecture2 --Complex Pipelining](cs/cs152_2.md)
 - [CS162 Lecture1 --Operating System Overview](cs/cs162_1.md)
