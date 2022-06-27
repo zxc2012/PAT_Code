@@ -47,11 +47,7 @@
 ## ☀️Daily English
 
 - [TG英语备考](DailyEnglish/TOEFL.md)
-- [Love,Death & English](DailyEnglish/Love.md)
-- [TPO47](DailyEnglish/TPO47.md)
-- [2020.8.19 TOEFL Independent Writing](DailyEnglish/Writing.md)
-- [Ceceil Hotel](DailyEnglish/ceil.md)
-- [TPO05](DailyEnglish/TPO05.md)
+- [TOEFL Speaking](DailyEnglish/ceil.md)
 
 ## ✈️Overseas
 
