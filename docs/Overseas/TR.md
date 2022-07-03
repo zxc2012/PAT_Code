@@ -19,9 +19,11 @@ Which of the following can be inferred about X？
 
 托福阅读不能过度`推理`
 
-1. 结合全段/全文—此时还是细节
+### 结合全段/全文—此时还是细节
     
-Venus and Earth are commonly regarded as twin planets but not identical twins. They are about the same size, are composed of roughly the same mix of materials, and may have been comparably endowed at their beginning with carbon dioxide and water. However, the twins evolved differently, largely because of differences in their distance from the Sun. With a significant amount of internal heat, Venus may continue to be geologically active with volcanoes, rifting, and folding
+Venus and Earth are commonly regarded as twin planets but not identical twins. 
+They are about the same size, are composed of roughly the same mix of materials, and may have been comparably endowed at their beginning with carbon dioxide and water. However, the twins evolved differently, largely because of differences in their distance from the Sun.
+With a significant amount of internal heat, Venus may continue to be geologically active with volcanoes, rifting, and folding.
 
 It can be inferred from paragraph 2 that Earth evolved differently than Venus did in part because_B_
 
@@ -29,7 +31,7 @@ B. they received different amounts of solar energy
 
 C. their interiors contained different amounts of heat
     
-2. 反向思维
+### 反向思维
     
 在此之前，我没有去过美国。
 →在此 **之后** ，我可能去过美国。
@@ -39,7 +41,7 @@ Eg:
 Until the 1980s, in what Blakemore and Harley called “the Old is Beautiful Paradigm,” scholars largely focused on maps made **before** 1800, marveling at their beauty and sometimes regretting the decline of the pre-technical age.
 →beginning in the 1980s, historians of cartography expanded their range of study to include more material created **after** 1800
     
-3. 解读修辞
+### 解读修辞
     
 Remember that 1867 was at the beginning of the Impressionist movement.
 French artists were already experimenting with new ideas, getting away from the elaborate formality of academic art that was taught in French art schools at the time. To these artists, the Japanese woodcuts were like a breath of fresh air, a new way of seeing and interpreting the world. Take perspective, for instance. What's its purpose?
@@ -61,13 +63,13 @@ French artists were already experimenting with new ideas, getting away from the 
 
 > **补充阅读文章的观点句。**
 
-1. **“描述”类**
+### “描述”类
 
 选项表示“描述”的写作目的动词：indicate、characterize、describe、express、point out、illustrate、identify等
 
 suggest 和 imply在托福是直白的表达
 
-2.  **“证据、例子”类**
+### “证据、例子”类
 
 选项中表示”例子“词：provide evidence、provide examples等。
 
@@ -75,59 +77,60 @@ suggest 和 imply在托福是直白的表达
 
 → provide evidence that Africans developed original iron-smelting technology that was not found elsewhere.
 
-3. **“观点”类**
+### “观点”类
 
-    选项中表示”观点“词：argue。
-    Someone argues that… 给出观点
+选项中表示”观点“词：argue。
+Someone argues that… 给出观点
 
-    辨析:
+辨析:
 
-    argue for赞成 argue against反对
+argue for赞成 argue against反对
 
-4. **“对比及反驳”类**
+### “对比及反驳”类
 
-    - 文章中表示“对比及反驳”的句型和关系
-        - 否定句、转折句
-        
-    - 选项中表示“对比及反驳”的写作目的动词
-        - compare, contrast
+- 文章中表示“对比及反驳”的句型和关系
+    - 否定句、转折句
     
-5. **“解释”类**
-    - 文章中表示“解释”的句型和关系
+- 选项中表示“对比及反驳”的写作目的动词
+    - compare, contrast
+    
+### “解释”类
 
-        a. 因果关系
-        因为特朗普听了 GRE 小白到大神的系列课并且认真记了笔记并且认真刷了题，所以特朗普考了 335 的高分。
-        →解释了为什么特朗普得到了 GRE 的高分。
-        b. 目的关系
-        特朗普听 GRE 小白到大神的系列课，目的是为了考 GRE 的高分。
-        →解释了为什么特朗普会听 GRE 小白到大神的系列课。
-        c. 难点举例：
-        特朗普的高分源自于他看了 GRE 从小白到大神的课程。（源自于）
-        特朗普得了高分，他之前看了 GRE 从小白到大神的课程。（没有关联词）
+- 文章中表示“解释”的句型和关系
 
-    - 选项中表示“解释”的写作目的动词
+    a. 因果关系
+    因为特朗普听了 GRE 小白到大神的系列课并且认真记了笔记并且认真刷了题，所以特朗普考了 335 的高分。
+    →解释了为什么特朗普得到了 GRE 的高分。
+    b. 目的关系
+    特朗普听 GRE 小白到大神的系列课，目的是为了考 GRE 的高分。
+    →解释了为什么特朗普会听 GRE 小白到大神的系列课。
+    c. 难点举例：
+    特朗普的高分源自于他看了 GRE 从小白到大神的课程。（源自于）
+    特朗普得了高分，他之前看了 GRE 从小白到大神的课程。（没有关联词）
 
-        例如：explain、account for、explicate等
+- 选项中表示“解释”的写作目的动词
 
-6. **“强调”类**
+    例如：explain、account for、explicate等
 
-    - 文章中表示“强调”的句型和关系
+### “强调”类
 
-        a. 问句
+- 文章中表示“强调”的句型和关系
 
-        GRE 考试怎么这么难啊？
+    a. 问句
 
-        b. 对比/让步句
+    GRE 考试怎么这么难啊？
 
-        参加这次刺绣大赛的所有参赛者都是女性，只有我是男性。
-        虽然他身有残疾，但是他还是坚持努力备考 GRE 考试。
-        
-        c. 强调句型
+    b. 对比/让步句
 
-        It is in the garden that she lost her watch
-        
-    - 选项中表示“强调”的写作目的动词
-    例如：emphasize、stress、highlight等
+    参加这次刺绣大赛的所有参赛者都是女性，只有我是男性。
+    虽然他身有残疾，但是他还是坚持努力备考 GRE 考试。
+    
+    c. 强调句型
+
+    It is in the garden that she lost her watch
+    
+- 选项中表示“强调”的写作目的动词
+例如：emphasize、stress、highlight等
 
 ## 指代题
 
@@ -173,15 +176,15 @@ Which of the following best expresses the essential information in the highlight
 ## 句子插入题
 
 1. 通过指代(80%)
-    - A X → The(This) X
-    - One X → The other X
-    - Some X → Other X
-    - 1, 2, (3…) → Both/Either/Neither/All(或反过来)
-    
+- A X → The(This) X
+- One X → The other X
+- Some X → Other X
+- 1, 2, (3…) → Both/Either/Neither/All(或反过来)
+
     **Likewise, the collective decision-making process of the open marketplace was no longer practical.**
-    
+
     *Likewise→D*
-    
+
     ![20220703201210](https://raw.githubusercontent.com/zxc2012/image/main/20220703201210.png)
     
 2. 通过逻辑配对(20%)
