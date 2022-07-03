@@ -130,7 +130,7 @@ Using points and examples from the talk, explain how A and B contribute to X.
     
 （1）概念、问题或现象 X；（2）分论点关键词 X1/X2
 
-- X1/X2 分别⽤⼀个词MN来概括两个分点
+X1/X2 分别⽤⼀个词MN来概括两个分点
 
 3. 模板
     
