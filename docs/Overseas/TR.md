@@ -146,7 +146,6 @@ I drive fast, and so does he
 ## 句子简化题
 
 > 找主语，找逻辑
-> 
 
 Which of the following best expresses the essential information in the highlighted sentence?
 

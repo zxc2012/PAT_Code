@@ -48,7 +48,8 @@
 
 - [TG英语备考](Overseas/English.md)
 - [TOEFL Reading](Overseas/TR.md)
-- [TOEFL Speaking](Overseas/TS.md)
+- [TOEFL Speaking](Overseas/TSp.md)
+- [Speaking Material](Overseas/TS.md)
 - [选校帖收藏](Overseas/school.md)
 
 ## 🍌Leetcode & OJ
