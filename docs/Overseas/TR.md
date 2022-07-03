@@ -19,7 +19,7 @@ Which of the following can be inferred about X？
 
 托福阅读不能过度`推理`
 
-### 结合全段/全文—此时还是细节
+### 结合全段/全文(此时还是细节)
     
 Venus and Earth are commonly regarded as twin planets but not identical twins. 
 They are about the same size, are composed of roughly the same mix of materials, and may have been comparably endowed at their beginning with carbon dioxide and water. However, the twins evolved differently, largely because of differences in their distance from the Sun.
@@ -58,9 +58,7 @@ French artists were already experimenting with new ideas, getting away from the 
 ## 目的题
 
 > **阅读所问细节所在的本句；**
-
 > **阅读所问内容的上一句和下一句；**
-
 > **补充阅读文章的观点句。**
 
 ### “描述”类
