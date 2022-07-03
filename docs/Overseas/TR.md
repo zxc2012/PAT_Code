@@ -47,4 +47,79 @@ Which of the following can be inferred about X？
     
     →The prints appealed to French artists in the 1800s
 
-## 
+## 填表题
+
+- 简单的情况：比较的两个事物属于细节，只存在于文章的 1~2 段中
+- 复杂的情况：全篇就是对 2~3 个事物之间的特点进行交叉比较的，X、Y、Z 的细节会散落在全文中
+
+## 目的题
+
+> **阅读所问细节所在的本句；**
+
+> **阅读所问内容的上一句和下一句；**
+
+> **补充阅读文章的观点句。**
+
+1. **“描述”类**
+
+选项表示“描述”的写作目的动词：indicate、characterize、describe、express、point out、illustrate、identify等
+
+suggest 和 imply在托福是直白的表达
+
+2.  **“证据、例子”类**
+选项中表示”例子“词：provide evidence、provide examples等。
+
+**The beehive and cylindrical furnaces of West Africa** were quite different from those of North Africa and Mesopotamia (modern Iraq) and were indicative of innovations in, if not the invention of, iron-smelting technology that were unique to Africa
+
+→ provide evidence that Africans developed original iron-smelting technology that was not found elsewhere.
+
+3. **“观点”类**
+
+选项中表示”观点“词：argue。
+Someone argues that… 给出观点
+
+辨析:
+
+argue for赞成 argue against反对
+
+4. **“对比及反驳”类**
+- 文章中表示“对比及反驳”的句型和关系
+    
+    否定句、转折句
+    
+- 选项中表示“对比及反驳”的写作目的动词
+    
+    compare, contrast
+    
+5. **“解释”类**
+- 文章中表示“解释”的句型和关系
+a. 因果关系
+因为特朗普听了 GRE 小白到大神的系列课并且认真记了笔记并且认真刷了题，所以特朗普考了 335 的高分。
+→解释了为什么特朗普得到了 GRE 的高分。
+b. 目的关系
+特朗普听 GRE 小白到大神的系列课，目的是为了考 GRE 的高分。
+→解释了为什么特朗普会听 GRE 小白到大神的系列课。
+c. 难点举例：
+特朗普的高分源自于他看了 GRE 从小白到大神的课程。（源自于）
+特朗普得了高分，他之前看了 GRE 从小白到大神的课程。（没有关联词）
+- 选项中表示“解释”的写作目的动词
+例如：explain、account for、explicate等
+
+6. **“强调”类**
+- 文章中表示“强调”的句型和关系
+
+    a. 问句
+
+    GRE 考试怎么这么难啊？
+
+    b. 对比/让步句
+
+    参加这次刺绣大赛的所有参赛者都是女性，只有我是男性。
+    虽然他身有残疾，但是他还是坚持努力备考 GRE 考试。
+    
+    c. 强调句型
+    
+    It is in the garden that she lost her watch
+    
+- 选项中表示“强调”的写作目的动词
+例如：emphasize、stress、highlight等
