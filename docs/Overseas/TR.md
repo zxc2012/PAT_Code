@@ -189,11 +189,11 @@ Which of the following best expresses the essential information in the highlight
     
 2. 通过逻辑配对(20%)
     
-    **Consequently, tunas do not need to suck in water**.
-    
-    [A] Because they are always swimming, tunas simply have to open their mouths and water is forced in and over their gills. [B] Accordingly, they have lost most of the muscles that other fishes use to suck in water and push it past the gills. [C] In fact, tunas must swim to breathe.[D] They must also keep swimming to keep from sinking, since most have largely or completely lost the swim bladder, the gas-filled sac that helps most other fish remain buoyant.
-    
-    other fishes use to suck in water→one在前面→B
+**Consequently, tunas do not need to suck in water**.
+
+[A] Because they are always swimming, tunas simply have to open their mouths and water is forced in and over their gills. [B] Accordingly, they have lost most of the muscles that other fishes use to suck in water and push it past the gills. [C] In fact, tunas must swim to breathe.[D] They must also keep swimming to keep from sinking, since most have largely or completely lost the swim bladder, the gas-filled sac that helps most other fish remain buoyant.
+
+other fishes use to suck in water→one在前面→B
 
 ## 文章总结
 
@@ -217,4 +217,4 @@ Which of the following best expresses the essential information in the highlight
 
 先看一下文章有多少段，比如有6段，可能的出题:
 
-1~2 选项，回读原文前三分之一，3~4 ，再回读原文中间三分之一，5~6 选项，再回读原文最后三分之一
+1-2 选项，回读原文前三分之一，3-4 ，再回读原文中间三分之一，5-6 选项，再回读原文最后三分之一
