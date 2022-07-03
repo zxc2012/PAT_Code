@@ -61,16 +61,18 @@ The second reason is that…/Secondly/What’s more
 
 45秒阅读、听听⼒、30秒准备、60秒回答
 
-1. 题目
+#### 题目
     
 The woman expresses her opinion of the announcement. State her opinion and explain the reasons she gives for holding that opinion
     
-2. 记笔记
-    - ⽤2句话的时间，把⼿头正在记的这1句话记好
-    - 3个分句(1+2),其中2最好各有一个概括性的词
-    - 举例可以只记其中1-2个
-    - Plan的实施: If √/×
-3. 模板
+#### 记笔记
+
+- ⽤2句话的时间，把⼿头正在记的这1句话记好
+- 3个分句(1+2),其中2最好各有一个概括性的词
+- 举例可以只记其中1-2个
+- Plan的实施: If √/×
+
+#### 模板
     
 - Reading
 
@@ -88,12 +90,12 @@ The woman expresses her opinion of the announcement. State her opinion and expla
 
 45秒阅读、听听⼒、30秒准备、60秒回答
 
-1. 题目
+#### 题目
 
 The professor describes Y. Explain how Y is related to X.
 Explain how the example from the lecture illustrates the concept of X.
 
-2. Reading
+#### Reading
 
 - 3种文本类型找X
     - 标题上出现，文中再次重现
@@ -103,11 +105,11 @@ Explain how the example from the lecture illustrates the concept of X.
     - 只记概念 X 的解释、概念 X 的补充（产生的原因或导致的结果，可能有**2个**）
     - 挑选（记录）的总量不能超过 2 句话
 
-3. Listening
+##### Listening
     
 起因、经过、结果，所有与解释、补充相关的内容
     
-4. 模板
+#### 模板
 
 - Reading
 
@@ -122,17 +124,17 @@ The professor in the lecture uses one/two example to illustrate this concept.
 
 听听⼒、20秒准备、60秒回答
 
-1. 题目
+#### 题目
     
 Using points and examples from the talk, explain how A and B contribute to X.
     
-2. Listening
+#### Listening
     
 （1）概念、问题或现象 X；（2）分论点关键词 X1/X2
 
 X1/X2 分别⽤⼀个词MN来概括两个分点
 
-3. 模板
+#### 模板
     
 In the lecture the professor talks about + 读题
 
