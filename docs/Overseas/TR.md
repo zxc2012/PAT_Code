@@ -69,11 +69,11 @@ Which of the following can be inferred about X？
 
 2.  **“证据、例子”类**
 
-    选项中表示”例子“词：provide evidence、provide examples等。
+选项中表示”例子“词：provide evidence、provide examples等。
 
-    **The beehive and cylindrical furnaces of West Africa** were quite different from those of North Africa and Mesopotamia (modern Iraq) and were indicative of innovations in, if not the invention of, iron-smelting technology that were unique to Africa
+**The beehive and cylindrical furnaces of West Africa** were quite different from those of North Africa and Mesopotamia (modern Iraq) and were indicative of innovations in, if not the invention of, iron-smelting technology that were unique to Africa
 
-    → provide evidence that Africans developed original iron-smelting technology that was not found elsewhere.
+→ provide evidence that Africans developed original iron-smelting technology that was not found elsewhere.
 
 3. **“观点”类**
 
