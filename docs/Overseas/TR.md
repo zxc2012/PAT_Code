@@ -21,32 +21,32 @@ Which of the following can be inferred about X？
 
 1. 结合全段/全文—此时还是细节
     
-    Venus and Earth are commonly regarded as twin planets but not identical twins. They are about the same size, are composed of roughly the same mix of materials, and may have been comparably endowed at their beginning with carbon dioxide and water. However, the twins evolved differently, largely because of differences in their distance from the Sun. With a significant amount of internal heat, Venus may continue to be geologically active with volcanoes, rifting, and folding
-    
-    It can be inferred from paragraph 2 that Earth evolved differently than Venus did in part because_B_
-    
-    B. they received different amounts of solar energy
-    
-    C. their interiors contained different amounts of heat
+Venus and Earth are commonly regarded as twin planets but not identical twins. They are about the same size, are composed of roughly the same mix of materials, and may have been comparably endowed at their beginning with carbon dioxide and water. However, the twins evolved differently, largely because of differences in their distance from the Sun. With a significant amount of internal heat, Venus may continue to be geologically active with volcanoes, rifting, and folding
+
+It can be inferred from paragraph 2 that Earth evolved differently than Venus did in part because_B_
+
+B. they received different amounts of solar energy
+
+C. their interiors contained different amounts of heat
     
 2. 反向思维
     
-    在此之前，我没有去过美国。
-    →在此 **之后** ，我可能去过美国。
-    
-    Eg:
-    
-    Until the 1980s, in what Blakemore and Harley called “the Old is Beautiful Paradigm,” scholars largely focused on maps made **before** 1800, marveling at their beauty and sometimes regretting the decline of the pre-technical age.
-    →beginning in the 1980s, historians of cartography expanded their range of study to include more material created **after** 1800
+在此之前，我没有去过美国。
+→在此 **之后** ，我可能去过美国。
+
+Eg:
+
+Until the 1980s, in what Blakemore and Harley called “the Old is Beautiful Paradigm,” scholars largely focused on maps made **before** 1800, marveling at their beauty and sometimes regretting the decline of the pre-technical age.
+→beginning in the 1980s, historians of cartography expanded their range of study to include more material created **after** 1800
     
 3. 解读修辞
     
-    Remember that 1867 was at the beginning of the Impressionist movement.
-    French artists were already experimenting with new ideas, getting away from the elaborate formality of academic art that was taught in French art schools at the time. To these artists, the Japanese woodcuts were like a breath of fresh air, a new way of seeing and interpreting the world. Take perspective, for instance. What's its purpose?
-    
-    **What can be inferred from the several characteristics of Japanese woodcut prints the professor describe?**
-    
-    →The prints appealed to French artists in the 1800s
+Remember that 1867 was at the beginning of the Impressionist movement.
+French artists were already experimenting with new ideas, getting away from the elaborate formality of academic art that was taught in French art schools at the time. To these artists, the Japanese woodcuts were like a breath of fresh air, a new way of seeing and interpreting the world. Take perspective, for instance. What's its purpose?
+
+**What can be inferred from the several characteristics of Japanese woodcut prints the professor describe?**
+
+→The prints appealed to French artists in the 1800s
 
 ## 填表题
 
@@ -63,9 +63,9 @@ Which of the following can be inferred about X？
 
 1. **“描述”类**
 
-    选项表示“描述”的写作目的动词：indicate、characterize、describe、express、point out、illustrate、identify等
+选项表示“描述”的写作目的动词：indicate、characterize、describe、express、point out、illustrate、identify等
 
-    suggest 和 imply在托福是直白的表达
+suggest 和 imply在托福是直白的表达
 
 2.  **“证据、例子”类**
 
@@ -128,3 +128,90 @@ Which of the following can be inferred about X？
         
     - 选项中表示“强调”的写作目的动词
     例如：emphasize、stress、highlight等
+
+## 指代题
+
+指代的内容一定存在于`本句或前一句`
+
+指代题考察的方面：与代词相关的`动作`
+
+so可以指代动词、形容词/副词，或指代一句话或整个段落
+
+I drive fast, and so does he
+
+## 句子简化题
+
+> 找主语，找逻辑
+> 
+
+Which of the following best expresses the essential information in the highlighted sentence?
+
+原则:（1）不能改变原句意思（2）必须体现关键信息
+
+步骤:
+
+- 找主语
+    - 找主句的主语，去掉从句
+    - “某人说”找引用的主语
+        
+        The research argues that **drops of water** are too heavy for surface tension to hold
+        
+    - 多个主语时，并列、对立顺序不重要
+        
+        I love cats, whereas he hates cats.
+        
+        →He hates cats; on the contrary, I love cats.
+        
+    - 主被动可以转换
+- 找逻辑
+    - 核心逻辑表达可以轻微变化，不过不能脱离核心关系
+        
+        Because A, B. → A leads to B
+        
+    - 并列、对立顺序不重要
+
+## 句子插入题
+
+1. 通过指代(80%)
+    - A X → The(This) X
+    - One X → The other X
+    - Some X → Other X
+    - 1, 2, (3…) → Both/Either/Neither/All(或反过来)
+    
+    **Likewise, the collective decision-making process of the open marketplace was no longer practical.**
+    
+    *Likewise→D*
+    
+    ![20220703201210](https://raw.githubusercontent.com/zxc2012/image/main/20220703201210.png)
+    
+2. 通过逻辑配对(20%)
+    
+    **Consequently, tunas do not need to suck in water**.
+    
+    [A] Because they are always swimming, tunas simply have to open their mouths and water is forced in and over their gills. [B] Accordingly, they have lost most of the muscles that other fishes use to suck in water and push it past the gills. [C] In fact, tunas must swim to breathe.[D] They must also keep swimming to keep from sinking, since most have largely or completely lost the swim bladder, the gas-filled sac that helps most other fish remain buoyant.
+    
+    other fishes use to suck in water→one在前面→B
+
+## 文章总结
+
+选项特点:
+
+- 两个“不是”
+    - 绝对不是简单的对每个段落的段首句的改写
+    - 不是所有段落在选项中都有对应，有时正确选项可能并不包含文章的所有要点（可以去掉列举的）
+- 两个“是”
+    - 选项是按文章顺序的
+    - 一个正确选项可能是对文章 2+个自然段的整体概括
+
+常见错误
+
+- 无中生有，选项中出现了文章中没有出现的关键词
+- 错乱搭配，两个相距较远的段落（第 2 段和第 6 段）的细节被拼合在同一个选项中(必须按顺序)
+- 偷换概念，选项中关键词都对，但是关键词之间的关系不对
+- 以偏概全，出现在细节、例子、让步语气等中内容，即使正确，也不是全文的重点
+
+做题步骤
+
+先看一下文章有多少段，比如有6段，可能的出题:
+
+1~2 选项，回读原文前三分之一，3~4 ，再回读原文中间三分之一，5~6 选项，再回读原文最后三分之一
