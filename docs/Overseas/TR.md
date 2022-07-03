@@ -4,7 +4,7 @@
 - 形式
     
     According to the paragraph, which of the following is true of X?
-    
+
 - 步骤
     - 阅读题干，找出题干中出现的关键词
     - 通读全段
@@ -20,7 +20,7 @@ Which of the following can be inferred about X？
 
 - 结合全段/全文—此时还是细节
     
-    Venus and Earth are commonly regarded as twin planets but not identical twins. They are about the same size, are composed of roughly the same mix of materials, and may have been comparably endowed at their beginning with carbon dioxide and water. However, the twins evolved differently, largely because of differences in their distance from the Sun. With a significant amount of internal heat, Venus may continue to be geologically active with volcanoes, rifting, and folding.
+    Venus and Earth are commonly regarded as twin planets but not identical twins. They are about the same size, are composed of roughly the same mix of materials, and may have been comparably endowed at their beginning with carbon dioxide and water. However, the twins evolved differently, largely because of differences in their distance from the Sun. With a significant amount of internal heat, Venus may continue to be geologically active with volcanoes, rifting, and folding
     
     It can be inferred from paragraph 2 that Earth evolved differently than Venus did in part because_B_
     
@@ -118,7 +118,7 @@ c. 难点举例：
     虽然他身有残疾，但是他还是坚持努力备考 GRE 考试。
     
     c. 强调句型
-    
+
     It is in the garden that she lost her watch
     
 - 选项中表示“强调”的写作目的动词
