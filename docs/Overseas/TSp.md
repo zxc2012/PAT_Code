@@ -58,13 +58,12 @@ The second reason is that…/Secondly/What’s more
 ### Q2 Fit and Explain
 
 > **1个change+2个分论点/1个分论点+好处**
-> 
 
 45秒阅读、听听⼒、30秒准备、60秒回答
 
 1. 题目
     
-    The woman expresses her opinion of the announcement. State her opinion and explain the reasons she gives for holding that opinion
+The woman expresses her opinion of the announcement. State her opinion and explain the reasons she gives for holding that opinion
     
 2. 记笔记
     - ⽤2句话的时间，把⼿头正在记的这1句话记好
@@ -73,16 +72,16 @@ The second reason is that…/Secondly/What’s more
     - Plan的实施: If √/×
 3. 模板
     
-Reading
+- Reading
 
-- The student(letter) proposes that…/The university announces that…
+    - The student(letter) proposes that…/The university announces that…
 
-Listening
+- Listening
 
-- The man/woman does not agree with this idea.
-    
-    First, for the M, he/she says that...
-    Second, for the N, he/she says that...
+    - The man/woman does not agree with this idea.
+        
+        First, for the M, he/she says that...
+        Second, for the N, he/she says that...
         
 
 ### Q3 General/Specific
@@ -125,16 +124,18 @@ The professor in the lecture uses one/two example to illustrate this concept.
 
 1. 题目
     
-    Using points and examples from the talk, explain how A and B contribute to X.
+Using points and examples from the talk, explain how A and B contribute to X.
     
 2. Listening
     
-    （1）概念、问题或现象 X；（2）分论点关键词 X1/X2
-    
-    - X1/X2 分别⽤⼀个词MN来概括两个分点
+（1）概念、问题或现象 X；（2）分论点关键词 X1/X2
+
+- X1/X2 分别⽤⼀个词MN来概括两个分点
+
 3. 模板
     
-    In the lecture the professor talks about + 读题
-    
-    For the first/second way, the professor says that...
-    The first way is about + 名词. The professor says that...
+In the lecture the professor talks about + 读题
+
+For the first/second way, the professor says that...
+
+The first way is about + 名词. The professor says that...
