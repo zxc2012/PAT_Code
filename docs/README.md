@@ -46,8 +46,9 @@
 
 ## ✈️Overseas
 
-- [TG英语备考](DailyEnglish/TOEFL.md)
-- [TOEFL Speaking](DailyEnglish/ceil.md)
+- [TG英语备考](Overseas/English.md)
+- [TOEFL Reading](Overseas/TR.md)
+- [TOEFL Speaking](Overseas/TS.md)
 - [选校帖收藏](Overseas/school.md)
 
 ## 🍌Leetcode & OJ
