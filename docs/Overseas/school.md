@@ -134,3 +134,5 @@
 [二硕+工作党申请总结](https://www.1point3acres.com/bbs/thread-610671-1-1.html)
 
 [学信网](https://www.1point3acres.com/bbs/thread-651776-1-1.html)
+
+[留学材料](https://jtchen0528.github.io/blog/articles/2022/04/30/grad-school-applications.html)
