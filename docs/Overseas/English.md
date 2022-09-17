@@ -162,6 +162,8 @@
 
 - proscribe 禁止 prescribe 开药方
 
+- providential `pertaining to foresifght` 幸运的 provident 有远见的
+
 - prowess 非凡技能 prowl 潜行
 
 - punctilious=prudent=meticulous=wary=discreet=chary 一丝不苟的 pungent 刺激的
