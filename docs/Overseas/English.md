@@ -50,6 +50,7 @@
 - edible 可食用的 audible 可听见的
 - elucidate 阐明 elude 逃避
 - effluvium 臭味 effusive 溢于言表的
+- embargo embark
 - enjoin 命令 adjoin 毗连
 - evict 驱逐 evince 表明
 - fable 寓言 affable 好说话的

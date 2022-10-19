@@ -1,12 +1,14 @@
-from urllib.parse import urlparse
-from focal_loss.focal_loss import FocalLoss
-from torchvision import models
-from sklearn.metrics import confusion_matrix, classification_report, accuracy_score,precision_recall_fscore_support
 
-# classification_report()
-model=models.DenseNet()
-url = 'http://localhost:8891/image/252/253/20210414102021_CP_1072_3115_0040.png'
-parsed = urlparse(url)
-par=parsed.path.replace("/image","C:/Users/78669/data/image")
-FocalLoss(alpha=2, gamma=5)
-print(par)
+import matplotlib.pyplot as plt
+from matplotlib.ticker import MaxNLocator
+xpoints = []
+for i in range(2004,2024):
+    xpoints.append(i)
+ypoints = [85000,85000,85000,85000,85000,163000,85000,85000,85000,85000,124000,172500,233000,236000,199000,190098,201011,275000,308613,483927]
+for a,b in zip(xpoints[16:],ypoints[16:]):
+    plt.text(a, b, '%d' % b, fontsize=9)
+plt.plot(xpoints,ypoints,marker = 'o')
+plt.gca().xaxis.set_major_locator(MaxNLocator(integer=True))
+
+plt.gca().yaxis.set_major_locator(MaxNLocator(integer=True))
+plt.savefig('../x.jpg')
