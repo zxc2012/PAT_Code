@@ -60,6 +60,13 @@
         )
       ],
       coverpage: false,
+      scrollToTop: {
+        auto: true,
+        text: 'Top',
+        right: 15,
+        bottom: 15,
+        offset: 500
+      },
       loadNavbar: false
     }
   </script>
@@ -84,11 +91,6 @@
     })
   </script>
   <!-- 置顶插件 -->
-  <script src="style/jquery-1.11.3.min.js"></script>
-  <script src="style/jquery.toTop.min.js"></script>
-  <script>
-    $('.to-top').toTop();
-  </script>
-  </div>
+  <script src="//unpkg.com/docsify-scroll-to-top/dist/docsify-scroll-to-top.min.js"></script>
 </body>
 </html>
