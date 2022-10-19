@@ -33,6 +33,7 @@ graph LR;
 DataInputStream:二进制写的 primitive
 
 LineNumberInputStream:一行行读文本
+
 **InputStream**
 
 - read()
