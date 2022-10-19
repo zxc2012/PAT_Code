@@ -1,12 +1,4 @@
 /* 置顶插件 */
-.to-top {
-    display         : none;
-    padding         : 10px 20px;
-    margin-right    : 10px;
-    color           : #fff;
-    border-radius   : 10px;
-    background-color: rgb(102, 126, 233);
-}
 
 .markdown-section {
     font-family: "微软雅黑", "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
