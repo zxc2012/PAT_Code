@@ -1,4 +1,4 @@
-# Javascript
+# web.lab2 --Javascript
 ## Basic
 ### Primitive types
 - Boolean (true, false)

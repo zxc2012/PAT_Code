@@ -3,28 +3,8 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import styles from './index.module.css';
-
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
 
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
@@ -32,10 +12,19 @@ export default function Home() {
     <Layout
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
+      <div  className={styles.hero_wrap} style={{
+        background: `url(./img/bg.svg) center center/cover no-repeat`
+      }}>
+        <h1 className={styles.hero_title}>{siteConfig.title} 前端 开发 javaScript 个人记录 博客</h1>
+        <p className={styles.hero_subtitle}>{siteConfig.tagline}</p>
+        {/* <header>
+          <div className={styles.container}>
+            
+            <p className="hero__subtitle">{siteConfig.tagline}</p>
+            <div className={styles.buttons}></div>
+          </div>
+        </header> */}
+      </div>
     </Layout>
   );
 }
