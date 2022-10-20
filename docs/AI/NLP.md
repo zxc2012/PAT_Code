@@ -58,6 +58,7 @@ if __name__ == "__main__":
 >2 长度不够要padding
 
 >3 将带声调音节(如一些法语单词)变形，这里采用先转换为unicode再变回去的办法
+
 ```py
 def make_tag_set(tag_set, relation_label):
     '''

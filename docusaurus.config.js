@@ -52,11 +52,6 @@ async function createConfig(){
       /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
       ({
         navbar: {
-          title: 'Chance',
-          logo: {
-            alt: 'My Site Logo',
-            src: 'img/logo.svg',
-          },
           items: [
             {
               label: "🎓cs专业课",
