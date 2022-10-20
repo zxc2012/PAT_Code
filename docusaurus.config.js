@@ -104,7 +104,7 @@ async function createConfig(){
           ],
         },
         prism: {
-          theme: lightCodeTheme,
+          theme: require('prism-react-renderer/themes/vsDark'),
           darkTheme: darkCodeTheme,
           additionalLanguages: ['java','armasm','verilog'],
         },
