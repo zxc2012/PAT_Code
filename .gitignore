@@ -1,1 +1,8 @@
-*.pem
+# Dependencies
+./node_modules
+# Production
+./build
+
+
+# Misc
+.DS_Store
