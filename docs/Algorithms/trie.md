@@ -207,11 +207,11 @@ private:
     <td>one or more</td>
 </tr>
 <tr>
-    <td>/{m}/</td>
+    <td>/&#123;m&#125;/</td>
     <td>m repetitions</td>
 </tr>
 <tr>
-    <td>/{m,n}/</td>
+    <td>/&#123;m,n&#125;/</td>
     <td>m to n repetitions</td>
 </tr>
 <tr>

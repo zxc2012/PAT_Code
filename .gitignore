@@ -2,7 +2,7 @@
 node_modules
 .docusaurus
 # Production
-./build
+build
 
 
 # Misc
