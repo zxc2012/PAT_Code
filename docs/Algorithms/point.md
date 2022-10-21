@@ -16,7 +16,8 @@ public:
 };
 ```
 ### 02替换空格
->开辟新存储空间
+开辟新存储空间
+
 ```cpp
 class Solution {
 public:
@@ -30,7 +31,8 @@ public:
     }
 };
 ```
->原字符串修改
+原字符串修改
+
 ```cpp
 class Solution {
 public:
@@ -47,7 +49,8 @@ public:
 };
 ```
 ### 03从尾到头反转链表
->不能改变链表结构
+不能改变链表结构
+
 ```cpp
 class Solution {
 public:
@@ -63,7 +66,8 @@ public:
     }
 };
 ```
->可以改变
+可以改变
+
 ```cpp
 class Solution {
 public:
@@ -191,7 +195,8 @@ bool IsPopOrder(vector<int> pushV,vector<int> popV) {
 }
 ```
 ### 37 两个链表的第一个公共节点
->法1:找到差值后找公共
+法1:找到差值后找公共
+
 ```cpp
 ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
     int la=0,lb=0;
@@ -211,7 +216,8 @@ ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
     return p;
 }
 ```
->法2:双指针,利用两个链表合并后长度-公共长度时一定相遇
+法2:双指针,利用两个链表合并后长度-公共长度时一定相遇
+
 ```cpp
 ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
     ListNode *p=headA,*q=headB;
