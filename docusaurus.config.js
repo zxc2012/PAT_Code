@@ -9,7 +9,7 @@ const katex = require('rehype-katex');
 async function createConfig(){
   const mdxMermaid = await import("mdx-mermaid");
   const config = {
-    title: 'My Site',
+    title: 'Chance\'s blog',
     tagline: 'It\'s not our abilities that show what we truly are,it is our choices',
     url: 'https://zxc2012.github.io',
     baseUrl: '/',
