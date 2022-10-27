@@ -42,9 +42,13 @@ Deque[dek]--double ended queue
 - TreeMap
 
 ## Generics
-`注意无论是什么泛型，getClass()均是同一个`
+
+:::tip
+无论是什么泛型，getClass()均是同一个
+:::
 
 ### 机制
+
 Java--类型参数(**Cannot use primitive types**)作为类的成员变量
 
 C++(模板)--源代码的源代码
