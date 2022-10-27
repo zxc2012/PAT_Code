@@ -75,11 +75,6 @@
                 "__tree": "cpp",
                 "map": "cpp",
                 "set": "cpp"
-        },
-        "python.pythonPath": "D:\\MDK\\python.exe",
-        "java.project.referencedLibraries": [
-                "lib/**/*.jar",
-                "c:\\Users\\yuchenyang\\Downloads\\junit-4.13.2.jar"
-        ],
+        }
     
 }  

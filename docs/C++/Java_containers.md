@@ -2,42 +2,45 @@
 
 ## Introduction
 
-Two Containers:**Collection** and **Map**
+Containers
 
-1.Collection:
+- Collection
+  - list:hold the element in a particular sequence 
+  - set
+- Map: key-value object pairs
 
-**list**:hold the element in a particular sequence 
-
-**set**
-
-2.Map:
-key-value object pairs
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201016212410955.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70#pic_center)
 
 ## Collection
 ### Function
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2020101715285823.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70#pic_center)
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201016210354543.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70#pic_center)
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2020101621042813.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70#pic_center)
+
 ### List
 
-1.**ArrayList**:implement with an array,slow for inserting and removing.
+- ArrayList: implement with an array, slow for inserting and removing.
+- LinkedList: inexpensive insertions and deletions, slow for random access.
 
-2.**LinkedList**:inexpensive insertions and deletions,slow for random access.
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201016210913913.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70#pic_center)
+
 Deque[dek]--double ended queue
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201016211342737.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70#pic_center)
 
 ### Set
 
-1.**HashSet**:Objects must also define hashCode()
-
-2.**TreeSet**:An ordered Set backed by a tree.
+- HashSet: Objects must also define hashCode()
+- TreeSet: An ordered Set backed by a tree.
 
 ## Map
 
-**HashMap** and **TreeMap**
+- HashMap
+- TreeMap
+
 ## Generics
 `注意无论是什么泛型，getClass()均是同一个`
 

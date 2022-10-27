@@ -2,8 +2,10 @@
 using namespace std;
 
 int main(){
-    string a;
-    cin>>a;
-    cout<<a<<endl;
+    char a;
+    a = getchar();
+    a+= 32;
+    printf("%d\n",a);
+    putchar(a);
     return 0;
 }
