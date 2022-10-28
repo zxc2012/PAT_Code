@@ -222,28 +222,33 @@ The compiler chooses the most specific matching method signature from the static
 
 Casting Problem:
 
-(联想集合)To move from a wider type to a narrower type, **must** use casting
+- Compiler allows method calls based on **compile-time**(static) type of variable
+- (联想集合)To move from a wider type to a narrower type, **must** use casting
 
-![20211230194803](https://raw.githubusercontent.com/zxc2012/image/main/20211230194803.png)
+![20221028171310](https://raw.githubusercontent.com/zxc2012/image/main/20221028171310.png)
 
 ## Abstract Classes & Interfaces
 
-### Abstract Class
+:::tip
 
-- Abstract method(only a signature without implementationv)
-- Abstract class as a data type
+One can implement multiple interfaces, but extend only one class:
 
-```java
-GeometricObject[] objects = new GeometricObject[2];
-```
+*multiple interface inheritance, but single body inheritance.*
+
+:::
 
 ### Interfaces
 
-- public: can be used in any package(All method declarations in an interface, including default methods, are implicitly public, so you can omit the public modifier.)
-- default: no need to override in subclass
+Interfaces may combine a mix of abstract and default methods.
+
+- Unless you use the keyword **default**, a method will be **abstract**
+- Unless you specify an access modifier, a method will be **public**(All method declarations in an interface, including default methods, are implicitly public, so you can omit the public modifier.)
+- Can provide variables, but they are **public static final**
 
 ```java
 public interface A {
+  double gravity = 6.67e-11;
+  void update(double dt);
   public default void doSomething() {
     System.out.println("Do something");
   }
@@ -252,9 +257,38 @@ public interface A {
 
 ![20211125105220](https://raw.githubusercontent.com/zxc2012/image/main/20211125105220.png)
 
+### Abstract Class
+
+- Abstract method(only a signature without implementationv)
+- Abstract class as a data type
+
+  ```java
+  GeometricObject[] objects = new GeometricObject[2];
+  ```
+
 ![20211125105246](https://raw.githubusercontent.com/zxc2012/image/main/20211125105246.png)
 
-## Lambda Expression
+![20221028215331](https://raw.githubusercontent.com/zxc2012/image/main/20221028215331.png)
+
+### Anonymous Class
+
+```java
+R = map(new IntUnaryFunction() {
+  public int apply(int x) { 
+    return Math.abs(x); 
+  }
+}, some list);
+
+//Equals to
+class Anonymous implements IntUnaryFunction {
+  public int apply(int x) { 
+    return Math.abs(x); 
+  }
+}
+R = map(new Anonymous(), some list);
+```
+
+Lambda Expression
 
 - A comma-separated list of formal parameters enclosed in parentheses(Optional type declaration)
 
@@ -262,13 +296,18 @@ public interface A {
 
 - A body, which consists of a single expression or a statement block.
 
-![20220112194646](https://raw.githubusercontent.com/zxc2012/image/main/20220112194646.png)
-
 ```java
 //一个参数时()可省略
 (param1, param2, …, paramN) -> { statements }
 (param1, param2, …, paramN) -> expression
 //相当于：(param1, param2, …, paramN) ->{ return expression; }
+```
+
+```java
+// Anonymous 可以改写
+R = map((int x) -> Math.abs(x), some list);
+// or even better, when the function already exists:
+R = map(Math::abs, some list);
 ```
 
 ## Other Classes
