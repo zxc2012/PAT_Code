@@ -139,7 +139,7 @@ public static void allBark(ArrayMap<Dog, ?> am) {
 }
 */
 ```
-:::caution
+:::danger
 
 MapHelper.java:62: error: incompatible types: ArrayMap<FrenchDog,Integer> cannot be converted to ArrayMap<Dog,?>
 

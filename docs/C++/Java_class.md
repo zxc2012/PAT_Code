@@ -1,6 +1,7 @@
 # Java Application Design--Class
 
-## Primitive Data Types
+## Data Types
+### Primitive Data Types
 
 C++(ILP32:int long pointer)
 
@@ -29,20 +30,6 @@ Java
 
 ![vs](https://img-blog.csdnimg.cn/20201013163013271.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70#pic_center)
 
-Immutability: **final**
-- Primitive types ensure immutability
-- Declaring a reference as final does not make object immutable
-
-### Initialization
-
-- Data Field
-  - null for a reference type
-  - 0 for a numeric type
-  - false for a boolean type
-  - '\u0000' for a char type
-- no default value to a local
-  variable
-
 ### Operator precedence
 
 单算移关与，异或逻条赋
@@ -58,13 +45,87 @@ Immutability: **final**
 - 条表示条件运算符(? :)
 - 赋表示赋值运算符(=,+=,-=,\*=,/=,%=,>>=,<<=,&=,^=, |=,!=)
 
+### Immutability: **final**
+
+- Primitive types ensure immutability
+- Declaring a reference as final does not make object immutable
+
+### Initialization
+
+- Data Field
+  - null for a reference type
+  - 0 for a numeric type
+  - false for a boolean type
+  - '\u0000' for a char type
+- no default value to a local
+  variable
+
 ### Pass by value
 
 - For a parameter of a **primitive** type, the actual value is passed
 - For a parameter of an **array** type, the reference value is passed
 
-## Class
+## Object
 
+| Function                        | Interpretion                       |
+| ------------------------------- | ---------------------------------- |
+| public boolean equals(Object w) | 判断两个对象变量是否指向同一个对象 |
+| public String toString()        |                                    |
+| public final Class getClass()   |                                    |
+| protected Object clone()        | 返回调用该方法的对象的一个副本     |
+
+### Autoboxing(auto-unboxing)
+
+Implicit conversions between wrapper/primitives.
+
+```java
+public class BasicArrayList {
+  public static void main(String[] args) {
+    ArrayList<Integer> L = new ArrayList<Integer>();
+    L.add(5);
+    L.add(6);
+    int first = L.get(0);
+  }
+}
+
+```
+
+:::tip
+
+Arrays are never autoboxed/unboxed, e.g. an Integer[] cannot be used in place of an int[] (or vice versa).
+
+:::
+
+### Object Comparison
+
+```java
+public interface Comparable<T> {
+  public int compareTo(T obj);
+} 
+public interface Comparator<T> {
+	int compare(T o1, T o2);
+}
+public class Person implements Comparable<Person> {
+  private String mSurname;
+  private int mAge;
+  public int compareTo(Person p) {
+    return mSurname.compareTo(p.mSurname);
+ }
+}
+public class AgeComparator implements Comparator<Person> {
+  public int compare(Person p1, Person p2) {
+    return (p1.mAge-p2.mAge);
+ }
+}
+ArrayList<Person> plist = ...;
+// 法1: sorts by surname
+Collections.sort(plist); 
+// 法2: sorts by age
+// Collections.sort(plist, new AgeComparator());
+
+```
+
+## Designing Classes
 ### Constructor
 
 - Constructors must have the same name as the
@@ -162,7 +223,9 @@ The compiler chooses the most specific matching method signature from the static
 Casting Problem:
 
 (联想集合)To move from a wider type to a narrower type, **must** use casting
+
 ![20211230194803](https://raw.githubusercontent.com/zxc2012/image/main/20211230194803.png)
+
 ## Abstract Classes & Interfaces
 
 ### Abstract Class
@@ -191,67 +254,24 @@ public interface A {
 
 ![20211125105246](https://raw.githubusercontent.com/zxc2012/image/main/20211125105246.png)
 
-## Object Class
+## Lambda Expression
 
-| Function                        | Interpretion                       |
-| ------------------------------- | ---------------------------------- |
-| public boolean equals(Object w) | 判断两个对象变量是否指向同一个对象 |
-| public String toString()        |                                    |
-| public final Class getClass()   |                                    |
-| protected Object clone()        | 返回调用该方法的对象的一个副本     |
+- A comma-separated list of formal parameters enclosed in parentheses(Optional type declaration)
 
-### Autoboxing(auto-unboxing)
+- The arrow token, ->
 
-Implicit conversions between wrapper/primitives.
+- A body, which consists of a single expression or a statement block.
+
+![20220112194646](https://raw.githubusercontent.com/zxc2012/image/main/20220112194646.png)
 
 ```java
-public class BasicArrayList {
-  public static void main(String[] args) {
-    ArrayList<Integer> L = new ArrayList<Integer>();
-    L.add(5);
-    L.add(6);
-    int first = L.get(0);
-  }
-}
-
+//一个参数时()可省略
+(param1, param2, …, paramN) -> { statements }
+(param1, param2, …, paramN) -> expression
+//相当于：(param1, param2, …, paramN) ->{ return expression; }
 ```
 
-::: tip
-
-Arrays are never autoboxed/unboxed, e.g. an Integer[] cannot be used in place of an int[] (or vice versa).
-
-:::
-
-### Object Comparison
-
-```java
-public interface Comparable<T> {
-  public int compareTo(T obj);
-} 
-public interface Comparator<T> {
-	int compare(T o1, T o2);
-}
-public class Person implements Comparable<Person> {
-  private String mSurname;
-  private int mAge;
-  public int compareTo(Person p) {
-    return mSurname.compareTo(p.mSurname);
- }
-}
-public class AgeComparator implements Comparator<Person> {
-  public int compare(Person p1, Person p2) {
-    return (p1.mAge-p2.mAge);
- }
-}
-ArrayList<Person> plist = ...;
-// 法1: sorts by surname
-Collections.sort(plist); 
-// 法2: sorts by age
-// Collections.sort(plist, new AgeComparator());
-
-```
-
-## Other Class
+## Other Classes
 
 ### Scanner Class
 
@@ -289,23 +309,6 @@ public static void fill(Object[] a,
         int fromIndex,
         int toIndex,
         Object val)
-```
-
-Lambda Expression
-
-- A comma-separated list of formal parameters enclosed in parentheses(Optional type declaration)
-
-- The arrow token, ->
-
-- A body, which consists of a single expression or a statement block.
-
-![20220112194646](https://raw.githubusercontent.com/zxc2012/image/main/20220112194646.png)
-
-```java
-//一个参数时()可省略
-(param1, param2, …, paramN) -> { statements }
-(param1, param2, …, paramN) -> expression
-//相当于：(param1, param2, …, paramN) ->{ return expression; }
 ```
 
 ![20211004215118](https://raw.githubusercontent.com/zxc2012/image/main/20211004215118.png)
