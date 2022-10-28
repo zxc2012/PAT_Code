@@ -29,6 +29,10 @@ Java
 
 ![vs](https://img-blog.csdnimg.cn/20201013163013271.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70#pic_center)
 
+Immutability: **final**
+- Primitive types ensure immutability
+- Declaring a reference as final does not make object immutable
+
 ### Initialization
 
 - Data Field
@@ -57,7 +61,6 @@ Java
 ### Pass by value
 
 - For a parameter of a **primitive** type, the actual value is passed
-
 - For a parameter of an **array** type, the reference value is passed
 
 ## Class
@@ -78,12 +81,7 @@ Java
 | public    | The class, data, or method is visible to any class in any package                                                       |
 | (default) | the class, variable, or method can be accessed by any class in the same package                                         |
 | private   | Modifier cannot be applied to a class, only its members/The data or methods can be accessed only by the declaring class |
-| protected | Used in inheritance                                                                                                     |
-
-### Cleanup:finalize()
-
-When the garbage collector is ready to release the storage used for your object,it will first call its **finalize()**
-But **finalize()** is totally different from destructor of C++:
+| protected | Used in inheritance|
 
 ### Order of Initialization
 
@@ -95,8 +93,31 @@ But **finalize()** is totally different from destructor of C++:
 - Setting **all** the primitives in the object to their default values.(Any initializations that occur at the point of field definition are executed.)
 - Constructors are executed.
 
-## Inheritance & Polymorphism
+### Cleanup:finalize()
 
+When the garbage collector is ready to release the storage used for your object,it will first call its **finalize()** to clean up temporary files, close sockets/connections, etc.
+
+- Blocking: pause the program when collecting garbage
+- Incremental: collect in multiple phases and let the program
+run in the gaps
+- Concurrent: runs concurrently with the program
+
+Compare with C++:
+
+```cpp
+void UseRawPointer()
+{   
+  MyClass *mc = new MyClass();
+  delete mc;//manually deleted
+}// or auto-deleted when out of scope
+```
+
+Problems: 
+
+We either forget to delete (memory leak) or we delete multiple
+times (crash)
+
+## Inheritance & Polymorphism
 ### Inheritance
 
 - super
@@ -178,6 +199,57 @@ public interface A {
 | public String toString()        |                                    |
 | public final Class getClass()   |                                    |
 | protected Object clone()        | 返回调用该方法的对象的一个副本     |
+
+### Autoboxing(auto-unboxing)
+
+Implicit conversions between wrapper/primitives.
+
+```java
+public class BasicArrayList {
+  public static void main(String[] args) {
+    ArrayList<Integer> L = new ArrayList<Integer>();
+    L.add(5);
+    L.add(6);
+    int first = L.get(0);
+  }
+}
+
+```
+
+::: tip
+
+Arrays are never autoboxed/unboxed, e.g. an Integer[] cannot be used in place of an int[] (or vice versa).
+
+:::
+
+### Object Comparison
+
+```java
+public interface Comparable<T> {
+  public int compareTo(T obj);
+} 
+public interface Comparator<T> {
+	int compare(T o1, T o2);
+}
+public class Person implements Comparable<Person> {
+  private String mSurname;
+  private int mAge;
+  public int compareTo(Person p) {
+    return mSurname.compareTo(p.mSurname);
+ }
+}
+public class AgeComparator implements Comparator<Person> {
+  public int compare(Person p1, Person p2) {
+    return (p1.mAge-p2.mAge);
+ }
+}
+ArrayList<Person> plist = ...;
+// 法1: sorts by surname
+Collections.sort(plist); 
+// 法2: sorts by age
+// Collections.sort(plist, new AgeComparator());
+
+```
 
 ## Other Class
 
