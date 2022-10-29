@@ -291,9 +291,7 @@ R = map(new Anonymous(), some list);
 Lambda Expression
 
 - A comma-separated list of formal parameters enclosed in parentheses(Optional type declaration)
-
 - The arrow token, ->
-
 - A body, which consists of a single expression or a statement block.
 
 ```java
@@ -301,9 +299,7 @@ Lambda Expression
 (param1, param2, …, paramN) -> { statements }
 (param1, param2, …, paramN) -> expression
 //相当于：(param1, param2, …, paramN) ->{ return expression; }
-```
 
-```java
 // Anonymous 可以改写
 R = map((int x) -> Math.abs(x), some list);
 // or even better, when the function already exists:
