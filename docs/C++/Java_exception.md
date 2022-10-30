@@ -1,11 +1,10 @@
 # Java Application Design--Exceptions & IO
 
 ## IO
-
-### Read a file
+### Read a file(Exception)
 
 1. open the file;(共享文件同时正在写)
-2. determine its size;(文件=键盘)
+2. determine its size;
 3. allocate that much memory;(JVM64MB)
 4. read the file into memory;(杭州下雨软盘失效)
 5. close the file;
@@ -60,15 +59,15 @@ LineNumberInputStream:一行行读文本
 
 ### The catch mechanism
 
-**throw try to match a catch**
+When an exception is thrown, it descends the call stack.
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020102715001043.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70#pic_center)
+![20221030173316](https://raw.githubusercontent.com/zxc2012/image/main/20221030173316.png)
 
 ### throw and throws
 
 You can _claim_ to throw an Exception that you really don't.
 
-1. Otherwise if you 在 f()内 throw 别的异常 编译不通过.
+1. Otherwise if you 在 f()内 throw 别的异常编译不通过.
 
 2. Anyone call your funcition must catch it or throws again.
 
@@ -79,6 +78,18 @@ public void f()throws SException,IOExption{}//陈述句三单
 ```
 
 ### Interface:throwable
+
+- Checked: Must be Caught or Declared to be Thrown(Green One)
+- Unchecked: no such restrictions(code below compile just fine)
+
+```java
+public class Eagle {
+	public static void gulgate() {
+       if (today == “Thursday”) { 
+          throw new IOException("hi"); }
+	}
+}
+```
 
 ```mermaid
 graph LR;
@@ -91,13 +102,14 @@ graph LR;
 	NullPointerException-->RuntimeException;
 	ClassNotFoundException-->Exception;
 	CloneNotSupportedException-->Exception;
-	IOException-->Exception;
+	id1(IOException)-->Exception;
     RuntimeException-->Exception;
     Exception-->Throwable;
     Error-->Throwable;
+	style id1 fill:#0cdf19
 ```
 
-- String get Message();
+- String getMessage();
 - String toString();
 - void printStackTrace();
 - void printStackTrace(PrintStream);
@@ -106,12 +118,54 @@ graph LR;
 
 **成员函数:父类和接口的交集**
 
+When you overide a method, you can only throw the exceptions that have beeen specified in the *base-class* version of the method.
+
+反证: Polymorphism
+
 ```java
-class B extends A;
-A b=new B();
-b.f();//编译器认为他还是A类，如果throw其他异常会光A.f()捕捉不到
+class A {
+	void f()throws A;
+}
+class B{
+	void f()throws A,B;
+}
+void process(A p){
+	try{
+		p.f();//Compile过而Run Time error,throw B时A.f()会捕捉不到
+	}catch(A a){
+
+	}
+}
+process(new B())
 ```
 
 **构造方法:父类的超集**
 
-因为构造方法里隐含调用了 super();
+因为构造方法里隐含调用了 super(); address了父类可以再加自己的
+
+```java
+class BaseballException extends Exception{}
+class Foul extends BaseballException{}
+class Strike extends BaseballException{}
+
+abstract class Inning{
+	Inning() throws BaseballException{}
+	abstract void atBat() throws Strike, Foul;
+	void walk(){} 
+}
+
+class RainedOut extends Exception{}
+class PopFoul extends Foul{}
+
+interface Storm{
+	void event()throws RainedOut;
+}
+
+public class StormInning extends Inning implements Storm{
+	StormInning() throws RainedOut,BaseballException;
+	StormInning(String s) throws Foul,BaseballException;
+	void walk()throws PopFoul{}// Compile Error
+	void atBat()throws PopFoul{} // call stack, ok
+}
+
+```
