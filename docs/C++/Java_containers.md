@@ -1,34 +1,48 @@
-# Java Application Design--Containers
-
-## Introduction
-
-Containers
-
-- Collection
-  - list:hold the element in a particular sequence 
-  - set
-- Map: key-value object pairs
-
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201016212410955.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70#pic_center)
-
+# Java Application Design--Collection
 ## Collection
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020101715285823.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70#pic_center)
+Deque[dek]--double ended queue
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201016210354543.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70#pic_center)
+![20221031160055](https://raw.githubusercontent.com/zxc2012/image/main/20221031160055.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020101621042813.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70#pic_center)
+```java
+Interface Iterable<T>{
+  default void forEach(Consumer<? super T> action)//Performs the given action for each element of the Iterable until all elements have been processed or the action throws an exception.
+  Iterator<T> iterator()//Returns an iterator over elements of type T.
+}
+public interface Collection<E> extends Iterable<E>{
+  int size();
+  boolean add(E e);
+  boolean addAll(Collection<? extends E> c);
+  void clear();
+  boolean contains(Object);
+  boolean containsAll(Collection<?> c);
+  boolean isEmpty();
+  default Stream<E>	stream();//Returns a sequential Stream with this collection as its source.
+  default Stream<E>	parallelStream();//Returns a possibly parallel Stream with this collection as its source.
+  boolean remove(Object o);
+  boolean removeAll(Collection<?> c);
+  boolean retainAll(Collection<?> c);//Retains only the elements in this collection that are contained in the specified collection 
+  Object[] toArray();//Returns an array containing all of the elements in this collection.
+  <T> T[] toArray(T[] a);
+}
+```
+
+Consumer Inferface
+
+```java
+@FunctionalInterface
+public interface Consumer<T>{
+  void accept(T t);
+}
+```
 
 ### List
 
 - ArrayList: implement with an array, slow for inserting and removing.
 - LinkedList: inexpensive insertions and deletions, slow for random access.
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201016210913913.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70#pic_center)
-
-Deque[dek]--double ended queue
-
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201016211342737.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70#pic_center)
+  - LinkedList is a doubly-linked list implementation of the List and Deque interfaces
 
 ### Set
 
@@ -37,8 +51,21 @@ Deque[dek]--double ended queue
 
 ## Map
 
-- HashMap
-- TreeMap
+![20221031212205](https://raw.githubusercontent.com/zxc2012/image/main/20221031212205.png)
+
+```java
+public interface Map<K,V>{
+  int size();
+  void clear();
+  boolean containsKey(Object key);
+  boolean containsValue(Object value);
+  default void forEach(BiConsumer<? super K,? super V> action);
+  V get(Object key);//Returns the value or null
+  boolean isEmpty();
+  V remove(Object key);
+  default V	replace(K key, V value);
+}
+```
 
 ## Generics
 
@@ -51,6 +78,14 @@ Deque[dek]--double ended queue
 Java--类型参数(**Cannot use primitive types**)作为类的成员变量
 
 C++(模板)--源代码的源代码
+
+The most commonly used type parameter names are:
+
+- E: Element
+- K: Key
+- N: Number
+- T: Type
+- V: Value
 
 ### Class
 
@@ -172,4 +207,20 @@ public static void allBark(ArrayMap<?extends Dog,?> am){
     }
 }
 
+```
+
+#### Type Inference
+
+*Type inference* is a Java compiler's ability to look at each method invocation and corresponding declaration to determine the type argument (or arguments) that make the invocation applicable.
+
+```java
+Map<String, List<String>> myMap = new HashMap<>();// <String,List<String>>
+
+
+class MyClass<X> {
+  <T> MyClass(T t) {
+    // ...
+  }
+}
+MyClass<Integer> myObject = new MyClass<>("");// X should be Integer, T should be String
 ```

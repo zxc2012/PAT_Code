@@ -69,10 +69,11 @@ Java
 
 | Function                        | Interpretion                       |
 | ------------------------------- | ---------------------------------- |
-| public boolean equals(Object w) | 判断两个对象变量是否指向同一个对象 |
-| public String toString()        |                                    |
-| public final Class getClass()   |                                    |
-| protected Object clone()        | 返回调用该方法的对象的一个副本     |
+| boolean equals(Object w) | 判断两个对象变量是否指向同一个对象 |
+| String toString()| Returns a string representation of the object.|
+| Class<?>getClass()| Returns the runtime class of this Object. |
+| protected Object clone()| Creates and returns a copy of this object.|
+|int	hashCode()||
 
 ### Autoboxing(auto-unboxing)
 
@@ -321,9 +322,9 @@ int value = input.nextInt();
 // nextDouble() reads a number of the double type.
 ```
 
-### Array Class
+### Arrays Class
 
-get length: array.length(_variable_)
+get length: (Object you create).length
 
 ```java
 /***Creation****/
@@ -334,6 +335,7 @@ int[] C = new int[] { 1, 2, 3, 4 }
 // Array with explicit initial values.
 int[] D = { 1, 2, 3, 4 } // Shorthand for the above
 /***Method******/
+public static <T> List<T> asList(T... a)//Returns a fixed-size list backed by the specified array.
 public static <T> void sort(T[] a,
             int fromIndex,
             int toIndex,
