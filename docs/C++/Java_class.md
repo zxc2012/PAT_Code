@@ -23,8 +23,8 @@ Java
 | byte    | 8             | -128                                              | 127                                               |
 | short   | 16            | $-2^{15}$                                         | $2^{15}-1$                                        |
 | char    | 16            | 0                                                 | $2^{16}-1$                                        |
-| int     | 32            | $-2^{31}$                                         | $2^{31}-1$                                        |
-| long    | 64            | $-2^{63}$                                         | $2^{63}-1$                                        |
+| int     | 32            | $-2^{31}$                                         | $2^{31}-1(2\times10^9)$                                        |
+| long    | 64            | $-2^{63}$ | $2^{63}-1(9\times10^{18})$  |
 | float   | 32            | Approximately-3.4e+38 with 7 significant digits   | Approximately3.4e+38 with 7 significant digits    |
 | double  | 64            | Approximately-1.7e+308 with 15 significant digits | Approximately-1.7e+308 with 15 significant digits |
 
