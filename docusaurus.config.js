@@ -111,12 +111,6 @@ async function createConfig(){
               position: 'left',
             },
             {
-              label: "🕹️Electronics",
-              type: 'docSidebar',
-              sidebarId: 'Electronics',
-              position: 'left',
-            },
-            {
               label: "🍉机器学习",
               type: 'docSidebar',
               sidebarId: 'AI',
