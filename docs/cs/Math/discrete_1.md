@@ -1,19 +1,87 @@
-# 离散数学复习1--命题逻辑
-## 知识总结
+# Discrete Structure 1--Modular Arithmetic
+## Divisibility
+### Definition
+Let $x,y\in Z$ with $x\neq0$
+We say that a divides b
+a|b, if there exists some $k\in Z$ such that $b = ak$.
 
-### 基本概念
+### Theorem
+Proof Easy
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200622211136346.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200622211313348.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70)
+1. If $a|b$ and $a|c$ then $a|(b+c)$
+2. If $a|b$ then $a|bc$
+3. If $a|b$ and $b|c$ then $a|c$ (**transitivity**)
 
-### 证明例题
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200622211535467.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200622211546589.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70)
+**Corollary** 
 
-## 习题
+Let $a, b, c \in Z$. If a|b and a|c, then a|mb+nc for any $m, n \in Z$
 
-1.选A
-![ss](https://img-blog.csdnimg.cn/20200314231644607.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70)
+## Modular Arithmetic
+### Definition
 
-2.选A(回顾真值表)
-![as](https://img-blog.csdnimg.cn/20200314231800525.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70)
+Let $x,y\in Z$,$m\in N^{+}$
+
+we say x is congruent to y modulo m 
+
+$x\equiv y\pmod m$ if and only if $m|(x-y)$
+
+Notation: $x\equiv y\pmod m$ or $mod(x,m)$
+
+**Claim** 
+
+$x\equiv y\pmod m$ if and only if $x$ and $y$ have the same remainder when divided by m (Proof easy)
+
+29 (mod 12) ≡ 5
+13 (mod 5) ≡ 3.
+
+### Theorem
+
+if $a\equiv b\pmod m$, $c\equiv d\pmod m$,then
+
+1. $a+c\equiv b+d\pmod m$
+
+2. $ac\equiv bd\pmod m$
+
+Solution:
+
+1. $a\equiv b\pmod m$ and $c\equiv d\pmod m$
+
+$\Rightarrow m|(a-b)$ and $m|(c-d)$
+
+$\Rightarrow m|(a-b+c-d)$
+
+$\Rightarrow m|(a+c-(b+d))$
+
+$\Rightarrow a+c\equiv b+d\pmod m$
+
+2. $m|(a-b)$ and $m|(c-d)$
+
+$\Rightarrow m|ac-bc$ and $m|bc-bd$
+
+$\Rightarrow m|ac-bd$
+
+$\Rightarrow ac\equiv bd \pmod m$
+
+### Lemma
+
+1. If $d|x$ and $d|y$, then $d|mod(x,y)$
+
+    Proof:
+
+    $$mod(x,y)\Rightarrow y|x-mod(x,y)$$
+
+    $$\because d|y$$
+
+    $$\therefore d|x-mod(x,y)$$
+
+    $$\therefore d|mod(x,y)$$
+
+2. If $d|y$ and $d|mod(x,y)$, then $d|x$
+
+    Similar
+
+3. GCD Mod Corollary: $gcd(x,y)=gcd(y,mod(x,y))$
+
+    x and y have same set of common divisors as x and mod (x,y) by Lemma.
+
+    Same common divisors $\Rightarrow$ largest is the same.

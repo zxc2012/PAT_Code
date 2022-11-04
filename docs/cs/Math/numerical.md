@@ -10,13 +10,16 @@ Example:求二进制幂O(n)->O($log_2n$)
 >$a^n=a^{p(2)}$$=a^{b_m2^m+...+b_i2^i+b_0}$
 
 >$a^{2p+b_i}=a^{2p}*a$ or $a^{2p}$
+
 ## Errors
 Assume that r is the root of function f(x)=0.
 
 **Forward Error**:$|r-x_a|$
 
 **Backward Error**:$f(x_a)$
+
 ![lk](https://img-blog.csdnimg.cn/20200927222415895.png#pic_center)
+
 ##  Solving Equations
 *Newton's Method*
 
