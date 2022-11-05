@@ -32,9 +32,10 @@ Notation: $x\equiv y\pmod m$ or $mod(x,m)$
 $x\equiv y\pmod m$ if and only if $x$ and $y$ have the same remainder when divided by m (Proof easy)
 
 29 (mod 12) ≡ 5
+
 13 (mod 5) ≡ 3.
 
-### Theorem
+### Lemma
 
 if $a\equiv b\pmod m$, $c\equiv d\pmod m$,then
 
@@ -62,7 +63,7 @@ $\Rightarrow m|ac-bd$
 
 $\Rightarrow ac\equiv bd \pmod m$
 
-### Lemma
+### Theorem
 
 1. If $d|x$ and $d|y$, then $d|mod(x,y)$
 
