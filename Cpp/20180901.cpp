@@ -2,10 +2,7 @@
 using namespace std;
 
 int main(){
-    char a;
-    a = getchar();
-    a+= 32;
-    printf("%d\n",a);
-    putchar(a);
+    string s ="abcd";
+    printf("%d",s[1]);
     return 0;
 }
