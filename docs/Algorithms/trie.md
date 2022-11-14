@@ -1,5 +1,14 @@
-# Trie summary
-## 单模匹配--KMP
+# String Matching 
+## Introduction
+
+Search for a string (pattern) in a large body of text
+- T[0..n − 1]: The text (or haystack) being searched within
+- P[0..m − 1]: The pattern (or needle) being searched for
+- Return smallest i such that $P[j] = T[i+j]$ for $1\leq j\leq m-1$ 
+
+This is the first **occurrence** of P in T
+ 
+## Knuth-Morris-Pratt Algorithm
 定义两个字符串text和pattern,pattern不断位移的过程中,需要让其中间断掉的时候剪枝
 
 Eg:*ABAABAB*
