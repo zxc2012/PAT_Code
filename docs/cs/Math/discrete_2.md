@@ -24,6 +24,13 @@ In **directed graph**, each $e\in E$ defined as $(u,v)$.
 
 ![20221105112539](https://raw.githubusercontent.com/zxc2012/image/main/20221105112539.png)
 
+### Representation
+
+- Adjacency matrices are true if there is a line going from node A to B and false otherwise
+- Adjacency lists list out all the nodes connected to each node in our graph
+
+    ![20221121170549](https://raw.githubusercontent.com/zxc2012/image/main/20221121170549.png)
+
 ### Paths, walks, cycles, tour
 
 - Path: a sequence of edges $(v_1,v_2),(v_2,v_3),...,(v_{k-1},v_k)$
