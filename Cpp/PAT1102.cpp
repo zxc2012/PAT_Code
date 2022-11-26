@@ -12,10 +12,6 @@ struct sq {
 vector<int> in;
 vector<sq> level;
 void order(int i,int j) {
-	if (node[i].lchild == -1 && node[i].rchild == -1) {
-		in.push_back(i);
-		return;
-	}
 	if (node[i].lchild != -1) {
 		level.push_back({2 * j,node[i].lchild});
 		order(node[i].lchild,2 * j);
