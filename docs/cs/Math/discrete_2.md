@@ -61,6 +61,55 @@ A connected graph without a cycle
 
 or: A connected graph with |V| −1 edges.
 
+### BST
+
+Binary search in ordered linked list
+
+Move pointer to middle and flip left links
+
+![20221128220141](https://raw.githubusercontent.com/zxc2012/image/main/20221128220141.png)
+
+Binary Search Tree
+
+![20221128220221](https://raw.githubusercontent.com/zxc2012/image/main/20221128220221.png)
+
+For every node X in the tree:
+- Every key in the left subtree is less than X's key
+- Every key in the right subtree is greater than X's key
+
+#### insert
+```java
+insert(BST T, Key ik) {
+    if (T == null)
+        return new BST(ik);
+    if (ik ≺ T.key)
+        T.left = insert(T.left, ik);
+    else if (ik ≻ T.key)
+        T.right = insert(T.right, ik);
+    return T;
+}
+```
+
+#### delete
+
+Deletion with two Children(Hibbard)
+
+If we want to delete k, move g or m upward
+
+![20221128221020](https://raw.githubusercontent.com/zxc2012/image/main/20221128221020.png)
+
+#### Implement Map
+
+To represent maps, just have each BST node store key/value pairs
+
+#### Tree Height
+
+- Θ(log N) in the best case (Left: "bushy")
+- Θ(N) in the worst case (Right: "spindly")
+
+![20221128222035](https://raw.githubusercontent.com/zxc2012/image/main/20221128222035.png)
+
+
 ### Minimum Spanning Trees
 
 Input: An undirected graph G = (V, E), edge weights $w_e$

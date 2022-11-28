@@ -309,7 +309,7 @@ R = map(Math::abs, some list);
 
 ## Other Classes
 
-### Scanner Class
+### java.util.Scanner
 
 ```java
 Scanner input = new Scanner(System.in);
@@ -322,7 +322,7 @@ int value = input.nextInt();
 // nextDouble() reads a number of the double type.
 ```
 
-### Arrays Class
+### java.util.Arrays
 
 get length: (Object you create).length
 
@@ -350,13 +350,13 @@ public static void fill(Object[] a,
 
 ![20211004215118](https://raw.githubusercontent.com/zxc2012/image/main/20211004215118.png)
 
-### String Class
+### java.lang.String
 
 | Method        | Description                                                            |
 | ------------- | ---------------------------------------------------------------------- |
-| length()      | Returns the number of characters in this string.                       |
-| charAt(index) | Returns the character at the specified index from this string.         |
-| concat(s1)    | Returns a new string that concatenates this string with string s1.     |
-| toUpperCase() | Returns a new string with all letters in uppercase.                    |
-| toLowerCase() | Returns a new string with all letters in lowercase.                    |
-| trim()        | Returns a new string with whitespace characters trimmed on both sides. |
+| int length()      | Returns the number of characters in this string.                       |
+| char charAt(index) | Returns the character at the specified index from this string.         |
+| String concat(String s1)    | Returns a new string that concatenates this string with string s1.     |
+| String toUpperCase() | Returns a new string with all letters in uppercase.                    |
+| String toLowerCase() | Returns a new string with all letters in lowercase.                    |
+| String trim()| Returns a string whose value is this string, with any leading and trailing whitespace removed.|
