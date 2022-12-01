@@ -106,6 +106,7 @@ To represent maps, just have each BST node store key/value pairs
 
 - Θ(log N) in the best case (Left: "bushy")
 - Θ(N) in the worst case (Right: "spindly")
+- Θ(log N) height if constructed via random inserts
 
 ![20221128222035](https://raw.githubusercontent.com/zxc2012/image/main/20221128222035.png)
 
