@@ -110,6 +110,184 @@ To represent maps, just have each BST node store key/value pairs
 
 ![20221128222035](https://raw.githubusercontent.com/zxc2012/image/main/20221128222035.png)
 
+#### BST Rotation
+
+rotateLeft(G): Head->Left Child
+
+![20221202112028](https://raw.githubusercontent.com/zxc2012/image/main/20221202112028.png)
+
+rotateRight(P): Head->Right Child
+
+![20221202112721](https://raw.githubusercontent.com/zxc2012/image/main/20221202112721.png)
+
+Rotation:
+- Can shorten (or lengthen) a tree
+- Preserves search tree property
+
+### BTree
+#### Concept
+Problem with BST: Adding new leaves at the bottom makes it imbalanced
+-> Avoid new leaves by "overstuffing" the leaf nodes
+
+![20221201211741](https://raw.githubusercontent.com/zxc2012/image/main/20221201211741.png)
+
+Height is balanced, but leaf nodes can get too juicy
+
+Solution: Set a limit L on the number of items, say L=3, move the left-middle
+
+![20221201212635](https://raw.githubusercontent.com/zxc2012/image/main/20221201212635.png)
+
+B(balanced/bushy)-trees of order L=3 are also called a 2-3-4(number of children) tree or a 2-4 tree
+
+#### B-Tree Runtime Analysis
+
+Height: 
+- Largest possible height is all non-leaf nodes have 1 item ($log_2n$)
+- Smallest possible height is all nodes have L items ($log_{l+1}n$)
+- Overall height is therefore Θ(log n) 
+
+Contains:
+- Worst case number of nodes to inspect: H + 1
+- Worst case number of items to inspect per node: L
+- Overall runtime: O(HL) = O(log n)
+
+Add:
+- Worst case number of nodes to inspect: H + 1
+- Worst case number of items to inspect per node: L
+- Worst case number of split operations: H + 1
+- Overall runtime: O(HL) = O(log n)
+
+### Red-Black Trees
+
+Representing a 2-3 Tree as a BST
+- Binary search trees: Can balance using rotation
+- 2-3 Tree: Balanced by construction
+
+Solution: Create "glue"(red) links with the smaller item off to the left
+
+![20221202113356](https://raw.githubusercontent.com/zxc2012/image/main/20221202113356.png)
+
+Left-Leaning Red Black Binary Search Tree (LLRB)
+
+There is a 1-1 correspondence between an LLRB and an equivalent 2-3 tree
+
+![20221202113510](https://raw.githubusercontent.com/zxc2012/image/main/20221202113510.png)
+
+```java
+private class Node {
+    private Key key;           // key
+    private Value val;         // associated data
+    private Node left, right;  // links to left and right subtrees
+    private boolean color;     // color of parent link
+    private int size;          // subtree count
+
+    public Node(Key key, Value val, boolean color, int size) {
+        this.key = key;
+        this.val = val;
+        this.color = color;
+        this.size = size;
+    }
+}
+```
+
+#### LLRB Height
+
+LLRB has no more than ~2x the height of its 2-3 tree: O(log n)
+
+#### Insertion
+
+Use red link
+
+![20221202114204](https://raw.githubusercontent.com/zxc2012/image/main/20221202114204.png)
+
+#### Insertion on the Right
+
+If there is a right leaning "3-node", Rotate left the appropriate node to fix
+
+![20221202114424](https://raw.githubusercontent.com/zxc2012/image/main/20221202114424.png)
+
+```java
+private Node rotateLeft(Node h) {
+    assert (h != null) && isRed(h.right);
+    Node x = h.right;
+    h.right = x.left;
+    x.left = h;
+    x.color = h.color;
+    h.color = RED;
+    x.size = h.size;
+    h.size = size(h.left) + size(h.right) + 1;
+    return x;
+}
+```
+
+#### Double Insertion on the Left
+
+If there are two consecutive left links, rotate right the appropriate node to fix
+
+![20221202115012](https://raw.githubusercontent.com/zxc2012/image/main/20221202115012.png)
+
+```java
+private Node rotateRight(Node h) {
+    assert (h != null) && isRed(h.left);
+    Node x = h.left;
+    h.left = x.right;
+    x.right = h;
+    x.color = h.color;
+    h.color = RED;
+    x.size = h.size;
+    h.size = size(h.left) + size(h.right) + 1;
+    return x;
+}
+```
+
+#### Splitting 4-Nodes
+
+If there are any nodes with two red children, color flip
+
+![20221202115231](https://raw.githubusercontent.com/zxc2012/image/main/20221202115231.png)
+
+```java
+private void flipColors(Node h) {
+    h.color = !h.color;
+    h.left.color = !h.left.color;
+    h.right.color = !h.right.color;
+}
+```
+
+#### Cascading operations
+
+It is possible that a rotation or flip operation will cause an additional violation that needs fixing
+
+![20221202115843](https://raw.githubusercontent.com/zxc2012/image/main/20221202115843.png)
+
+Wrapping it up
+
+```java
+private Node put(Node h, Key key, Value val) {
+    if (h == null) return new Node(key, val, RED, 1);
+
+    int cmp = key.compareTo(h.key);
+    if      (cmp < 0) h.left  = put(h.left,  key, val);
+    else if (cmp > 0) h.right = put(h.right, key, val);
+    else              h.val   = val;
+
+    // fix-up any right-leaning links
+    if (isRed(h.right) && !isRed(h.left))      h = rotateLeft(h);
+    if (isRed(h.left)  &&  isRed(h.left.left)) h = rotateRight(h);
+    if (isRed(h.left)  &&  isRed(h.right))     flipColors(h);
+    h.size = size(h.left) + size(h.right) + 1;
+
+    Balance(); // Cascading operations
+    return h;
+}
+```
+
+#### LLRB Runtime
+
+- Contains: O(log n)
+- Insert:
+    - O(log n) to add the new node
+    - O(log n) rotation and color flip operations per insert
 
 ### Minimum Spanning Trees
 
