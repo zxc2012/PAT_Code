@@ -66,6 +66,19 @@ public interface Map<K,V>{
   default V	replace(K key, V value);
 }
 ```
+## Collections
+
+```java
+public class Collections extends Object{
+  static <T> void fill(List<? super T> list, T obj);//Replaces all of the elements of the specified list with the specified element.
+  static <T> T max(Collection<? extends T> coll,Comparator<? super T> comp);
+  static <T> T min(Collection<? extends T> coll,Comparator<? super T> comp);
+  static void reverse(List<?> list);
+  static <T> void sort(List<T> list, Comparator<? super T> c);
+  static void swap(List<?> list, int i, int j);
+}
+
+```
 
 ## Generics
 

@@ -55,41 +55,24 @@ LineNumberInputStream:一行行读文本
 - flush()
 - close()
 
-## Exceptions
-
-### The catch mechanism
-
-When an exception is thrown, it descends the call stack.
-
-![20221030173316](https://raw.githubusercontent.com/zxc2012/image/main/20221030173316.png)
-
-### throw and throws
-
-You can _claim_ to throw an Exception that you really don't.
-
-1. Otherwise if you 在 f()内 throw 别的异常编译不通过.
-
-2. Anyone call your funcition must catch it or throws again.
+## Throwable
 
 ```java
-throw new Exception;//祈使句
-class SException extends Exception{}//陈述句三单
-public void f()throws SException,IOExption{}//陈述句三单
+public class Throwable implements Serializable{
+	Throwable();
+	Throwable(String message);//Constructs a new throwable with the specified detail message.
+	String getMessage();//Returns the detail message string of this throwable
+	String toString();//Returns a short description of this throwable.
+	void printStackTrace();
+	void printStackTrace(PrintStream s);
+}
+
 ```
 
-### Interface:throwable
+## Exception
 
 - Checked: Must be Caught or Declared to be Thrown(Green One)
 - Unchecked: no such restrictions(code below compile just fine)
-
-```java
-public class Eagle {
-	public static void gulgate() {
-       if (today == “Thursday”) { 
-          throw new IOException("hi"); }
-	}
-}
-```
 
 ```mermaid
 graph LR;
@@ -109,10 +92,25 @@ graph LR;
 	style id1 fill:#0cdf19
 ```
 
-- String getMessage();
-- String toString();
-- void printStackTrace();
-- void printStackTrace(PrintStream);
+### The catch mechanism
+
+When an exception is thrown, it descends the call stack.
+
+![20221030173316](https://raw.githubusercontent.com/zxc2012/image/main/20221030173316.png)
+
+### throw and throws
+
+You can _claim_ to throw an Exception that you really don't.
+
+1. Otherwise if you 在 f()内 throw 别的异常编译不通过.
+
+2. Anyone call your funcition must catch it or throws again.
+
+```java
+throw new Exception("Help");//祈使句
+class SException extends Exception{}//陈述句三单
+public void f()throws SException,IOExption{}//陈述句三单
+```
 
 ### throw Inheritance
 
