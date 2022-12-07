@@ -31,6 +31,15 @@ In **directed graph**, each $e\in E$ defined as $(u,v)$.
 
     ![20221121170549](https://raw.githubusercontent.com/zxc2012/image/main/20221121170549.png)
 
+DFS and BFS runtime with adjacency list: O(V + E) (creating marked array)
+
+DFS and BFS runtime with adjacency matrix: O($V^2$)
+
+DFS is worse for spindly graphs (Θ(V) memory to remember recursive calls)
+
+BFS is worse for absurdly “bushy” graphs (In worst case, queue will require Θ(V) memory.)
+
+
 ### Paths, walks, cycles, tour
 
 - Path: a sequence of edges $(v_1,v_2),(v_2,v_3),...,(v_{k-1},v_k)$
@@ -54,6 +63,16 @@ $K_n$ complete graph on n vertices
 every pair of (distinct) vertices u and v are connected by an edge $\lbrace u,v\rbrace$.
 
 ![20221105155349](https://raw.githubusercontent.com/zxc2012/image/main/20221105155349.png)
+
+### Shortest Path
+
+Dijkstra's algorithm /ˈdaɪkstrə/
+
+```cpp
+void dijkstra(){
+
+}
+```
 
 ## Tree
 
@@ -334,4 +353,3 @@ for all edges {u, v} in E, in increasing order of weight:
 
 #### Prim's Algorithm
 
-/ˈdaɪkstrə/
