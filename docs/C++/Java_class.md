@@ -88,7 +88,6 @@ public class BasicArrayList {
     int first = L.get(0);
   }
 }
-
 ```
 
 :::tip
@@ -123,7 +122,6 @@ ArrayList<Person> plist = ...;
 Collections.sort(plist); 
 // 法2: sorts by age
 // Collections.sort(plist, new AgeComparator());
-
 ```
 
 ## Designing Classes

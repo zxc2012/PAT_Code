@@ -77,7 +77,6 @@ public class Collections extends Object{
   static <T> void sort(List<T> list, Comparator<? super T> c);
   static void swap(List<?> list, int i, int j);
 }
-
 ```
 
 ## Generics
@@ -219,7 +218,6 @@ public static void allBark(ArrayMap<?extends Dog,?> am){
         d.bark();
     }
 }
-
 ```
 
 #### Type Inference

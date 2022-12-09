@@ -68,11 +68,68 @@ every pair of (distinct) vertices u and v are connected by an edge $\lbrace u,v\
 
 Dijkstra's algorithm /ˈdaɪkstrə/
 
-```cpp
-void dijkstra(){
-
+```java
+int dijkstra(){
+    PQ.add(source, 0);
+    While (!PQ.empty()){
+        p = PQ.removeSmallest();
+        If distTo[p] + w < distTo[q]{
+            distTo[q] = distTo[p] + w; // relax
+            edgeTo[q] = p;
+            PQ.changePriority(q, distTo[q]);
+        }
+    }
 }
 ```
+
+Dijkstra’s is guaranteed to return a correct result if all edges are non-negative
+
+Proof:
+
+After relaxing all edges from source, let vertex v1 be the vertex with minimum weight(closest to the source) 
+
+Claim: distTo[v1] is optimal, and thus future relaxations will fail
+- distTo[p]         ≥ distTo[v1] for all p, therefore
+- distTo[p] + w ≥ distTo[v1]
+
+Runtime: 
+
+- add: V, each costing O(log V) time.
+- removeSmallest: V, each costing O(log V) time.
+- changePriority: E, each costing O(log V) time.
+
+Assuming E > V, this is just O(Elog V) for a connected graph
+
+### DAG
+
+#### Directed acyclic graph
+
+Topological sort: order the vertices one after the other in such a way that each edge goes from an earlier vertex to a later vertex
+
+A topological sort only exists if the graph is a DAG
+
+**Property**: Every dag has at least one source and at least one sink(proof easy)
+
+**Algorithm**: O(V+E) time Θ(V) space
+
+1. process all of the edges and keep a count of
+the number of incoming edges for each node
+2. Find a source, output it, and delete it from the graph
+3. The graph is still a DAG, and thus will still have a source vertex.
+4. Repeat until the graph is empty.
+
+#### Shortest path on DAG
+
+Dijkstra may suffer from negative edges(dist to 5 is update earlier than 2)
+
+![20221209223906](https://raw.githubusercontent.com/zxc2012/image/main/20221209223906.png)
+
+Solution: Topological sort->Each vertex is visited only when all possible info about it has been used
+
+**Algorithm**: O(V+E) time Θ(V) space
+
+1. Visit vertices in topological order
+2. On each visit, relax all outgoing edges
 
 ## Tree
 

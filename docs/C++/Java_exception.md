@@ -66,7 +66,6 @@ public class Throwable implements Serializable{
 	void printStackTrace();
 	void printStackTrace(PrintStream s);
 }
-
 ```
 
 ## Exception
@@ -165,5 +164,4 @@ public class StormInning extends Inning implements Storm{
 	void walk()throws PopFoul{}// Compile Error
 	void atBat()throws PopFoul{} // call stack, ok
 }
-
 ```
