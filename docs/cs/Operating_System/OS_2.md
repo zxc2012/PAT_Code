@@ -1,5 +1,4 @@
-# CS162 Lecture2 --Synchronization
-
+# 2 Synchronization
 ## Race Condition
 
 we need to make threads coordinate with each other to ensure **mutual exclusion** in accessing **critical sections** of code

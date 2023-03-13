@@ -1,8 +1,7 @@
-# CS61C Lecture2 --RISCV Assembly
-
+# 2 RISCV Assembly
 ## RISC-V Architecture
-- Register Size: 1 word = 32 bits = 4 bytes
 
+- Register Size: 1 word = 32 bits = 4 bytes
 - 32 registers:
 
     x0(holds the value zero)-x31
@@ -20,7 +19,6 @@
 - Sign Extend: Take the most-significant bit and copy it to the new bits
 
 ## RISC-V Instructions
-
 ### Assembly Syntax
 
 ![20220310173933](https://raw.githubusercontent.com/zxc2012/image/main/20220316201927.png)

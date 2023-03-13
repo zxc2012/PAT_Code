@@ -1,4 +1,4 @@
-# CS61C Lecture1 --Number Representation
+# 1 Number Representation
 ## Number Representation
 ### Unsigned
 

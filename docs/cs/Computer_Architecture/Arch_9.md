@@ -1,7 +1,5 @@
-# CS152 Lecture2 --Complex Pipelining
-
+# 9 Complex Pipelining
 ## Basics
-
 ### Advanced Data Hazard
 
 Out-of-order write hazards due to variable latencies of different functional units(FDIV,FMUL takes more than one cycle)
@@ -122,7 +120,6 @@ Conservative Out-of-order Load	Execution
 ![20220522161722](https://raw.githubusercontent.com/zxc2012/image/main/20220522161722.png)
 
 ## Branch Prediction
-
 ### BHT
 
 - Temporal correlation: The way a branch resolves may	be a good predictor of the	way	it	will resolve at	the next execution

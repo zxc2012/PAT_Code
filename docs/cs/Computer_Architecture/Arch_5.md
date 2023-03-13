@@ -1,4 +1,4 @@
-# CS61C Lecture5 --Parallelism
+# 5 Parallelism
 
 ## Basics
 

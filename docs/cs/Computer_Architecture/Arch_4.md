@@ -1,4 +1,4 @@
-# CS61C Lecture4 --Cache
+# 4 Cache
 
 ## Basic
 

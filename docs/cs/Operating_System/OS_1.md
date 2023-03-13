@@ -1,5 +1,4 @@
-# CS162 Lecture1 --Operating System Overview
-
+# 1 Operating System Overview
 ## Overview
 
 - BIOS:Basic Input Output System
@@ -16,14 +15,15 @@
 - Machines -- Processes
 
 Instruction Fetch/Decode/Execute
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210310160953285.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70)
 
 ## Four fundamental OS concepts
 
-- Thread: Single unique execution context(Fully desribes program state)
+- Thread: execution context
 - Address space: set of memory address accessible to program(r/o)
-- Process: an instance of a running program(protected address space+ >=1 threads)
-- Dual Mode operation/Protection(only the "system" has the ability to access certain resources)
+- Process: instance of a running program(protected address space+ >=1 threads)
+- Dual Mode operation/Protection: only the "system" has the ability to access certain resources
 
 ### Thread 
 

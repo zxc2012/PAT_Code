@@ -1,5 +1,4 @@
-# CS61C Lecture3 --RISC V Single-Cycle Control and Pipelining
-
+# 3 RISCV Single-Cycle Control and Pipelining
 ## Basics
 
 ![20220310173933](https://raw.githubusercontent.com/zxc2012/image/main/20220326211448.png)

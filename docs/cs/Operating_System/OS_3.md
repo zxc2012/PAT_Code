@@ -1,5 +1,4 @@
-# CS162 Lecture3 --Scheduling
-
+# 3 Scheduling
 ## Basic
 
 Design Objectives

@@ -1,4 +1,4 @@
-# Java Application Design--Collection
+# 2 Collection
 ## Collection
 
 Deque[dek]--double ended queue

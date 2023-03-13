@@ -1,4 +1,4 @@
-# CS61C Lecture6 --Virtual Memory
+# 6 Virtual Memory
 ## Memory Basic
 ### Memory Multiplexing
 

@@ -1,4 +1,4 @@
-# CS61C Lecture7 --IO & Summary
+# 7 IO & Summary
 ## Input/Output Devices
 
 Bus: Common set of wires for communication among hardware devices plus protocols for carrying out data transfer transactions
@@ -22,6 +22,20 @@ Disk Access Time = Seek Time + Rotation Time + Transfer Time + Controller Overhe
 - Rotation Time: time for disk to rotate to proper sector
     -  Average rotation time = 1/2 time of a rotation
 - Transfer Time: time for data to rotate under the head
+
+#### HDD Scheduling
+
+- FIFO
+    - Pro: Fair among requesters
+    - Con: order of arrival may be to random spots on the disk(Very long seeks)
+- SSTF(Shortest seek time first): Pick the request that’s closest to head
+    - Pro: Reduce seek time, throughput increases
+    - Con: may lead to starvation
+- SCAN(aka elevator): Take the closest request in a particular direction. When reaches the end, it reverses direction and follow the closest request.
+    - Pro: no starvation
+    - Con: Long waiting time for locations just visited by disk arm
+- C(Circular)-SCAN: only goes in one direction, skips any requests on the way back
+    - Pro: A bit more fair to inner and outer tracks
 
 ### SSD
 

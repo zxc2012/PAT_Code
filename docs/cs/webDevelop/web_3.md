@@ -1,4 +1,4 @@
-# web.lab3 --React
+# 3 React
 ## Component
 Make states stay, make props pass
 

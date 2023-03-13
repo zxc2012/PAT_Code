@@ -1,5 +1,4 @@
-# Java Application Design--Class
-
+# 1 Class
 ## Data Types
 ### Primitive Data Types
 

@@ -1,6 +1,5 @@
-# CS152 Lecture1 --Cache Coherence & Memory Consistency
+# 8 Cache Coherence & Memory Consistency
 ## Cache Coherence
-
 ### Snoopy Cache
 
 Have cache	watch (or snoop	upon) other	memory transactions,and	then “do the right thing”

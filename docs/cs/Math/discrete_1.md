@@ -1,4 +1,4 @@
-# Discrete Structure 1--Modular Arithmetic
+# 1 Modular Arithmetic
 ## Divisibility
 ### Definition
 Let $x,y\in Z$ with $x\neq0$

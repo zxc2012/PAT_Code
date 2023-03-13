@@ -1,4 +1,4 @@
-# Discrete Structure 2--Graph
+# 2 Graph
 ## Graph
 ### Definition
 
