@@ -18,7 +18,7 @@ Assume that r is the root of function f(x)=0.
 
 **Backward Error**:$f(x_a)$
 
-![lk](https://img-blog.csdnimg.cn/20200927222415895.png#pic_center)
+![lk](https://raw.githubusercontent.com/zxc2012/image/main/20200927222415895.png)
 
 ##  Solving Equations
 *Newton's Method*

@@ -49,7 +49,8 @@ if __name__ == "__main__":
 
 ## Tagging scheme
 根据中科院论文中的标注，这里举例如下:
-![dcas](https://img-blog.csdnimg.cn/20200521212641784.png)
+
+![dcas](https://raw.githubusercontent.com/zxc2012/image/main/20200521212641784.png)
 
 预处理过程主要注意几个要点:
 
@@ -161,14 +162,18 @@ def prepare_data_set(fin, charset, vocab, relation_labels, entity_labels, tag_se
     return num_overlap
 ```
 ## End2End Model
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200521213114432.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70)
+
+![在这里插入图片描述](https://raw.githubusercontent.com/zxc2012/image/main/20200521213114432.png)
+
 ### CNN Encoder
 其中，第一层卷积层可表示为
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020052121322775.png)
+![20230314205626](https://raw.githubusercontent.com/zxc2012/image/main/20230314205626.png)
 卷积核为3，再经过两层卷积
 
 ### LSTM Decoder
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200521213511827.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70)
+
+![20230314205655](https://raw.githubusercontent.com/zxc2012/image/main/20230314205655.png)
+
 ```py
 import torch
 import torch.nn as nn

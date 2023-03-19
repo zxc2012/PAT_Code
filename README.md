@@ -56,6 +56,7 @@ Cpp/Py:打开对应文件夹可以单独调试
 >Tools--Compiler Options--General--Add the following commands when calling compiler---std=c++11
 
 ![Devcpp](https://img-blog.csdn.net/20170409111041454)
+
 >Settings-linker-Generate debugging information-Yes
 
 ![Devcpp](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMTkvMDcvMTkvNWQzMWUyMTc4MDExNjkzNzUwLnBuZw)

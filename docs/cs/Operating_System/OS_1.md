@@ -16,7 +16,7 @@
 
 Instruction Fetch/Decode/Execute
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210310160953285.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://raw.githubusercontent.com/zxc2012/image/main/202300001.png)
 
 ## Four fundamental OS concepts
 
@@ -70,7 +70,7 @@ API
 Base and bounds registers are visible/accessible only
 when processor is running in *supervisor* mode
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210310170644453.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70)
+![在这里插入图33](https://raw.githubusercontent.com/zxc2012/image/main/202300002.png)
 
 ### Process
 
@@ -78,7 +78,7 @@ Thread encapsulate *concurrency*
 
 Address spaces encapsulate *protection*
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210310171008806.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://raw.githubusercontent.com/zxc2012/image/main/20210310171008806.png)
 
 #### Process Management API
 
@@ -146,7 +146,7 @@ Example:web server
 
 Unix structure
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210310171233609.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70)
+![20210317172017](https://raw.githubusercontent.com/zxc2012/image/main/Kernel.png)
 
 3 types of user$\rightarrow$kernel mode transfer
 

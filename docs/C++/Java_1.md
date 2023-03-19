@@ -27,7 +27,7 @@ Java
 | float   | 32            | Approximately-3.4e+38 with 7 significant digits   | Approximately3.4e+38 with 7 significant digits    |
 | double  | 64            | Approximately-1.7e+308 with 15 significant digits | Approximately-1.7e+308 with 15 significant digits |
 
-![vs](https://img-blog.csdnimg.cn/20201013163013271.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MzgwMjMw,size_16,color_FFFFFF,t_70#pic_center)
+![vs](https://raw.githubusercontent.com/zxc2012/image/main/20201013163013271.png)
 
 ### Operator precedence
 
