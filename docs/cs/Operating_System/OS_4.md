@@ -42,6 +42,15 @@ Hard Links and Symbolic Links
 - Symbolic links: One directory entry points to the file’s inode, Other directory entries contains the "path"
     - inode different
 
+7 disk accesses to resolve "/my/book/count"
+- Read in file header for root (fixed position on disk)
+- Read in first data block for root, search for "my"
+- Read in file header for "my"
+- Read in first data block for "my"; search for "book"
+- Read in file header for "book"
+- Read in first data block for "book"; search for "count"
+- Read in file header for "count"
+
 ## File Allocation
 ### Contiguous Allocation
 

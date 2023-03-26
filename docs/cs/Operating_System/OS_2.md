@@ -172,7 +172,61 @@ Consumer() {
 }
 ```
 
-## More Problems
+## DeadLock
+
+![20230323204655](https://raw.githubusercontent.com/zxc2012/image/main/20230323204655.png)
+
+Deadlock => starvation but not vice versa
+
+- Starvation: thread waits indefinitely
+- Deadlock: circular waiting for resources
+
+Starvation can end. Deadlock can’t end without external intervention
+
+### Resource-Allocation Graph
+
+A set of Threads $T_1$, $T_2$, . . ., $T_n$/ Resource types $R_1$，$R_2$, . . ., $R_m$(CPU cycles, memory space, I/O devices)
+
+Each thread utilizes a resource as follows: Request() / Use() / Release()
+
+- request edge – directed edge $T_1$ -> $R_j$
+- assignment edge – directed edge $R_j$ -> $T_i$
+
+![20230323212735](https://raw.githubusercontent.com/zxc2012/image/main/20230323212735.png)
+
+### Four requirements
+
+- **Mutual exclusion**: Only one thread at a time can use a resource.
+- **Hold and wait**: Thread holding at least one resource is waiting to acquire additional resources held by other threads
+- **No preemption**: Resources are released only voluntarily by the thread holding the resource, after thread is finished with it
+- **Circular wait**
+    - There exists a set {T1, …, Tn} of waiting threads
+    - T1 is waiting for a resource that is held by T2
+    - T2 is waiting for a resource that is held by T3
+    - ...
+    - Tn is waiting for a resource that is held by T1
+
+### Techniques for addressing deadlock
+
+- **Deadlock prevention**: breaks any one of four requirements
+    - No mutual exclusion: No Sharing of resources (totally independent threads)
+    - No hold and wait:
+        - Allow process to request resources only when the process has none: starvation possible
+        - Make all threads request everything they’ll need at the beginning: Low resource utilization
+    - Allow preemption: On collision, back off and retry
+    - No circular wait: Force all threads to request resources in a particular order preventing any cyclic use of resources
+- **Deadlock recovery**: let deadlock happen, and then figure out how to recover from it
+    - Terminate thread, force it to give up resources
+    - Preempt resources without killing off thread
+    - Roll back actions of deadlocked threads
+- **Deadlock avoidance**: prevent system from reaching an *unsafe* state
+    - When a thread requests a resource, OS checks if it would result in deadlock an unsafe state
+        - If not, it grants the resource right away
+        - If so, it waits for other threads to release resources
+- **Deadlock denial**: ignore the possibility of deadlock
+
+Deadlock avoidance: Safe state(System can delay resource acquisition to prevent deadlock), Unsafe state(Threads can unavoidably lead to deadlock/Deadlock exist)
+
 ### The Dining Philosopher
 
 Five Philosopher sit at a table
