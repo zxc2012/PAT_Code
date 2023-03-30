@@ -16,7 +16,7 @@ css: cascading style sheets
 <div> generic block section tag(division)
 ```
 ### Attributes
-![W0 & HTML CSS](https://raw.githubusercontent.com/zxc2012/image/main/W0%20%26%20HTML%20CSS.jpg)
+
 (1)anchor and hypertext reference
 ```markdown
 <a href="">
@@ -36,7 +36,7 @@ content
 ```markdown
 <ul><!-- unordered list-->
 <li></li>
-</url>
+</ul>
 ```
 (5)Other
 
