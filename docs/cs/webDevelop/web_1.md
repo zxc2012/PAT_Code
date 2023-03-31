@@ -195,48 +195,7 @@ vw:viewpoint width
 }
 ```
 ## Computer Networks
-
-### HTTP
-
-*hypertext transfer protocol*
-
-Fetching a web page with HTTP:
-
-1. Resolve the server to IP address (DNS)
-2. Set up TCP connection to the server
-3. Send HTTP request for the page
-4. Await HTTP response for the page
-5. Execute and fetch embedded resources, render
-6. Clean up any idle TCP connections
-
-Primary Methods
-
-- GET gets data
-- POST creates data
-- PUT modifies data
-- DELETE deletes data
-
-Status Code
-
-|Code|Meaning|Examples|
-|-|-|-|
-|1xx| Information |100 = server agrees to handle client's request|
-|2xx |Success |200 = request succeeded; 204 = no content present|
-|3xx| Redirection| 301 = page moved; 304 = cached page still valid|
-|4xx| Client error| 403 = forbidden page; 404 = page not found|
-|5xx| Server error| 500 = internal server error; 503 = try again later error|
-
-URL
-
-*uniform resource locator*
-
-```html
-<protocol>://<hostname>/<path>？<query>#<fragment_id>
-```
-*fragment_id* points to the HTML element with the given ID
-
-
-#### Application
+### Application
 - CDN: Content Delivery Networks
  
 Map clients to a nearby replica
