@@ -16,7 +16,7 @@
 |var|Only declarations are hoisted|function scope|
 |let const|block hoisted,but not initialized with 'undefined'|block scope|
 
-TDZ: from the start of the block until the initialization has completed.
+TDZ(temporal dead zones): from the start of the block until the initialization has completed.
 
 **block:{}**
 ```js
@@ -74,6 +74,35 @@ go({a: [1, 2, 3]});
 
    for...of creates a loop iterating over *iterable objects*.
 4. Spread syntax (...) allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.
+
+### Prototype Chain
+
+someObject.[[Prototype]] is used to designate the prototype of someObject. 
+
+The [[Prototype]] internal slot can be accessed with the Object getPrototypeOf() and Object.setPrototypeOf() functions.
+
+That prototype object has a prototype of its own, and so on until an object is reached with null as its prototype. By definition, null has no prototype, and acts as the final link in this prototype chain.
+
+```js
+const o = {
+  a: 1,
+  b: 2,
+  // __proto__ sets the [[Prototype]]. It's specified here
+  // as another object literal.
+  __proto__: {
+    b: 3,
+    c: 4,
+    __proto__: {
+      d: 5,
+    },
+  },
+};
+// Prototype Chain
+// { a: 1, b: 2 } ---> { b: 3, c: 4 } ---> { d: 5 } ---> Object.prototype ---> null
+
+console.log(o.d); // 5
+```
+
 ### Function
 - Arrow Function: 
     - Does not have its own bindings to this or super, and should not be used as methods.
@@ -91,7 +120,8 @@ go({a: [1, 2, 3]});
 //常用函数
 setTimeout(handler: TimerHandler, timeout?: number, ...arguments: any[]): number//timeout default:0
 ```
-#### Prototype
+#### Properties
+
 ```js
 function doSomething(){}
 doSomething.prototype.foo = "bar";
@@ -104,18 +134,21 @@ console.log("doSomething.foo:            " + doSomething.foo);//undefined
 console.log("doSomething.prototype.prop: " + doSomething.prototype.prop);//undefined
 console.log("doSomething.prototype.foo:  " + doSomething.prototype.foo);//bar
 ```
-### Ouput
-Function.prototype.call(),Function.prototype.blind()
+#### Methods
+
+Bind
+
+The bind() method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
+
+Apply and Call
+
+- Function.prototype.call() accepts an argument list
+- Function.prototype.apply() accepts a single array of arguments
+
 ```js
-Function.prototype.mycall = function(thisArg, ...args) {
-  if(thisArg===null||thisArg===undefined)thisArg=window;
-  thisArg=Object(thisArg);
-  let key = Symbol();
-  thisArg[key]=this;
-  let result = thisArg[key](...args);
-  delete thisArg[key];
-  return result;
-}
+// thisArg: The value to be passed as the this parameter to the target function func when the bound function is called
+apply(thisArg, argsArray)// func.apply(this, ['eat', 'bananas'])
+call(thisArg, arg1, /* …, */ argN)// func.call(this, 'eat', 'bananas')
 ```
 ## Object
 ### Declaration
@@ -126,19 +159,22 @@ let person={
     color:"red"
 };
 let {name,age}=person;//Object destructuring is a shorthand to obtain multiple properties at once.
-
 ```
+
 ### Array
+
 ```js
 let a=[1,2,3];
 //改变数组
-a.splice(1,1,4);//于p1删除p2个元素并在p1插入=>[1,4,3]
+//splice(start, deleteCount, item1, item2, itemN) // 于start删除deleteCount个元素并在start插入
+a.splice(1,1,4);//[1,4,3]
 //不改变数组
-a.concat(1,[2,3],[5,[6,7]])//[1,4,3,1,2,3,5,[6,7]]//flatten array,but not arrays of arrays
+// concat: flatten array,but not arrays of arrays
+a.concat(1,[2,3],[5,[6,7]])//return [1,4,3,1,2,3,5,[6,7]]
 a.map(x=>x+3);//return [4,7,6] but not change
-a.foreach(value=>sum+=value);
+a.foreach(value=>sum+=value); // callback return value is discarded
 a.filter(x=>x>2);//return [4,3]
-a.reduce((x,y)=>x+y);//8,reduce right process from right-to-left
+a.reduce((x,y)=>x+y);//8, reduceRight() process from right-to-left
 ```
 #### Other function
 <table>
@@ -167,8 +203,9 @@ a.reduce((x,y)=>x+y);//8,reduce right process from right-to-left
     </tr>
 </table>
 
-## Closure
-this is determined by the enclosing lexical context
+## This
+
+`this` is determined by the enclosing lexical context
 
 ### Global Context
 
@@ -213,6 +250,30 @@ console.log(fn2()() == window); // true
 obj.doSomethingLater(); 
 //In a browser:window,In Node:Timeout {...}
 ```
+## Closure
+
+A closure is the combination of a function and the lexical environment within which that function was declared, which gives you access to an outer function's scope from an inner function.
+
+This environment consists of any local variables that were in-scope at the time the closure was created
+
+```js
+let myObj = {
+    "gender": "man",
+    makeFunc() {
+        const name = this.gender;
+        function displayName() {
+          console.log(name)// "man"
+          console.log(this)// window
+        }
+        return displayName;
+    }
+}
+const myFunc = myObj.makeFunc();
+myFunc();
+```
+
+In this case, myFunc is a reference to the instance of the function displayName that is created when makeFunc is run. The instance of displayName maintains a reference to its lexical environment, within which the variable name exists.
+
 ## DOM
 Document Object Model: how your browser interprets the HTML “tree”
 
