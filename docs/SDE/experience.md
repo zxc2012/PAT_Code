@@ -33,4 +33,4 @@
 
 [Java](https://www.nowcoder.com/discuss/405272)
 
-[前端](https://messiahhh.github.io/blog/frontend/)
+[前端](https://messiahhh.github.io/blog/docs/javascript/basic/)

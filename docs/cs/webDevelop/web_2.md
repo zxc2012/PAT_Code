@@ -118,8 +118,31 @@ console.log(o.d); // 5
 ```
 ```js
 //常用函数
-setTimeout(handler: TimerHandler, timeout?: number, ...arguments: any[]): number//timeout default:0
+timeoutID = setTimeout(functionRef, delay, param1, param2, /* … ,*/ paramN);//delay default:0, ms
+clearTimeout(timeoutID);
+intervalID = setInterval(func, delay, arg0, arg1, /* … ,*/ argN);// epeatedly calls a function or executes a code snippet, with a fixed time delay(ms) between each call.
+clearInterval(intervalID);
 ```
+
+实现一个打点计时器，要求
+
+- 从 start 到 end（包含 start 和 end）, 每隔 100 毫秒 console.log 当前数字，每次数字增幅为 1
+- 返回的对象中需要包含一个 cancel 方法，用于停止定时操作
+- start 需要立即输出
+
+```js
+function count(start, end) {
+    console.log(start);
+    let id = setInterval(()=>{
+        console.log(++start);
+        if(start === end) clearInterval(id);
+    },100);
+    return{
+        cancel:()=>clearInterval(id)
+    } 
+}
+```
+
 #### Properties
 
 ```js
@@ -283,12 +306,13 @@ HTMLOrForeignElement.blur()// 从当前焦点元素中移除键盘焦点。
 HTMLElement.click()// 向元素发送鼠标单击事件。
 HTMLOrForeignElement.focus()// 使元素成为当前键盘焦点。
 HTMLElement.forceSpellCheck()// 对元素的内容运行拼写检查程序
+document.querySelector() // returns the first Element within the document that matches the specified selector, or group of selectors
 ```
 
 - Create and add elements on the fly
 
     ```js
-    const list=document.getElementById("shopping list");
+    const list=document.querySelector("shopping list");
     const newEL=document.createElement("li");
     newEl.innerHTML="apples";
     list.appendChild(newEl));
@@ -296,24 +320,74 @@ HTMLElement.forceSpellCheck()// 对元素的内容运行拼写检查程序
 - Change the contents/style of an element
 
     ```js
-    const list=document.getElementById("shopping list");
+    const list=document.querySelector("shopping list");
     list.style.color="red";
     ```
 - Give elements actions by adding event listeners
 
     ```js
-    const button=document.getElementById("button");
+    const button=document.querySelector("button");
     button.addEventListener("click",()=>{
         addParagraph("");
     });//common events include load, click, input, mouseover
     ```
 
 ## Promise
-### 实现promise.all
+
+A Promise is in one of these states:
+
+- pending: initial state, neither fulfilled nor rejected.
+- fulfilled: meaning that the operation was completed successfully.
+- rejected: meaning that the operation failed.
+
+Promise.resolve() "resolves" a given value to a Promise. 
+
+If the value is a promise, flattens nested layers of promise into a single layer
+
+If the value is a thenable, first transform into a promise, then follow the flattening process
+
+```js
+const myPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("foo");
+  }, 300);
+});
+myPromise
+  .then(handleFulfilled)
+  .catch(handleRejected);
+```
+
+### Method
+
+promise.race
+
+```js
+function race(promises) {
+  /*
+  Wait until any of the promises is fulfilled or rejected.
+
+  If the returned promise fulfills, it is fulfilled with the value of the first promise in the iterable that fulfilled.
+
+  If it rejects, it is rejected with the reason from the first promise that was rejected.
+  */
+  return new Promise((resolve,reject)=>{
+    promises.forEach(promise=>{
+      Promise.resolve(promise).then(value=>resolve(value))
+      .catch(e=>reject(e))
+    })
+  })
+}
+```
+
+promise.all
+
 ```js
 /**
- * @param {Array<any>} promises - notice input might have non-Promises
- * @return {Promise<any[]>}
+  Wait for all promises to be fulfilled, or for any to be rejected.
+
+  If the returned promise fulfills, it is fulfilled with an aggregating array of the values from the fulfilled promises, in the same order as defined in the iterable of multiple promises.
+
+  If it rejects, it is rejected with the reason from the first promise in the iterable that was rejected.
  */
 function all(promises) {
   return new Promise((resolve,reject)=>{
@@ -331,31 +405,57 @@ function all(promises) {
   )
 }
 ```
+
+promise.any
+
+```js
+/**
+  Takes an iterable of Promise objects and, as soon as one of the promises in the iterable fulfills, returns a single promise that fulfills with the value from that promise.
+ */
+function any(promises) {
+  return new Promise((resolve,reject)=>{
+    if(promises.length===0) resolve(promises);
+    let result = [];
+    promises.forEach((promise,idx)=>Promise.resolve(promise)
+      .then(value=>resolve(value))
+      .catch(e=>{
+        result[idx] = e;
+        if(result.length === promises.length){
+          reject(new AggregateError('No Promise in Promise.any was resolved',
+            result
+          ));
+        }
+      }
+      )
+    )
+  }
+  )
+}
+```
+
 ## debounce & throttle
 ```js
 function debounce(func, wait) {
-  let timer=null;
-  return function(...args){
-    if(timer){
-      clearTimeout(timer);
-    }
-    timer=setTimeout(()=>{
-      func.call(this,args);
-    },wait);
+  let id = null;
+  return (args)=>{
+    if(id) clearTimeout(id);
+    id = setTimeout(()=>func.call(this,...args),wait);
   }
 }
 function throttle(func, wait) {
-  let timer=null;
+  let id;
   let lastargs;
-  return (...args)=>{
-    if(timer)lastargs=args;
-    else{
+  return (args)=>{
+    if(!id){
       func.call(this,...args);
-      timer=setTimeout(()=>{
-        if(lastargs)func.call(this,lastargs);
-        timer=null;
-      },wait)
+      id = setTimeout(()=>{
+        id = null;
+        if(lastargs){
+          func.call(this,...lastargs);
+        }
+      },wait);
     }
+    else lastargs = args;
   } 
 }
 ```

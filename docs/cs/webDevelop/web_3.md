@@ -35,6 +35,16 @@ syntax extension to JavaScript that allows us to write HTML code snippets in Jav
 
 - {} allows us to return to JavaScript inside the HTML environment inside the JavaScript class
 
+```js
+<div>
+    {isLoggedIn? <AdminPanel />: <LoginForm />}
+    {
+        // or: logical && syntax
+        // isLoggedIn && <AdminPanel />
+    }
+</div>
+```
+
 ## Lifecyle method
 
 ![20210804194814](https://raw.githubusercontent.com/zxc2012/image/main/20210804194814.png)

@@ -133,7 +133,7 @@ public class ArrayMap<K, V> {
 
 ### Method
 
-Create a class MapHelper with two methods:
+Create a class MapHelper with three methods:
 - get(key): Returns the item in the map if it exists, otherwise null.
 - maxKey(): Returns the maximum of all keys. Works only if keys can be compared.
 - allBark(): Makes all keys bark. Works only for keys of type Dog.
@@ -194,13 +194,14 @@ MapHelper.java:62: error: incompatible types: ArrayMap<FrenchDog,Integer> cannot
 Arrays are convariant in java, but generic types are invariant
 
 反证: 
-if 2(√) then 4(x) so 2(x)
+if 2(√),I made 3 without telling List, then 4(x) => 2(x)
 
 ```java
-List<FrenchDog> fg = new ArrayList<FrenchDog>();
-List<Dog> g = fg;
-g.add(new Dog());
-FrenchDog s = g.get(0);
+Object[] numArray = new int[]{1,2,3}; // Correct
+List<Dog> fg = new ArrayList<Dog>();
+List<Animal> g = fg;
+g.add(new Cat());
+Dog s = g.get(0);
 ```
 
 Fix
@@ -226,8 +227,6 @@ public static void allBark(ArrayMap<?extends Dog,?> am){
 
 ```java
 Map<String, List<String>> myMap = new HashMap<>();// <String,List<String>>
-
-
 class MyClass<X> {
   <T> MyClass(T t) {
     // ...

@@ -135,12 +135,33 @@ Collections.sort(plist);
 
 ### Visibility Modifiers
 
+Class level: Only public and (default)
+
+Member level:
+
 | Modifiers | Description                                                                                                             |
 | --------- | ----------------------------------------------------------------------------------------------------------------------- |
-| public    | The class, data, or method is visible to any class in any package                                                       |
-| (default) | the class, variable, or method can be accessed by any class in the same package                                         |
-| private   | Modifier cannot be applied to a class, only its members/The data or methods can be accessed only by the declaring class |
-| protected | Used in inheritance|
+| public    | The member is visible to any class in any package |
+| protected | default + inheritance|
+| (default) | By any class in the same package (*aka* package private)|
+| private   | Only by the declaring class |
+
+```java
+//package a;
+public class Vehicle {
+    protected void drive() {System.out.print("Drive !");}
+    void stop() {System.out.print("Stop !");}
+}
+// package b
+// import a.Vehicle;
+public class Car extends Vehicle {
+    private void test(Vehicle obj) {
+        obj.drive();// invisible to different package
+        drive(); // compile ok
+        stop(); // invisible to different package
+    }
+}
+```
 
 ### Order of Initialization
 
@@ -179,16 +200,44 @@ times (crash)
 ## Inheritance & Polymorphism
 ### Inheritance
 
-- super
+private、static method cannot be overriden
 
-  - constructor
-  - superclass method
+If a static method defined in the superclass is redefined in a subclass, the method defined in the superclass is *hidden*
 
-    super.method(arguments);
+```java
+// 区分instance 和 static method
+public class BaseClass
+{
+   public void objectAction();
 
-    _private、static method cannot be overriden_(If a static method defined in the superclass is
-    redefined in a subclass, the method defined
-    in the superclass is hidden)
+   public static void classAction()
+   {
+      System.out.println("classAction in BaseClass.");
+   }
+}
+public class DerivedClass extends BaseClass
+{
+   public void objectAction()
+   {
+      this.classAction(); // OK
+   }
+
+   public static void classAction()
+   {
+      //super.objectAction(); // Not OK
+      BaseClass.baseAction();// OK
+   }
+}
+public class Demo 
+{
+   public static void main(String[] args) 
+   {
+      DerivedClass derivedObject = new DerivedClass(); 
+      BaseClass baseObjectAlias = derivedObject;
+
+      baseObjectAlias.classAction();//classAction in BaseClass. Hide but not override
+}
+```
 
 **Overriding**
 
@@ -257,7 +306,7 @@ public interface A {
 
 ### Abstract Class
 
-- Abstract method(only a signature without implementationv)
+- Abstract method(only a signature without implementation)
 - Abstract class as a data type
 
   ```java
@@ -300,12 +349,22 @@ Lambda Expression
 
 // Anonymous 可以改写
 R = map((int x) -> Math.abs(x), some list);
-// or even better, when the function already exists:
+// or even better, Method Reference
 R = map(Math::abs, some list);
 ```
 
-## Other Classes
+Method Reference
 
+- Reference to a static method
+  - ContainingClass::staticMethodName
+- Reference to an instance method of a particular object
+  - containingObject::instanceMethodName	
+- Reference to an instance method of an arbitrary object of a particular type
+  - String::concat
+- Reference to a constructor
+  - HashSet::new
+
+## Other Classes
 ### java.util.Scanner
 
 ```java
@@ -328,8 +387,7 @@ get length: (Object you create).length
 int[] A = new int[4]; // A points to array of 4 0s.
 int[] B; // Same thing, but in two steps.
 B = new int[4];
-int[] C = new int[] { 1, 2, 3, 4 }
-// Array with explicit initial values.
+int[] C = new int[] { 1, 2, 3, 4 }// Array with explicit initial values.
 int[] D = { 1, 2, 3, 4 } // Shorthand for the above
 /***Method******/
 public static <T> List<T> asList(T... a)//Returns a fixed-size list backed by the specified array.
