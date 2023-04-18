@@ -1,14 +1,16 @@
-package com.zju.test;
+package com.zju;
 import org.junit.Test;
 
 import com.zju.learn.MyInterface;
-import com.zju.learn.MyObject;
 
 import java.util.*;
 
 import static org.junit.Assert.*;
 public class TestInterface {
-    
+    public record Greetings(String sentence){}
+    public Greetings greet(){
+        return new Greetings("Hi");
+    }
     @Test
     public void testreadata(){
         MyInterface r1 = a->a+1;
@@ -19,6 +21,7 @@ public class TestInterface {
         r1.testdefault();
         MyInterface.teststatic();
         assertEquals(4, r1.readdata(3));
+        System.out.println(greet());
     }
 
 }

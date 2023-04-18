@@ -10,6 +10,10 @@ Interface Iterable<T>{
   default void forEach(Consumer<? super T> action)//Performs the given action for each element of the Iterable until all elements have been processed or the action throws an exception.
   Iterator<T> iterator()//Returns an iterator over elements of type T.
 }
+public interface Iterator<E>{
+  boolean	hasNext(); 
+  E	next();//Returns the next element in the iteration.
+}
 public interface Collection<E> extends Iterable<E>{
   int size();
   boolean add(E e);
@@ -60,6 +64,7 @@ public interface Map<K,V>{
   boolean containsKey(Object key);
   boolean containsValue(Object value);
   default void forEach(BiConsumer<? super K,? super V> action);
+  V put(K key,V value)//Returns the previous value associated with key, or null if there was no mapping for key.
   V get(Object key);//Returns the value or null
   boolean isEmpty();
   V remove(Object key);

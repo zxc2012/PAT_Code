@@ -1,4 +1,4 @@
-# Java8 Features
+# 4 Java New Features
 ## Optional
 
 Before Java 8, any number of operations involving accessing an object’s methods or properties could result in a NullPointerException:
@@ -8,7 +8,7 @@ String isocode = user.getAddress().getCountry().getIsocode().toUpperCase();
 ```
 
 - Create Optional(Of, OfNullable)
-    - Optional<User> opt = Optional.ofNullable(user);
+    - Optional.ofNullable(user);
 - ReturnValues
     - Optional.ofNullable(user).ifPresent(u -> logger.info("User is:" + u.getEmail()))
     - Optional.ofNullable(user).orElse(createNewUser());

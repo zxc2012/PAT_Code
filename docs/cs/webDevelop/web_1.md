@@ -42,6 +42,16 @@ content
 
 hr : horizontal rule
 
+table
+
+```markdown
+<caption>This is the caption</caption>
+<tr>:table row
+<th>:table header
+<td>:table data/cell
+colspan、rowspan
+```
+
 ## CSS
 
 ![W0 & HTML CSS (1)](https://raw.githubusercontent.com/zxc2012/image/main/W0%20%26%20HTML%20CSS%20(1).jpg)

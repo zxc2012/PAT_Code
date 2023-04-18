@@ -163,6 +163,17 @@ public class Car extends Vehicle {
 }
 ```
 
+### Class Import
+
+- The normal import declaration imports classes from packages, allowing them to be used without *package* qualification
+- The static import declaration imports static members from classes, allowing them to be used without *class* qualification
+  - Common Scenario: local copies of constants
+
+```java
+import static java.lang.Math.cos;
+double r = cos(PI * theta);
+```
+
 ### Order of Initialization
 
 1.Staic members is to be initialized in the loading of the class,属于类的数据(C++全局)
@@ -293,12 +304,17 @@ Interfaces may combine a mix of abstract and default methods.
 - Can provide variables, but they are **public static final**
 
 ```java
-public interface A {
+public interface Module {
   double gravity = 6.67e-11;
   void update(double dt);
   public default void doSomething() {
     System.out.println("Do something");
   }
+}
+// Interface as a data type
+Module[] instances  = new Module[1];
+instances[0] = new module{
+  void update(double dt){}
 }
 ```
 

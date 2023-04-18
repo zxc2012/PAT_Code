@@ -9,7 +9,6 @@ public class MyObject {
 class smallObject extends MyObject{
     void test(){
         age =4 ;
-        name = "tets";
         bark();
     }
 }

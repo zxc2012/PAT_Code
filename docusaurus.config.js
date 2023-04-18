@@ -81,33 +81,27 @@ async function createConfig(){
               position: 'left',
             },
             {
-              label: "☕️C++&Java",
+              label: "☕️CodingLanguage",
               type: 'docSidebar',
               sidebarId: 'C',
               position: 'left',
             },
             {
-              label: "✏️算法总结",
+              label: "✏️Algorithms",
               type: 'docSidebar',
               sidebarId: 'Algorithms',
-              position: 'left',
-            },
-            {
-              label: "✈️Overseas",
-              type: 'docSidebar',
-              sidebarId: 'Overseas',
-              position: 'left',
-            },
-            {
-              label: "🍌Leetcode & OJ",
-              type: 'docSidebar',
-              sidebarId: 'OJ',
               position: 'left',
             },
             {
               label: "💡Software Development",
               type: 'docSidebar',
               sidebarId: 'SDE',
+              position: 'left',
+            },
+            {
+              label: "🍌Leetcode & OJ",
+              type: 'docSidebar',
+              sidebarId: 'OJ',
               position: 'left',
             },
             {
