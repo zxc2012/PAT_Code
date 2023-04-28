@@ -1,0 +1,30 @@
+GET http://localhost:8080/api/customer/all
+
+###
+POST http://localhost:8080/api/customer/create
+content-type: application/json
+
+{
+    "name": "Jamila",
+    "age": 18,
+    "email": "Jamila@gmail.com"
+}
+
+### 
+POST http://localhost:8080/api/customer/create
+content-type: application/json
+
+{
+    "name": "John",
+    "age": 19,
+    "email": "John@gmail.com"
+}
+
+###
+PUT http://localhost:8080/api/customer/update/2
+content-type: application/json
+
+{
+    "id": 3,
+    "email":"John@163.com"
+}

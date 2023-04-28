@@ -133,6 +133,10 @@ Collections.sort(plist);
   empty body)
 - Constructors do not have a return type(Not even void)
 
+POJO: plain old java object, sometimes called an Entity
+
+DTO: data transfer object
+
 ### Visibility Modifiers
 
 Class level: Only public and (default)
@@ -384,14 +388,17 @@ Method Reference
 ### java.util.Scanner
 
 ```java
+Class Scanner implements Iterator<String>, Closeable{
+  Scanner(InputStream source);
+  // move forward one byte/int, return the one scanned from the input
+  // hasnextByte()/nextByte() 
+  // hasnextShort()/nextShort()
+  // hasnextInt()/nextInt()
+  // hasnextLine()/nextLine(), returns the rest of the current line, excluding any line separator at the end
+}
+
 Scanner input = new Scanner(System.in);
 int value = input.nextInt();
-// nextByte() reads an integer of the byte type.
-// nextShort() reads an integer of the short type.
-// nextInt() reads an integer of the int type.
-// nextLong() reads an integer of the long type.
-// nextFloat() reads a number of the float type.
-// nextDouble() reads a number of the double type.
 ```
 
 ### java.util.Arrays
@@ -423,11 +430,41 @@ public static void fill(Object[] a,
 
 ### java.lang.String
 
-| Method        | Description                                                            |
-| ------------- | ---------------------------------------------------------------------- |
-| int length()      | Returns the number of characters in this string.                       |
-| char charAt(index) | Returns the character at the specified index from this string.         |
-| String concat(String s1)    | Returns a new string that concatenates this string with string s1.     |
-| String toUpperCase() | Returns a new string with all letters in uppercase.                    |
-| String toLowerCase() | Returns a new string with all letters in lowercase.                    |
-| String trim()| Returns a string whose value is this string, with any leading and trailing whitespace removed.|
+```java
+//Can't modify
+Class String{
+  char charAt(int index);
+  String concat(String s1); // Returns a new string that concatenates this string with string s1.
+  static String	format​(String format, Object... args);
+  String formatted(Object... args);
+  boolean isEmpty();
+  int indexOf(String str);
+  int length();
+  String substring(int beginIndex, int endIndex);
+  String toUpperCase();//Returns a new string with all letters in uppercase
+  String toLowerCase();
+  String trim();//Returns a string whose value is this string, with any leading and trailing whitespace removed.
+}
+
+// Can modify
+Class StringBuilder implements CharSequence{ 
+  StringBuilder(int capacity);
+  StringBuilder(CharSequence seq);//Constructs a string builder that contains the same characters as the specified CharSequence
+  StringBuilder(String str);//Constructs a string builder initialized to the contents of the specified string
+  StringBuilder append(String s);// 会变
+  StringBuilder append(char c);// 会变
+  StringBuilder append(CharSequence s);// 会变
+  char charAt(int index);
+  int length();
+  void setCharAt(int index, char ch);
+  StringBuilder reverse();
+}
+
+int age = 12;
+String formattedString = "Your age is %d".formatted(age);
+String formattedString = String.format("Your age is %d",age);
+
+// ParseInt
+String ageStr = "13";
+age = Integer.parseInt(ageStr);
+```

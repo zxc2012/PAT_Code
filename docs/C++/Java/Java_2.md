@@ -45,8 +45,18 @@ public interface Consumer<T>{
 
 - ArrayList: implement with an array, slow for inserting and removing.
 - LinkedList: inexpensive insertions and deletions, slow for random access.
-
   - LinkedList is a doubly-linked list implementation of the List and Deque interfaces
+
+```java
+Interface List<E>{
+  E get(int index);
+  int indexOf(Object o);
+  int lastindexOf(Object o);
+  static <E> List<E> of(E... elements);
+  E set(int index, E element);// returns the element previously at the specified position
+  Object[] toArray();
+}
+```
 
 ### Set
 
@@ -69,6 +79,7 @@ public interface Map<K,V>{
   boolean isEmpty();
   V remove(Object key);
   default V	replace(K key, V value);
+  Collection<V> values();
 }
 ```
 ## Collections

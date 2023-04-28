@@ -1,4 +1,4 @@
-# 5 SpringBoot
+# 6 Web Frameworks and ORM
 
 ![20230417172826](https://raw.githubusercontent.com/zxc2012/image/main/20230417172826.png)
 
@@ -44,3 +44,8 @@ It can figure out what libraries you use and pre-configure their compo
 The @ResponseBody is a utility annotation that tells Spring to automatically serialize return values of this classes methods into HTTP responses. 
 
 When building a JSON endpoint, this is an amazing way to "magically" convert your objects into JSON for easier consumption.
+
+## ORM
+
+- ORM: Object Relational Mapping
+- JPA: Jakarta Persistence API is a Jakarta EE application programming interface that describes the management of relational data in enterprise Java applications

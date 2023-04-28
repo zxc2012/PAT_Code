@@ -1,4 +1,4 @@
-# 4 Java New Features
+# 5 Java New Features
 ## Optional
 
 Before Java 8, any number of operations involving accessing an object’s methods or properties could result in a NullPointerException:
@@ -28,52 +28,50 @@ Stream pipeline:
 
 forEach() is a terminal function. After the operation is performed, the stream pipeline is considered consumed
 
-```java
-@Test
-public void whenIncrementSalaryForEachEmployee_thenApplyNewSalary() {    
-    empList.stream().forEach(e -> e.salaryIncrement(10.0));
-    
-    assertThat(empList, contains(
-      hasProperty("salary", equalTo(110000.0)),
-      hasProperty("salary", equalTo(220000.0)),
-      hasProperty("salary", equalTo(330000.0))
-    ));
-}
+```java    
+empList.stream().forEach(e -> e.salaryIncrement(10.0));
+assertThat(empList, contains(
+  hasProperty("salary", equalTo(110000.0)),
+  hasProperty("salary", equalTo(220000.0)),
+  hasProperty("salary", equalTo(330000.0))
+));
 ```
 
 The strategy for collect() is provided via the *Collector* interface implementation. In the example below, we used the toList collector to collect all Stream elements into a List instance.
 
 ```java
-@Test
-public void whenFindFirst_thenGetFirstEmployeeInStream() {
-    Integer[] empIds = { 1, 2, 3, 4 };
-    
-    List<Employee> employees = Stream.of(empIds)
-      .map(employeeRepository::findById)
-      .filter(e -> e != null)
-      .filter(e -> e.getSalary() > 200000)
-      .collect(Collectors.toList());
-    
-    assertEquals(Arrays.asList(arrayOfEmps[2]), employees);
-}
+Integer[] empIds = { 1, 2, 3, 4 };
+List<Employee> employees = Stream.of(empIds)
+  .map(employeeRepository::findById)
+  .filter(e -> e != null)
+  .filter(e -> e.getSalary() > 200000)
+  .collect(Collectors.toList());
+
+assertEquals(Arrays.asList(arrayOfEmps[2]), employees);
+```
+
+flatMap() lets you replace a value with a stream and concatenates all the streams together
+
+```java
+List<Integer> together = Stream.of(Arrays.asList(1,2),asList(3,4))
+.flatMap(numbers -> numbers.stream)
+.collect(toList())
+
+asserEqual(asList(1,2,3,4),together);
 ```
 
 findFirst() returns an Optional for the first entry in the stream; the Optional can, of course, be empty.
 
 ```java
-@Test
-public void whenFindFirst_thenGetFirstEmployeeInStream() {
-    Integer[] empIds = { 1, 2, 3, 4 };
-    
-    Employee employee = Stream.of(empIds)
-      .map(employeeRepository::findById)
-      .filter(e -> e != null)
-      .filter(e -> e.getSalary() > 100000)
-      .findFirst()
-      .orElse(null);
-    
-    assertEquals(employee.getSalary(), new Double(200000));
-}
+Integer[] empIds = { 1, 2, 3, 4 };
+Employee employee = Stream.of(empIds)
+  .map(employeeRepository::findById)
+  .filter(e -> e != null)
+  .filter(e -> e.getSalary() > 100000)
+  .findFirst()
+  .orElse(null);
+
+assertEquals(employee.getSalary(), new Double(200000));
 ```
 
 We saw forEach() earlier in this section, which is a terminal operation. However, sometimes we need to perform multiple operations on each element of the stream before any terminal operation is applied.
@@ -81,27 +79,24 @@ We saw forEach() earlier in this section, which is a terminal operation. However
 peek() is a intermediate operation
 
 ```java
-@Test
-public void whenIncrementSalaryUsingPeek_thenApplyNewSalary() {
-    Employee[] arrayOfEmps = {
-        new Employee(1, "Jeff Bezos", 100000.0), 
-        new Employee(2, "Bill Gates", 200000.0), 
-        new Employee(3, "Mark Zuckerberg", 300000.0)
-    };
+Employee[] arrayOfEmps = {
+    new Employee(1, "Jeff Bezos", 100000.0), 
+    new Employee(2, "Bill Gates", 200000.0), 
+    new Employee(3, "Mark Zuckerberg", 300000.0)
+};
 
-    List<Employee> empList = Arrays.asList(arrayOfEmps);
-    
-    empList.stream()
-      .peek(e -> e.salaryIncrement(10.0))
-      .peek(System.out::println)
-      .collect(Collectors.toList());
+List<Employee> empList = Arrays.asList(arrayOfEmps);
 
-    assertThat(empList, contains(
-      hasProperty("salary", equalTo(110000.0)),
-      hasProperty("salary", equalTo(220000.0)),
-      hasProperty("salary", equalTo(330000.0))
-    ));
-}
+empList.stream()
+  .peek(e -> e.salaryIncrement(10.0))
+  .peek(System.out::println)
+  .collect(Collectors.toList());
+
+assertThat(empList, contains(
+  hasProperty("salary", equalTo(110000.0)),
+  hasProperty("salary", equalTo(220000.0)),
+  hasProperty("salary", equalTo(330000.0))
+));
 ```
 
 ### Lazy Evaluation
@@ -113,17 +108,13 @@ All intermediate operations are lazy, so they’re not executed until a result o
 **Short-circuiting**:When findFirst() meets, the remaining employees will not evalute.
 
 ```java
-@Test
-public void whenFindFirst_thenGetFirstEmployeeInStream() {
-    Integer[] empIds = { 1, 2, 3, 4 };
-    
-    Employee employee = Stream.of(empIds)
-      .map(employeeRepository::findById)
-      .filter(e -> e != null)
-      .filter(e -> e.getSalary() > 100000)
-      .findFirst()
-      .orElse(null);
-    
-    assertEquals(employee.getSalary(), new Double(200000));
-}
+Integer[] empIds = { 1, 2, 3, 4 };
+Employee employee = Stream.of(empIds)
+  .map(employeeRepository::findById)
+  .filter(e -> e != null)
+  .filter(e -> e.getSalary() > 100000)
+  .findFirst()
+  .orElse(null);
+
+assertEquals(employee.getSalary(), new Double(200000));
 ```
