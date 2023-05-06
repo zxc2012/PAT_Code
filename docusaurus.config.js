@@ -75,13 +75,13 @@ async function createConfig(){
         navbar: {
           items: [
             {
-              label: "🎓cs专业课",
+              label: "🎓CS Fundamental",
               type: 'docSidebar',
               sidebarId: 'cs',
               position: 'left',
             },
             {
-              label: "☕️CodingLanguage",
+              label: "☕️Language",
               type: 'docSidebar',
               sidebarId: 'C',
               position: 'left',
@@ -105,7 +105,7 @@ async function createConfig(){
               position: 'left',
             },
             {
-              label: "🍉机器学习",
+              label: "🍉Machine Learning",
               type: 'docSidebar',
               sidebarId: 'AI',
               position: 'left',

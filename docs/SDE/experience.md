@@ -20,13 +20,13 @@
 
 [一个牛人](https://leetcode.com/anonymous_kumar/)
 ## 🎓汇集篇
-[编程剑谱](https://www.ershicimi.com/a/3646)
 
 [浙大](https://www.cc98.org/topic/4972107)
 
 [北邮](https://www.nowcoder.com/discuss/188241)
 
 ## 🔨岗位
+
 [电子科大C++](http://bbs.uestc.edu.cn/forum.php?mod=viewthread&tid=1791063&highlight=学习路线)
 
 [算法工程师](https://www.nowcoder.com/discuss/356243)

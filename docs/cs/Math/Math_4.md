@@ -1,4 +1,4 @@
-# Numrical Analysis Summary
+# 4 Numrical Analysis
 ## Evaluating a polynomial
 Direct form:O($n^2$)
 >$P(x)=a_0+a_1x+a_2x^2+...+a_nx^n$
