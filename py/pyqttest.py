@@ -1,3 +1,6 @@
-import os
+from matplotlib import pyplot as plt
+import seaborn as sns
 
-print(os.getcwd())
+tips =  sns.load_dataset("tips")
+sns.jointplot(x='total_bill',y='tip',data=tips,kind="hist")
+plt.show()
