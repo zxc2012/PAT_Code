@@ -1,6 +1,7 @@
 from matplotlib import pyplot as plt
 import seaborn as sns
 
-tips =  sns.load_dataset("tips")
-sns.jointplot(x='total_bill',y='tip',data=tips,kind="hist")
+flights =  sns.load_dataset("flights")
+fp = flights.pivot_table(index='month',columns='year',values='passengers')
+sns.clustermap(fp,cmap='coolwarm')
 plt.show()

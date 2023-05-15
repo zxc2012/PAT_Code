@@ -26,3 +26,15 @@ Assume that r is the root of function f(x)=0.
 $x_0=initial\ guess$
 
 $x_{i+1}=x_i-\frac{f(x_i)}{f'(x_i)}$
+
+## Convex Optimization
+
+Convex combination: $(x,y)\rightarrow\{\alpha x + \beta y|\alpha + \beta =1, \alpha,\beta \geq 0\}$
+
+Convex set S: $(x1, . . . , xk) \in S$, then convex combination of the points x1, . . . , xk should $\in$ S.
+
+A function f : $R^n \rightarrow R$ is convex if $\forall x, y$ and $\forall \alpha \in [0, 1]$
+
+$$f(\alpha x + (1-\alpha) y) \leq \alpha f(x) + (1-\alpha) f(y)$$
+
+![20230512172643](https://raw.githubusercontent.com/zxc2012/image/main/20230512172643.png)
