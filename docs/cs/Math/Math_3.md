@@ -184,7 +184,7 @@ Two random variables X and Y are independent if $F_{XY}(x, y) = F_X(x)F_Y(y)$ fo
 - For continuous variables, $f_{XY}(x, y) = f_X(x)f_Y(y)$
 ### The Gaussian distribution
 
-$$p(x; \mu, \Sigma) = \frac1{\sqrt{(2\pi)^d \det{\Sigma}}}{exp(-\frac12(x-\mu)^T\Sigma^{-1}(x-\mu))}$$
+$$p(x; \mu, \Sigma) = \frac1{\sqrt{(2\pi)^d \det{\Sigma}}}{\exp(-\frac12(x-\mu)^T\Sigma^{-1}(x-\mu))}$$
 
 ## Estimation of Parameters
 ### Maximum Likelihood estimation
@@ -206,3 +206,44 @@ L(\theta)  = \prod_{i=1}^np(x_i;\theta)\\
 \end{aligned}
 $$
 
+## Information Theory
+### Entropy
+Information: How uncertain we are of the outcome of random experiments
+
+Self information: $i(x) = - \log_2p(x)$
+
+Entropy 
+$$\begin{aligned}
+H(X) = E[i(x)] =  -\sum_{x\in X(\Omega)}p(x)\log_2p(x) \\
+H(X,Y) = -\sum_{y\in y(\Omega)}\sum_{x\in X(\Omega)}p(x,y)\log_2p(x,y) \\
+H(X|Y) = -\sum_{y\in y(\Omega)}\sum_{x\in X(\Omega)}p(x,y)\log_2p(x|y) \\
+H(X,Y) = H(X) + H(Y|X) = H(Y) + H(X|Y)
+\end{aligned}
+$$
+
+### Relative Entropy
+
+Jensen's inequality: Let X be a random variable and f(x) be a convex function, then
+
+$$E(f(X))\geq f(E(X))
+$$
+
+Conversely, if f(x) is a concave function
+
+$$E(f(X))\leq f(E(X))
+$$
+
+Relative Entropy (Kullback-Leibler divergence):
+
+$$D(p(x)||q(x)) = \sum_{x\in X(\Omega)}p(x)\log\frac{p(x)}{q(x)} = - E_p[\log\frac{q(x)}{p(x)}] \geq -\log E_p[\frac{q(x)}{p(x)}] \geq 0
+$$
+
+### Connection to MLE
+
+Set loss function loss$(x) = -\log q(x)$, the expect value would be 
+
+Risk$(q) = -E_p(\log q(x))= D(p||q) +$ Risk$(p)$
+
+Thus, $\arg \min D(p||q) = \arg \min$ Risk$(q)$
+
+Here, we call Risk(q) as **cross entropy** CE(p,q)
