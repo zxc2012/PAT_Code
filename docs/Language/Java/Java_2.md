@@ -1,8 +1,6 @@
 # 2 Collection
 ## Collection
 
-Deque[dek]--double ended queue
-
 ![20221031160055](https://raw.githubusercontent.com/zxc2012/image/main/20221031160055.png)
 
 ```java
@@ -57,6 +55,27 @@ Interface List<E>{
   Object[] toArray();
 }
 ```
+### Queue
+
+- Queues typically, but do not necessarily, order elements in a FIFO manner
+- The head of the queue is that element which would be removed by a call to remove() or poll()
+- In a FIFO queue, all new elements are inserted at the tail of the queue
+
+Queue methods:
+
+|Name|	Throws exception	|Returns special value|
+|-|-|-|
+|Insert|	add(e)|	offer(e)|
+|Remove|	remove()|	poll()|
+|Examine|	element()	|peek()|
+
+Deque[dek]--double ended queue
+
+|Name|	First Element (Head)	|Last Element (Tail)|
+|-|-|-|
+|Insert|	addFirst(e)|	addLast(e)|
+|Remove|	removeFirst()|	removeLast()|
+|Examine|	getFirst()	|getLast()|
 
 ### Set
 

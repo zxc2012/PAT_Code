@@ -71,12 +71,14 @@ Dijkstra's algorithm /ˈdaɪkstrə/
 ```java
 int dijkstra(){
     PQ.add(source, 0);
-    While (!PQ.empty()){
+    while(!PQ.empty()){
         p = PQ.removeSmallest();
-        If distTo[p] + w < distTo[q]{
-            distTo[q] = distTo[p] + w; // relax
-            edgeTo[q] = p;
-            PQ.changePriority(q, distTo[q]);
+        for (q:adjlist[p]){
+            if (distTo[p] + w < distTo[q]){
+                distTo[q] = distTo[p] + w; // relax
+                edgeTo[q] = p;
+                PQ.changePriority(q, distTo[q]);
+            }
         }
     }
 }
@@ -94,9 +96,9 @@ Claim: distTo[v1] is optimal, and thus future relaxations will fail
 
 Runtime: 
 
-- add: V, each costing O(log V) time.
-- removeSmallest: V, each costing O(log V) time.
-- changePriority: E, each costing O(log V) time.
+- add: V times, each costing O(log V) time.
+- removeSmallest: V times, each costing O(log V) time.
+- changePriority: E times, each costing O(log V) time.
 
 Assuming E > V, this is just O(Elog V) for a connected graph
 
@@ -112,11 +114,17 @@ A topological sort only exists if the graph is a DAG
 
 **Algorithm**: O(V+E) time Θ(V) space
 
+Solution1:
+
 1. process all of the edges and keep a count of
 the number of incoming edges for each node
 2. Find a source, output it, and delete it from the graph
 3. The graph is still a DAG, and thus will still have a source vertex.
 4. Repeat until the graph is empty.
+
+Solution2:
+
+Perform a DFS traversal from an arbitrary vertex, record DFS postorder in a list. If not all marked, pick an unmarked vertex and do it again. Topological ordering is given by the reverse of that list.
 
 #### Shortest path on DAG
 
@@ -136,7 +144,28 @@ Solution: Topological sort->Each vertex is visited only when all possible info a
 A connected graph without a cycle
 
 or: A connected graph with |V| −1 edges.
+### Binary Tree
 
+Tree Terminology
+
+- The depth of a node is the number of edges from the root to the node
+- The height of a node is the number of edges from the node to the deepest leaf
+- The height of a tree is a height of the root
+- A full binary tree is a binary tree in which each node has exactly zero or two children
+- A complete binary tree is a binary tree, which is completely filled, with the possible exception of the bottom level, which is filled from left to right
+
+![20230524152640](https://raw.githubusercontent.com/zxc2012/image/main/20230524152640.png)
+
+Tree traversals
+
+A traversal is a process that visits all the nodes in the tree
+- depth-first traversal
+    - PreOrder traversal
+    - InOrder traversal
+    - PostOrder traversal
+- breadth-first traversal
+    - For binary tree, BFS = level order traversal
+    
 ### BST
 
 Binary search in ordered linked list
@@ -149,7 +178,7 @@ Binary Search Tree
 
 ![20221128220221](https://raw.githubusercontent.com/zxc2012/image/main/20221128220221.png)
 
-For every node X in the tree:
+A BST is a binary tree where nodes are ordered in the following way:
 - Every key in the left subtree is less than X's key
 - Every key in the right subtree is greater than X's key
 
@@ -217,10 +246,20 @@ B(balanced/bushy)-trees of order L=3 are also called a 2-3-4(number of children)
 
 #### B-Tree Runtime Analysis
 
+The minimum degree of the B-tree t is an integer such that:
+- Every node other than the root must have at least t - 1 keys
+- Every internal node other than the root must have at least t children
+- The root must have at least one key
+
 Height: 
-- Largest possible height is all non-leaf nodes have 1 item ($log_2n$)
-- Smallest possible height is all nodes have L items ($log_{l+1}n$)
-- Overall height is therefore Θ(log n) 
+
+$$\begin{aligned}
+n \geq 1 + (t-1)\sum_{i=1}^H 2t^{i-1} \geq 1 + 2(t^H -1) \geq 2t^H -1 \\
+H \leq \log_t{(n+1)/2}
+\end{aligned}
+$$
+
+H = O(log n)
 
 Contains:
 - Worst case number of nodes to inspect: H + 1
