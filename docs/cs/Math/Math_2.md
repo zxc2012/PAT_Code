@@ -1,8 +1,11 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # 2 Graph
 ## Graph
 ### Definition
 
-Graph: G = (V,E)
+Graph: 𝐺 = (𝑉, 𝐸)
 - V: set of vertices.
 - $E\subseteq V\times V$(set of edges)
 
@@ -24,12 +27,38 @@ In **directed graph**, each $e\in E$ defined as $(u,v)$.
 
 ![20221105112539](https://raw.githubusercontent.com/zxc2012/image/main/20221105112539.png)
 
+#### Paths, walks, cycles, tour
+
+- Path: a sequence of edges $(v_1,v_2),(v_2,v_3),...,(v_{k-1},v_k)$
+- Cycle: Path from $v_1$ to $v_{k-1}$, + edge $(v_{k-1},v_1)$
+- Walk is sequence of edges with possible repeated vertex or edge
+- Tour is walk that starts and ends at the same node.
+
+#### Connectivity
+
+u and v are connected if there is a path between u and v
+
+A connected graph is a graph where all pairs of vertices are
+connected.
+
+Connected component: maximal set of connected vertices.
+
+#### Complete Graph
+
+$K_n$ complete graph on n vertices
+
+every pair of (distinct) vertices u and v are connected by an edge $\lbrace u,v\rbrace$.
+
+![20221105155349](https://raw.githubusercontent.com/zxc2012/image/main/20221105155349.png)
+
 ### Representation
 
 - Adjacency matrices are true if there is a line going from node A to B and false otherwise
 - Adjacency lists list out all the nodes connected to each node in our graph
 
     ![20221121170549](https://raw.githubusercontent.com/zxc2012/image/main/20221121170549.png)
+
+### Searching
 
 DFS and BFS runtime with adjacency list: O(V + E) (creating marked array)
 
@@ -39,45 +68,49 @@ DFS is worse for spindly graphs (Θ(V) memory to remember recursive calls)
 
 BFS is worse for absurdly “bushy” graphs (In worst case, queue will require Θ(V) memory.)
 
+#### Bipartite
 
-### Paths, walks, cycles, tour
+An undirected graph 𝐺 = (𝑉, 𝐸) is bipartite if you can partition the vertex set into 2 parts so that all edges join vertices in different parts
 
-- Path: a sequence of edges $(v_1,v_2),(v_2,v_3),...,(v_{k-1},v_k)$
-- Cycle: Path from $v_1$ to $v_{k-1}$, + edge $(v_{k-1},v_1)$
-- Walk is sequence of edges with possible repeated vertex or edge
-- Tour is walk that starts and ends at the same node.
+![20230601211523](https://raw.githubusercontent.com/zxc2012/image/main/20230601211523.png)
 
-### Connectivity
+A graph G is bipartite if and only if it contains no odd length cycles.
 
-u and v are connected if there is a path between u and v
+Proof: 
 
-A **connected graph** is a graph where all pairs of vertices are
-connected.
+(1) If G is bipartite, then it does not contain an odd length cycle.
 
-**Connected component**: maximal set of connected vertices.
+![20230601211637](https://raw.githubusercontent.com/zxc2012/image/main/20230601211637.png)
 
-### Complete Graph
+(2) Let G be a connected graph, and let $L_0,... , L_k$ be the layers produced by BFS.
 
-$K_n$ complete graph on n vertices
+Then only 2 situations:
+- No edge of G joins two nodes of the same layer, and G is
+bipartite. See blue and red parts.
+- An edge of G joins two nodes of the same layer, and G contains an odd-length cycle (and hence is not bipartite). Consider the edge and the lowest common ancestor of the connecting vertices. The total length must be odd.
 
-every pair of (distinct) vertices u and v are connected by an edge $\lbrace u,v\rbrace$.
+![20230601211746](https://raw.githubusercontent.com/zxc2012/image/main/20230601211746.png)
 
-![20221105155349](https://raw.githubusercontent.com/zxc2012/image/main/20221105155349.png)
+:::tip
+BFS solution to test bipartiteness: 
 
+队首孩子结点入队时, 判断是否在同一层
+:::
 ### Shortest Path
 
 Dijkstra's algorithm /ˈdaɪkstrə/
 
-```java
+```cpp
 int dijkstra(){
-    PQ.add(source, 0);
+    PQ.push({source, 0});
     while(!PQ.empty()){
-        p = PQ.removeSmallest();
+        p = PQ.top();
+        PQ.pop();
         for (q:adjlist[p]){
             if (distTo[p] + w < distTo[q]){
                 distTo[q] = distTo[p] + w; // relax
                 edgeTo[q] = p;
-                PQ.changePriority(q, distTo[q]);
+                PQ.push({q, distTo[q]});
             }
         }
     }
@@ -103,28 +136,64 @@ Runtime:
 Assuming E > V, this is just O(Elog V) for a connected graph
 
 ### DAG
-
 #### Directed acyclic graph
 
 Topological sort: order the vertices one after the other in such a way that each edge goes from an earlier vertex to a later vertex
 
 A topological sort only exists if the graph is a DAG
 
-**Property**: Every dag has at least one source and at least one sink(proof easy)
+Property: Every dag has at least one source and at least one sink(proof easy)
 
-**Algorithm**: O(V+E) time Θ(V) space
+- O(V+E) time
+- Θ(V) space
 
-Solution1:
+#### Solution
 
-1. process all of the edges and keep a count of
-the number of incoming edges for each node
-2. Find a source, output it, and delete it from the graph
-3. The graph is still a DAG, and thus will still have a source vertex.
-4. Repeat until the graph is empty.
+```mdx-code-block
+<Tabs>
+<TabItem value="BFS">
+```
+- process all of the edges and keep a count of the number of incoming edges for each node
+- Find a source, output it, and delete it from the graph
+- The graph is still a DAG, and thus will still have a source vertex
+- Repeat until the graph is empty
 
-Solution2:
+```cpp
+bool topolical_sort(){
+    // graph可包含self cycle and parallel edge
+    queue<int> q;
+    // find source
+    for (int i = 0; i < indegree.size(); ++i) {
+        if (!indegree[i]) q.push(i);
+    }
+    // repeating pop source
+    while (!q.empty()) {
+        int u = q.front();
+        res.push_back(u);
+        q.pop();
+        for (auto v: graph[u]){
+            --indegree[v];
+            if (!indegree[v]) q.push(v);
+        }
+    }
+    // Check DAG
+    return res.size()==n;
+}
+```
 
-Perform a DFS traversal from an arbitrary vertex, record DFS postorder in a list. If not all marked, pick an unmarked vertex and do it again. Topological ordering is given by the reverse of that list.
+```mdx-code-block
+</TabItem>
+<TabItem value="DFS">
+```
+
+- Perform a DFS traversal from an arbitrary vertex, record DFS postorder in a list
+- If not all marked, pick an unmarked vertex and do it again
+- Topologica lordering is given by the reverse of that list
+
+```mdx-code-block
+</TabItem>
+</Tabs>
+```
 
 #### Shortest path on DAG
 
@@ -132,12 +201,12 @@ Dijkstra may suffer from negative edges(dist to 5 is update earlier than 2)
 
 ![20221209223906](https://raw.githubusercontent.com/zxc2012/image/main/20221209223906.png)
 
-Solution: Topological sort->Each vertex is visited only when all possible info about it has been used
+Solution: visit all the vertices in topological order, relaxing all edges as we go
 
-**Algorithm**: O(V+E) time Θ(V) space
+- O(V+E) time
+- Θ(V) space
 
-1. Visit vertices in topological order
-2. On each visit, relax all outgoing edges
+Longest path on DAG: just flip all weights and treat as SPT
 
 ## Tree
 
@@ -404,13 +473,38 @@ private Node put(Node h, Key key, Value val) {
     - O(log n) to add the new node
     - O(log n) rotation and color flip operations per insert
 
+### Disjoint Sets
+```cpp
+int findf(int v){
+    if(v!=father[v])
+        father[v]=findf(father[v]);//注意点
+    return father[v];
+}
+void uni(int a,int b){
+    int fa = findf(a);
+    int fb = findf(b);
+    if(fa!=fb)
+        father[fa] = fb;
+}
+```
+
+Improvement: **Weighted Quick Union**
+
+Modify uni():
+- Track tree size (number of elements)
+- Always link root of smaller tree to larger tree
+
+![20221203164944](https://raw.githubusercontent.com/zxc2012/image/main/20221203164944.png)
+
+Worst case tree height is O(log n)
+
+=> findf and uni are O(log n)
+
 ### Minimum Spanning Trees
 
 Input: An undirected graph G = (V, E), edge weights $w_e$
 
-Output: A tree $T = (V, E')$, with $E_0 \subset E$, that minimizes
-
-$$weight(T) = \sum_{e\in E'}w_e$$
+Output: A tree $T = (V, E')$, with $E_0 \subset E$, that minimizes weight$(T) = \sum_{e\in E'}w_e$
 
 ![20221105161941](https://raw.githubusercontent.com/zxc2012/image/main/20221105161941.png)
 
@@ -430,22 +524,83 @@ if we remove $e'$ and add $e$,  $T' = T \lbrace e\rbrace − \lbrace e'\rbrace$,
 
 And it has the same number of edges as T; so it is also a tree.
 
-but $weight(T')\leq weight(T)$
+but weight$(T')\leq$ weight$(T)$
 
 ![20221105164746](https://raw.githubusercontent.com/zxc2012/image/main/20221105164746.png)
+
+#### Prim's Algorithm
+
+Prim Runtime just as Dijkstra: O(ElogV)
+
+```java
+int prism(){
+    distTo[s] = 0;
+    PQ.push({s,0})
+ 
+    /* Get vertices in order of distance from tree. */
+    while (!PQ.empty()) {
+        int v = PQ.top();
+        PQ.pop();
+        visit[v] = true;
+        for (Edge e:adjlist[v]){
+            int q = e.head;
+            if (!visit[q] && e.weight < distTo[q]) {
+                distTo[q] = e.weight;
+                edgeTo[q] = e;
+                PQ.push({q, distTo[q]});
+            }
+        }
+    } 
+}
+```
 
 #### Kruskal's Algorithm
 
 ```cpp
-for ( u : V)
-    makeset(u); //create a singleton set containing just u
-X = {};
-Sort the edges E by weight
-for all edges {u, v} in E, in increasing order of weight:
-    if (find(u)!= find(v)) // to which set does u and v belong
-        add edge {u, v} to X
-        union(u, v);
+int kruskal(){
+    sort(EdgeList.begin(),EdgeList().end());
+    for(e:EdgeList){
+        int fa = findf(e.from);
+        int fb = findf(e.to);
+        if(fa!=fb){
+            father[e.from] = e.to;
+            edgeTo[e.to] = e;
+        }
+    }
+}
 ```
 
-#### Prim's Algorithm
+Runtime:
+- sort: O(ElogE)
+- union: O(ElogV)
 
+Assuming E > V, this is just O(ElogE) 
+
+## Network Flow
+### Definition
+A directed graph G = (V, E). Two special nodes $s,t\in V$ , which are, respectively, a source and sink of G; and capacities $c_e$ > 0 on the edges. We would like to send as much oil as possible from s to t without exceeding the capacities of any of the edges. 
+
+A particular shipping scheme is called a flow and consists of a variable $f_e$ for each edge e of the network, satisfying the following two properties
+- Capacity: $0 \leq f_e\leq c_e$ for each edge e
+- Conservation: $f^{in}_u = f^{out}_u$ for each vertex except s,t
+
+capacity of the cut: cap(A,B) = $\sum_{(u,v):u\in A,v\in B}c(u,v)$
+
+Our task is to maximize the value of the flow v(f) = $f^{out}_s = f^{in}_t$
+
+### Flow and Cut Lemma
+
+Flow Lemma: Let f be any flow, and let (A, B) be any s-t cut.
+Then, the net flow sent across the cut is equal to the amount leaving s
+
+$\sum_{e \,\rm{out of}\, A} - \sum_{e \,\rm{in to}\, A} = v(f)$ (Proof Easy)
+
+Cut capacity Lemma: Let f be any flow, and let (A, B) be any s-t
+cut. Then the value of the flow is at most the capacity of the cut. 
+
+$v(f)\leq$ cap(A,B)
+
+Residual Network denotes a flow-increasing opportunity: $G^f = (V, E^f)$, $c^f= \left\{\begin{aligned}
+c_e - f_e,& {\rm if} (u,v)\in E \, {\rm and}\,f_e < c_e\\
+f_e,& {\rm if} (v,u)\in E \,{\rm and}\,f_e > 0
+\end{aligned}\right.$

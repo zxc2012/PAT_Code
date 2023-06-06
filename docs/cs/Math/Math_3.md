@@ -1,4 +1,16 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # 3 Data Structure
+## Big O Notation
+
+- f(n) = O(g(n))
+    - $\exist k>0,n_0,\forall n>n_0, f(n)\leq kg(n)$
+- f(n) = Ω(g(n))
+    - $\exist k>0,n_0,\forall n>n_0, f(n)\geq kg(n)$
+- f(n) = Θ(g(n))
+    - $\exist k_1>0, k_2>0,n_0,\forall n>n_0, k_1g(n)\leq f(n)\leq k_2g(n)$
+
 ## Hashmap
 | Implement |contains(x) | add(x)|
 |-|-|-|
@@ -61,6 +73,38 @@ If target bucket is already occupied, use a different bucket
     - Use next address, and if already occupied, just keep scanning one by one.
 - Quadratic probing
     - Use next address, and if already occupied, try looking 4 ahead, then 9 ahead, then 16 ahead, ...
+
+## Sort
+### Counting Sort
+
+Procedure:
+- Find the range
+- Count number of occurrences of each item
+- Iterate through list, using count array to decide where to put everything
+
+![20230530221227](https://raw.githubusercontent.com/zxc2012/image/main/20230530221227.png)
+
+If the size of the hashmap is R, then 
+- Runtime: Θ(N+R)
+- Memory: Θ(N+R)(Result Θ(N))
+
+### Radix Sort
+#### LSD Radix Sort
+Sort each digit independently from rightmost digit towards left
+
+![20230530221554](https://raw.githubusercontent.com/zxc2012/image/main/20230530221554.png)
+
+W: Width of each item in # digits
+
+Runtime: Θ(WN+WR)
+
+#### MSD Radix Sort
+
+![20230530221748](https://raw.githubusercontent.com/zxc2012/image/main/20230530221748.png)
+
+- Best Case: finish in one counting sort pass, looking only at the top digit: Θ(N + R)
+- Worst Case: look at every character, degenerating to LSD sort: Θ(WN + WR)
+
 ## List,Set,Map
 
 ![20230524204202](https://raw.githubusercontent.com/zxc2012/image/main/20230524204202.png)
@@ -78,3 +122,47 @@ Priority Queue Implementation
 |add|Θ(N)|Θ(log N)| Θ(1)|Θ(log N)|
 |getSmallest|Θ(1)|Θ(log N)|Θ(N)|Θ(1)|
 |removeSmallest|Θ(N)|Θ(log N)| Θ(N)|Θ(log N)|
+
+## Trie
+
+Each Node Stores One Character, keys in blue
+
+![20230531215017](https://raw.githubusercontent.com/zxc2012/image/main/20230531215017.png)
+
+### Implementation
+
+```mdx-code-block
+<Tabs>
+<TabItem value="DataIndexedCharMap">
+```
+
+![20230531215523](https://raw.githubusercontent.com/zxc2012/image/main/20230531215523.png)
+
+```mdx-code-block
+</TabItem>
+<TabItem value="BST">
+```
+
+![20230531215612](https://raw.githubusercontent.com/zxc2012/image/main/20230531215612.png)
+
+```mdx-code-block
+</TabItem>
+<TabItem value="Separate Chaining Hash Table">
+```
+
+![20230531215637](https://raw.githubusercontent.com/zxc2012/image/main/20230531215637.png)
+
+```mdx-code-block
+</TabItem>
+</Tabs>
+```
+### Analysis
+Contains and Add in O(L)(the length of the key), for each node:
+- DataIndexedCharMap is Θ(1).
+- BST is O(log R), where R is size of alphabet.
+- Hash Table is O(R), where R is size of alphabet.
+
+Space:
+- DataIndexedCharMap: 128 links per node.
+- BST: C links per node, where C is the number of children.
+- Separate Chaining Hash Table: C links per node.
