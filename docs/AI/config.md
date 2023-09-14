@@ -21,15 +21,3 @@ CUDA_VISIBLE_DEVICES=0 python filename.py#Device number up
 ```py
 os.environ["CUDA_VISIBLE_DEVICES"] = "0" # or :export CUDA_VISIBLE_DEVICES=0
 ```
----
-# 源配置
----
-```py
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge 
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/pro
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/
-conda config --set show_channel_urls yes
-```
