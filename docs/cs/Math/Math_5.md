@@ -1,5 +1,15 @@
 # 5 Numrical Analysis
-## Evaluating a polynomial
+## Errors
+Assume that r is the root of function f(x)=0.
+
+**Forward Error**:$|r-x_a|$
+
+**Backward Error**:$f(x_a)$
+
+![lk](https://raw.githubusercontent.com/zxc2012/image/main/20200927222415895.png)
+
+## Basic Arithmetic
+### Evaluating a polynomial
 Direct form:O($n^2$)
 >$P(x)=a_0+a_1x+a_2x^2+...+a_nx^n$
 
@@ -11,16 +21,11 @@ Example:求二进制幂O(n)->O($log_2n$)
 
 >$a^{2p+b_i}=a^{2p}*a$ or $a^{2p}$
 
-## Errors
-Assume that r is the root of function f(x)=0.
+### Multiplication
 
-**Forward Error**:$|r-x_a|$
+Calculate $x=yz$
 
-**Backward Error**:$f(x_a)$
-
-![lk](https://raw.githubusercontent.com/zxc2012/image/main/20200927222415895.png)
-
-##  Solving Equations
+### Solving Equations
 *Newton's Method*
 
 $x_0=initial\ guess$
