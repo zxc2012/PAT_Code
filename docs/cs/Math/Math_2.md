@@ -578,22 +578,26 @@ Assuming E > V, this is just O(ElogE)
 
 ## Network Flow
 ### Definition
-A directed graph G = (V, E). Two special nodes $s,t\in V$ , which are, respectively, a source and sink of G; and capacities $c_e$ > 0 on the edges. We would like to send as much oil as possible from s to t without exceeding the capacities of any of the edges. 
+A flow network is a connected, directed graph G = (V, E).
+- Each edge $e$ has a capacity $c_e > 0$
+- A single source $s \in V$ and a single sink $t \in V$
+- No edge enters the source and no edge leaves the sink
 
-A particular shipping scheme is called a flow and consists of a variable $f_e$ for each edge e of the network, satisfying the following two properties
-- Capacity: $0 \leq f_e\leq c_e$ for each edge e
-- Conservation: $f^{in}_u = f^{out}_u$ for each vertex except s,t
+**Def.** A  flow is a function $f:E\rightarrow R^+$ that assigns a real number to each edge, satisfying the following two properties
+- Capacity: $0 \leq f(e)\leq c_e$ for each edge e
+- Conservation: $f^{in}(u) = f^{out}(u)$ for each vertex except s,t
 
 capacity of the cut: cap(A,B) = $\sum_{(u,v):u\in A,v\in B}c(u,v)$
 
-Our task is to maximize the value of the flow v(f) = $f^{out}_s = f^{in}_t$
+Our task is to maximize the value of the flow $v(f) = f^{out}(s)$
+
+![20240306113519](https://raw.githubusercontent.com/zxc2012/image/main/20240306113519.png)
 
 ### Flow and Cut Lemma
 
-Flow Lemma: Let f be any flow, and let (A, B) be any s-t cut.
-Then, the net flow sent across the cut is equal to the amount leaving s
+Flow Lemma: Let f be any flow, and let (A, B) be any s-t cut. Then
 
-$\sum_{e \,\rm{out of}\, A} - \sum_{e \,\rm{in to}\, A} = v(f)$ (Proof Easy)
+$v(f) = f^{out}(A) - f^{in}(A)$ (Proof Easy)
 
 Cut capacity Lemma: Let f be any flow, and let (A, B) be any s-t
 cut. Then the value of the flow is at most the capacity of the cut. 
