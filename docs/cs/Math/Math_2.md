@@ -498,7 +498,7 @@ Modify uni():
 
 Worst case tree height is O(log n)
 
-=> findf and uni are O(log n)
+$\Rightarrow$ findf and uni are O(log n)
 
 ### Minimum Spanning Trees
 
@@ -587,7 +587,7 @@ A flow network is a connected, directed graph G = (V, E).
 - Capacity: $0 \leq f(e)\leq c_e$ for each edge e
 - Conservation: $f^{in}(u) = f^{out}(u)$ for each vertex except s,t
 
-capacity of the cut: cap(A,B) = $\sum_{(u,v):u\in A,v\in B}c(u,v)$
+capacity of the cut: cap(A,B) = $\sum_{\text{e leaving A}}c_e$
 
 Our task is to maximize the value of the flow $v(f) = f^{out}(s)$
 
@@ -597,14 +597,70 @@ Our task is to maximize the value of the flow $v(f) = f^{out}(s)$
 
 Flow Lemma: Let f be any flow, and let (A, B) be any s-t cut. Then
 
-$v(f) = f^{out}(A) - f^{in}(A)$ (Proof Easy)
+$v(f) = f^{out}(A) - f^{in}(A)$ (Proof Easy) $\Rightarrow v(f) = f^{in}(t)$
 
 Cut capacity Lemma: Let f be any flow, and let (A, B) be any s-t
 cut. Then the value of the flow is at most the capacity of the cut. 
 
 $v(f)\leq$ cap(A,B)
 
-Residual Network denotes a flow-increasing opportunity: $G^f = (V, E^f)$, $c^f= \left\{\begin{aligned}
-c_e - f_e,& {\rm if} (u,v)\in E \, {\rm and}\,f_e < c_e\\
-f_e,& {\rm if} (v,u)\in E \,{\rm and}\,f_e > 0
-\end{aligned}\right.$
+### Residual graph
+
+Residual graph $G^f = (V, E^f)$
+
+For an origin edge e = (u, v) in G
+- Remaining capacity left: if $f_e < c_e$, copy the edge e with capacity $c_e - f_e$
+- Erase origin: if $f_e > 0$, include an edge e' = (v, u) with capacity $f_e$
+
+Augmenting Path: 
+- Let P be an s − t path in the residual graph $G_f$
+- Let bottleneck (P, f) be the smallest capacity in $G_f$ on any edge of P
+- We can increase the flow by (P, f)
+
+**Theorem**: maximum flow = minimum cut
+
+Proof: if $f^*$ is maximized, then $G_{f^*}$ has no augmenting path
+
+Let $A^*$ denote the set of vertices that are reachable from s: If there is an augmenting path from s to a vertex v then $v \in S$. Also $t\in B^*$
+
+- Blue edges must be saturated otherwise there would be a forward edge which make an augmenting path
+- Red edges must be empty otherwise there would be a forward edge which make an augmenting path
+
+$$v(f^*) = f^{out}(A^*) - f^{in}(A^*) = cap(A^*,B^*)$$ 
+
+![20240306214613](https://raw.githubusercontent.com/zxc2012/image/main/20240306214613.png)
+
+### Algorithms
+#### Ford-Fulkerson Algorithm
+
+Runtime: O((E+V)f)
+
+Assuming E > V, this is O(Ef)
+
+```cpp
+int dfs(int s, int t, int flow){
+    visit[s] = true;
+    for (Edge e:adjlist[s]){
+        if(e.weight > 0 && !visit[e.from]){
+            int newFlow = dfs(e.to, t, min(flow, e.weight));
+            if(newFlow > 0){
+                e.weight -= newFlow;
+                edge[e.to].weight += newFlow;
+                return newFlow;
+            }
+        }
+    }
+    return -1;
+}
+int ff(int s, int t){
+	int ans = 0;
+	while (1)
+	{
+		memset(visit, false, sizeof(visit));
+		int d = dfs(s, t, inf);
+		if (d == -1)
+			return ans;
+		ans += d;
+	}
+}
+```

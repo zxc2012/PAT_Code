@@ -1,12 +1,10 @@
 # 5 Numrical Analysis
 ## Errors
-Assume that r is the root of function f(x)=0.
+Assume that r is the root of function $f(x)=0$.
 
-**Forward Error**:$|r-x_a|$
-
-**Backward Error**:$f(x_a)$
-
-![lk](https://raw.githubusercontent.com/zxc2012/image/main/20200927222415895.png)
+- Forward Error: $|r-x_a|$
+- Backward Error: $f(x_a)$
+- $\text{error magnification factor} = \frac{\text{relative forward error}}{\text{relative backward error}}$
 
 ## Basic Arithmetic
 ### Evaluating a polynomial
@@ -16,7 +14,7 @@ Direct form:O($n^2$)
 Horner's method:O(n)
 >$P(x)=a_0+x(a_1+x(a_2+x*(...(a_{n-1}+a_nx)))$
 
-Example:求二进制幂O(n)->O($log_2n$)
+Example:求二进制幂O(n)->O($\log n$)
 >$a^n=a^{p(2)}$$=a^{b_m2^m+...+b_i2^i+b_0}$
 
 >$a^{2p+b_i}=a^{2p}*a$ or $a^{2p}$
