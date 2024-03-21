@@ -129,7 +129,6 @@ Claim: distTo[v1] is optimal, and thus future relaxations will fail
 
 Runtime: 
 
-- add: V times, each costing O(log V) time.
 - removeSmallest: V times, each costing O(log V) time.
 - changePriority: E times, each costing O(log V) time.
 
