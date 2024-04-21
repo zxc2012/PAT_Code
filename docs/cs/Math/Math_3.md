@@ -33,7 +33,22 @@ Compare which part is bigger
     for some $k\geq 0$, $f(n) = \Theta(n^{\log_b^a}(\log n)^k)\Rightarrow T(n) = \Theta(n^{\log_b^a}(\log n)^{k+1})$  
 - case3: for some $\epsilon > 0$, $f(n) = \Omega(n^{\log_b^a} + \epsilon)$ and $\exist c < 1, \forall n > n_0, af(\frac nb) \leq cf(n)$ $\Rightarrow T(n) = \Theta (f(n))$
 
-### Recursion Tree
+## P and NP
+
+Reductions:
+- A $\leq$ B: A reduces to B if an instance $x \in A$ iff $f(x) \in B$
+- A $\leq_p$ B: A is polynomial time reducible to B
+- Theorem1: If A $\leq_p$ B and B $\in$ P, then A $\in$ P
+- Theorem2: If A $\leq_p$ B and B $\leq_p$ C, then A $\leq_p$ C (transitivity)
+
+P and NP:
+- P(Polynomial): The set of all decision problems that have an algorithm that runs intime $O(n^k)$ for some constant $k$
+- NP(nondeterministic polynomial): NP is the set of existential questions that can be verified in polynomial time
+- NP hard: B is NP hard if A $\leq_p$ B for all A $\in$ NP
+- NP complete
+    - Definition: B in NP and B is NP hard
+    - Theorem: If B $\leq_p$ C, C $\in$ NP, and 𝐵 is NP complete, then C is NP complete(Proof using transitivity)
+
 
 ## Hashmap
 | Implement |contains(x) | add(x)|
