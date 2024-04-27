@@ -35,9 +35,18 @@ Compare which part is bigger
 
 ## P and NP
 
+Problems, Instances and Algorithms:
+
+- Problem: Max-Flow
+- Instance: A graph G with edge-capacities, two vertices s, t, and an integer k
+- Algorithm: It takes as input an instance, and outputs either 'YES' or 'NO'
+
 Reductions:
-- A $\leq$ B: A reduces to B if an instance $x \in A$ iff $f(x) \in B$
-- A $\leq_p$ B: A is polynomial time reducible to B
+- A $\leq$ B: A reduces to B if an instance $I_A$ is YES iff $I_B$ is YES
+- A $\leq_p$ B: A is polynomial time reducible to B. There is an algorithm A that has the following properties:
+    - given an instance $I_X$ of X, A produces an instance $I_Y$
+    - A runs in time $O(|I_X|^k)$.
+    - Answer to $I_X$ is YES iff answer to $I_Y$ is YES.
 - Theorem1: If A $\leq_p$ B and B $\in$ P, then A $\in$ P
 - Theorem2: If A $\leq_p$ B and B $\leq_p$ C, then A $\leq_p$ C (transitivity)
 

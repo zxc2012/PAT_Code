@@ -34,14 +34,17 @@ In **directed graph**, each $e\in E$ defined as $(u,v)$.
 - Walk is sequence of edges with possible repeated vertex or edge
 - Tour is walk that starts and ends at the same node.
 
+Hamiltonian cycle: A cycle that visits every vertex in graph exactly once
+
 #### Connectivity
 
 u and v are connected if there is a path between u and v
 
-A connected graph is a graph where all pairs of vertices are
-connected.
-
-Connected component: maximal set of connected vertices.
+- Connected graph: A graph where all pairs of vertices are
+connected
+- Connected component: Maximal set of connected vertices
+- Independent set: No two vertices are connected by an edge
+- Clique: Every pair of vertices is connected by an edge
 
 #### Complete Graph
 
