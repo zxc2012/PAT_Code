@@ -56,7 +56,7 @@ P and NP:
 - NP hard: B is NP hard if A $\leq_p$ B for all A $\in$ NP
 - NP complete
     - Definition: B in NP and B is NP hard
-    - Theorem: If B $\leq_p$ C, C $\in$ NP, and 𝐵 is NP complete, then C is NP complete(Proof using transitivity)
+    - Theorem: If B $\leq_p$ C, C $\in$ NP, and B is NP complete, then C is NP complete(Proof using transitivity)
 
 
 ## Hashmap
