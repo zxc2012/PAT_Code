@@ -45,6 +45,7 @@ connected
 - Connected component: Maximal set of connected vertices
 - Independent set: No two vertices are connected by an edge
 - Clique: Every pair of vertices is connected by an edge
+- Minimum Vertex Cover: for every edge $(u, v) \in E$, either $u \in V'$ or $v \in V'$. The task is to find the minimum $|V'|$ 
 
 #### Complete Graph
 
