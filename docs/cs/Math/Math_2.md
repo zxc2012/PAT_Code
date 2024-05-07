@@ -47,6 +47,8 @@ connected
 - Clique: Every pair of vertices is connected by an edge
 - Minimum Vertex Cover: for every edge $(u, v) \in E$, either $u \in V'$ or $v \in V'$. The task is to find the minimum $|V'|$ 
 
+![20240507151659](https://raw.githubusercontent.com/zxc2012/image/main/20240507151659.png)
+
 #### Complete Graph
 
 $K_n$ complete graph on n vertices
