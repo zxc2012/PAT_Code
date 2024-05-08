@@ -58,6 +58,28 @@ P and NP:
     - Definition: B in NP and B is NP hard
     - Theorem: If B $\leq_p$ C, C $\in$ NP, and B is NP complete, then C is NP complete(Proof using transitivity)
 
+### Typical NP complete problem
+- SAT
+- 3-SAT
+- Clique
+- Independent Set
+- vertex cover
+- Hamiltonian Cycle
+
+3SAT $\leq_p$ Independent Set
+- If the formula is satisfiable, there is at least one true
+literal in each clause. Let S be a set of one such true literal from
+each clause. |S| = k and no two nodes in S are connected by an
+edge.
+- If the graph has an independent set S of size k, we know that
+it has one node from each “clause triangle.” Set those terms to
+true. This is possible because no 2 are negations of each other. 
+
+![20240508150921](https://raw.githubusercontent.com/zxc2012/image/main/20240508150921.png)
+
+DNF(disjunctive normal form)
+
+CNF(conjunctive normal form)
 
 ## Hashmap
 | Implement |contains(x) | add(x)|
